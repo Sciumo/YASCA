@@ -1,0 +1,219 @@
+<?php
+
+/*.
+	DOC  Reflection
+
+	Actually this module should be part of the standard module, and
+	it is available on any PHP 5 installation. I made a separated one
+	for performance reasons, since it is seldom used.
+	<p>
+
+	See: <a href="http://www.php.net/manual/en/language.oop5.reflection.php"><code>www.php.net/manual/en/language.oop5.reflection.php</code></a>
+.*/
+
+
+/*. require_module 'standard'; .*/
+
+
+/*. forward class ReflectionClass{}
+	forward class ReflectionFunction{}
+.*/
+
+
+interface Reflector
+{
+	#static /*. string .*/ function export(/*. string .*/ $name, /*. bool .*/ $return_) ;
+	/*. string .*/ function __toString() ;
+}
+
+
+class ReflectionException extends Exception { }
+
+
+class ReflectionParameter implements Reflector
+{
+	public /*. void .*/ function __clone(){}
+	public /*. void .*/ function __construct(/*. mixed .*/ $func_, /*. bool .*/ $return_){}
+	public /*. string .*/ function __toString(){}
+	public static /*. string .*/ function export(/*. string .*/ $parameter, /*. bool .*/ $return_)
+	{ throw new ReflectionException(); }
+	public /*. string .*/ function getName(){}
+	public /*. ReflectionFunction .*/ function getDeclaringFunction(){}
+	public /*. ReflectionClass .*/ function getDeclaringClass(){}
+	public /*. ReflectionClass .*/ function getClass(){}
+	public /*. bool .*/ function isArray(){}
+	public /*. bool .*/ function allowsNull(){}
+	public /*. bool .*/ function isPassedByReference(){}
+	public /*. bool .*/ function isOptional(){}
+	public /*. bool .*/ function isDefaultValueAvailable(){}
+	public /*. mixed .*/ function getDefaultValue(){}
+	public /*. int   .*/ function getPosition(){}
+}
+
+abstract class ReflectionFunctionAbstract
+{
+	public /*. void .*/ function __clone(){}
+	public /*. string .*/ function getName(){}
+	public /*. bool .*/ function isInternal(){}
+	public /*. bool .*/ function isUserDefined(){}
+	public /*. string .*/ function getFileName(){}
+	public /*. int .*/ function getStartLine(){}
+	public /*. int .*/ function getEndLine(){}
+	public /*. string .*/ function getDocComment(){}
+	public /*. array[string]mixed .*/ function getStaticVariables(){}
+	public /*. bool .*/ function returnsReference(){}
+	public /*. array[int]ReflectionParameter .*/ function getParameters(){}
+	public /*. int .*/ function getNumberOfParameters(){}
+	public /*. int .*/ function getNumberOfRequiredParameters(){}
+}
+
+
+class ReflectionFunction extends ReflectionFunctionAbstract implements Reflector
+{
+	public /*. void .*/ function __clone(){}
+	public /*. void .*/ function __construct(/*. string .*/ $name){}
+	public /*. string .*/ function __toString(){}
+	public static /*. string .*/ function export(/*. string .*/ $func_name /*., args .*/)
+	{ throw new ReflectionException(); }
+	public /*. mixed .*/ function invoke(/*. args .*/){}
+	public /*. mixed .*/ function invokeArgs(/*. array[]mixed .*/ $args_){}
+	public /*. bool  .*/ function isDisabled(){}
+}
+
+class ReflectionExtension implements Reflector {
+	public /*. void .*/ function __clone(){}
+	public /*. void .*/ function __construct(/*. string .*/ $name){}
+	public /*. string .*/ function __toString(){}
+	public static /*. string .*/ function export(/*. string .*/ $extension_name, /*. bool .*/ $return_)
+	{ throw new ReflectionException(); }
+	public /*. string .*/ function getName(){}
+	public /*. string .*/ function getVersion(){}
+	public /*. array[int]ReflectionFunction .*/ function getFunctions(){}
+	public /*. array[string]mixed .*/ function getConstants(){}
+	public /*. array .*/ function getINIEntries(){}
+	public /*. array[int]ReflectionClass .*/ function getClasses(){}
+	public /*. array[int]string .*/ function getClassNames(){}
+	public /*. mixed .*/ function getClosure(){}
+	public /*. string .*/ function info(){}
+}
+
+class ReflectionMethod extends ReflectionFunctionAbstract implements Reflector
+{
+	public /*. void .*/ function __construct(/*. mixed .*/ $class_name_or_object, /*. string .*/ $method_name){}
+	public /*. string .*/ function __toString(){}
+	public static /*. string .*/ function export(/*. string .*/ $class_name, /*. bool .*/ $return_)
+	{ throw new ReflectionException(); }
+	public /*. mixed .*/ function invoke(/*. object .*/ $obj /*., args .*/){}
+	public /*. mixed .*/ function invokeArgs(/*. array[]mixed .*/ $args_){}
+	public /*. bool .*/ function isFinal(){}
+	public /*. bool .*/ function isAbstract(){}
+	public /*. bool .*/ function isPublic(){}
+	public /*. bool .*/ function isPrivate(){}
+	public /*. bool .*/ function isProtected(){}
+	public /*. bool .*/ function isStatic(){}
+	public /*. bool .*/ function isConstructor(){}
+	public /*. bool .*/ function isDestructor(){}
+	public /*. int .*/ function getModifiers(){}
+	public /*. mixed .*/ function getClosure(){}
+	public /*. ReflectionClass .*/ function getDeclaringClass(){}
+}
+
+
+class ReflectionProperty implements Reflector
+{
+	public /*. void .*/ function __clone(){}
+	public /*. void .*/ function __construct(/*. mixed .*/ $class_, /*. string .*/ $name){}
+	public /*. string .*/ function __toString(){}
+	public static /*. string .*/ function export(/*. string .*/ $class_, /*. bool .*/ $return_)
+	{ throw new ReflectionException(); }
+	public /*. string .*/ function getName(){}
+	public /*. bool .*/ function isPublic(){}
+	public /*. bool .*/ function isPrivate(){}
+	public /*. bool .*/ function isProtected(){}
+	public /*. bool .*/ function isStatic(){}
+	public /*. bool .*/ function isDefault(){}
+	public /*. int .*/ function getModifiers(){}
+	public /*. mixed .*/ function getValue(object $obj){}
+	public /*. void .*/ function setValue(object $obj, /*. mixed .*/ $value){}
+	public /*. void .*/ function setAccessible(){}
+	public /*. ReflectionClass .*/ function getDeclaringClass(){}
+	public /*. string .*/ function getDocComment(){}
+}
+
+class ReflectionClass implements Reflector
+{
+	public /*. void .*/ function __clone(){}
+	public /*. void .*/ function __construct(/*. string .*/ $name){}
+	public /*. string .*/ function __toString(){}
+	#public static /*. string .*/ function export(/*. string .*/ $class_)
+	public static /*. string .*/ function export(/*. mixed .*/ $class_name /*., args .*/)
+	{ throw new ReflectionException(); }
+	public /*. string .*/ function getName(){}
+	public /*. bool .*/ function isInternal(){}
+	public /*. bool .*/ function isUserDefined(){}
+	public /*. bool .*/ function isInstantiable(){}
+	public /*. bool .*/ function hasConstant(/*. string .*/ $name){}
+	public /*. bool .*/ function hasMethod(/*. string .*/ $name){}
+	public /*. bool .*/ function hasProperty(/*. string .*/ $name){}
+	public /*. string .*/ function getFileName(){}
+	public /*. int .*/ function getStartLine(){}
+	public /*. int .*/ function getEndLine(){}
+	public /*. string .*/ function getDocComment(){}
+	public /*. ReflectionMethod .*/ function getConstructor(){}
+	public /*. ReflectionMethod .*/ function getMethod(/*. string .*/ $name)
+	{ throw new ReflectionException(); }
+	public /*. array[int]ReflectionMethod .*/ function getMethods(){}
+	public /*. ReflectionProperty .*/ function getProperty(/*. string .*/ $name)
+	{ throw new ReflectionException(); }
+	public /*. array[int]ReflectionProperty .*/ function getProperties(){}
+	public /*. array[string]mixed .*/ function getConstants()
+	/*. DOC Returns the list of class constants
+	
+		The key is the constants' name, the value is its value.
+	.*/{}
+	public /*. mixed .*/ function getConstant(/*. string .*/ $name){}
+	public /*. array[int]ReflectionClass .*/ function getInterfaces(){}
+	public /*. bool .*/ function isInterface(){}
+	public /*. bool .*/ function isAbstract(){}
+	public /*. bool .*/ function isFinal(){}
+	public /*. int .*/ function getModifiers(){}
+	public /*. bool .*/ function isInstance(object $obj){}
+	public /*. object .*/ function newInstance(/*. args .*/){}
+	public /*. object .*/ function newInstanceArgs(/*. array[]mixed .*/ $args_){}
+	public /*. ReflectionClass .*/ function getParentClass(){}
+	public /*. bool .*/ function isSubclassOf(ReflectionClass $class_){}
+	public /*. array[string]mixed .*/ function getStaticProperties()
+	/*. DOC Returns static properties
+		Static properties that lack an initial value explicitly defined
+		are set to NULL.
+	.*/{}
+	public /*. mixed .*/ function getStaticPropertyValue(/*. string .*/ $name /*., args .*/){}
+	public /*. void .*/ function setStaticPropertyValue(/*. string .*/ $name, /*. mixed .*/ $value){}
+	public /*. array[string]mixed .*/ function getDefaultProperties()
+	/*.DOC Returns non-static properties
+		Non-static properties that lack an initial value explicitly defined
+		are set to NULL.
+	.*/{}
+	public /*. bool .*/ function isIterateable(){}
+	public /*. bool .*/ function implementsInterface(/*. string .*/ $name){}
+	public /*. ReflectionExtension .*/ function getExtension(){}
+	public /*. string .*/ function getExtensionName(){}
+}
+
+class Reflection
+{
+	static /*. string .*/ function export(/*. Reflector .*/ $r){}
+	static /*. array[int]string .*/ function getModifierNames(/*. int .*/ $modifiers){}
+}
+
+
+class ReflectionObject extends ReflectionClass
+{
+	public /*. void .*/ function __clone(){}
+	public /*. void .*/ function __construct(/*. object .*/ $obj)
+	{ parent::__construct(""); }
+	public /*. string .*/ function __toString(){}
+	public static /*. string .*/ function export(/*. mixed .*/ $object_ /*., args .*/){}
+}
+
+?>

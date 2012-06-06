@@ -1,0 +1,20 @@
+name = Unvalidated Input Placed in Session
+file_type = JAVA
+grep = /session\.setAttribute\(\".*\",\s*req(uest)?\.getParameter\(\"/i
+category = Session Management
+severity = 2
+category_link = http://www.owasp.org/index.php/Session_Management
+description =
+<p>
+	Input data should always be validated before being used. In this case, input obtained from request.getParameter() is placed directly
+	into the user's session without any validation.
+
+	Always validate data before using it.
+</p>
+<p>
+    <h4>References</h4>
+    <ul>
+        <li><a target="_blank" href="http://www.owasp.org/index.php/Session_Management">OWASP - Session Management</a></li>
+    </ul>
+</p>
+END;

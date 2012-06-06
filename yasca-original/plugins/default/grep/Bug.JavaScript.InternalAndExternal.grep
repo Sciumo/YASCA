@@ -1,0 +1,31 @@
+name = Both Internal and External JavaScript in Same Tag
+file_type = js,html,jsp,htm,php,xsl 
+grep = /<script[^>]*src[^>]*>[^\s]<\/script>/mi
+grep = /<script[^>]*src[^>]*>/i
+category = Bug: Script Tag in JavaScript file
+severity = 2
+description =
+<p>
+	The &lt;script&gt; tag is used within HTML to signal the inclusion of JavaScript code. Javascript
+	can be included inline, as in:
+	<pre>
+	&lt;script language="javascript"&gt;
+	  alert('Foo Bar');
+	&lt;/script&gt;
+	&lt;/pre&gt;
+	or externally, as in:
+	&lt;script language="javascript" src="my_script.js"&gt;&lt;/script&gt;
+	
+	One may &lt;b&gt;not&lt;/b&gt; combine the two, as in:
+	&lt;script language="javascript" src="my_script.js"&gt;
+	  &lt;div style="color:red;font-weight: bold;"&gt;alert('Foo Bar');&lt;/a&gt;
+	&lt;/script&gt;
+
+</p>
+<p>
+	<h4>References</h4>
+	<ul>
+		<li><a href="http://www.webmasterworld.com/forum91/2707.htm">Note from a forum</a></li>
+	</ul>
+</p>
+END;

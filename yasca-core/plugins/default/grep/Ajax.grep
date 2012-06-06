@@ -1,0 +1,6 @@
+name = Use of AJAX
+file_type = JAVA,HTML,js
+grep = /XMLHttpRequest|XMLHTTP/i
+category = Potentially Dangerous Technology: AJAX
+severity = 3 
+description = While AJAX is not by itself bad, there are both security and performance considerations that are oftentimes overlooked.

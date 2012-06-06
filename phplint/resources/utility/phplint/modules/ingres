@@ -1,0 +1,28 @@
+<?
+/*. DOC   Ingres II Functions
+
+See: <a href="http://www.php.net/manual/en/ref.ingres.php"><code>http://www.php.net/manual/en/ref.ingres.php</code></a>
+
+.*/
+
+
+
+/*. resource .*/ function ingres_connect( /*. args .*/){}
+/*. resource .*/ function ingres_pconnect( /*. args .*/){}
+/*. bool .*/ function ingres_close( /*. args .*/){}
+/*. bool .*/ function ingres_query(/*. string .*/ $query /*., args .*/){}
+/*. int .*/ function ingres_num_rows( /*. args .*/){}
+/*. int .*/ function ingres_num_fields( /*. args .*/){}
+/*. string .*/ function ingres_field_name(/*. int .*/ $index /*., args .*/){}
+/*. string .*/ function ingres_field_type(/*. int .*/ $index /*., args .*/){}
+/*. string .*/ function ingres_field_nullable(/*. int .*/ $index /*., args .*/){}
+/*. string .*/ function ingres_field_length(/*. int .*/ $index /*., args .*/){}
+/*. string .*/ function ingres_field_precision(/*. int .*/ $index /*., args .*/){}
+/*. string .*/ function ingres_field_scale(/*. int .*/ $index /*., args .*/){}
+/*. array .*/ function ingres_fetch_array( /*. args .*/){}
+/*. array .*/ function ingres_fetch_row( /*. args .*/){}
+/*. array .*/ function ingres_fetch_object( /*. args .*/){}
+/*. bool .*/ function ingres_rollback( /*. args .*/){}
+/*. bool .*/ function ingres_commit( /*. args .*/){}
+/*. bool .*/ function ingres_autocommit( /*. args .*/){}
+?>

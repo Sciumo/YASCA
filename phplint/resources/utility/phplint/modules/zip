@@ -1,0 +1,100 @@
+<? /*. DOC Zip File Functions
+
+See: <a href="http://www.php.net/manual/en/ref.zip.php">http://www.php.net/manual/en/ref.zip.php</a>.
+
+.*/
+/*. resource .*/ function zip_open(/*. string .*/ $filename){}
+/*. void .*/ function zip_close(/*. resource .*/ $zip){}
+/*. resource .*/ function zip_read(/*. resource .*/ $zip){}
+/*. bool .*/ function zip_entry_open(/*. resource .*/ $zip_dp, /*. resource .*/ $zip_entry  /*. , args .*/){}
+/*. void .*/ function zip_entry_close(/*. resource .*/ $zip_ent){}
+/*. mixed .*/ function zip_entry_read(/*. resource .*/ $zip_entry  /*. , args .*/){}
+/*. string .*/ function zip_entry_name(/*. resource .*/ $zip_entry){}
+/*. int .*/ function zip_entry_compressedsize(/*. resource .*/ $zip_entry){}
+/*. int .*/ function zip_entry_filesize(/*. resource .*/ $zip_entry){}
+/*. string .*/ function zip_entry_compressionmethod(/*. resource .*/ $zip_entry){}
+
+class ZipArchive
+{
+
+	const
+		CREATE  = 1,
+		OVERWRITE  = 1,
+		EXCL  = 1,
+		CHECKCONS  = 1,
+		FL_NOCASE  = 1,
+		FL_NODIR  = 1,
+		FL_COMPRESSED  = 1,
+		FL_UNCHANGED  = 1,
+		CM_DEFAULT  = 1,
+		CM_STORE  = 1,
+		CM_SHRINK  = 1,
+		CM_REDUCE_1  = 1,
+		CM_REDUCE_2  = 1,
+		CM_REDUCE_3  = 1,
+		CM_REDUCE_4  = 1,
+		CM_IMPLODE  = 1,
+		CM_DEFLATE  = 1,
+		CM_DEFLATE64  = 1,
+		CM_PKWARE_IMPLODE  = 1,
+		CM_BZIP2  = 1,
+		ER_OK  = 1,
+		ER_MULTIDISK  = 1,
+		ER_RENAME  = 1,
+		ER_CLOSE  = 1,
+		ER_SEEK  = 1,
+		ER_READ  = 1,
+		ER_WRITE  = 1,
+		ER_CRC  = 1,
+		ER_ZIPCLOSED  = 1,
+		ER_NOENT  = 1,
+		ER_EXISTS  = 1,
+		ER_OPEN  = 1,
+		ER_TMPOPEN  = 1,
+		ER_ZLIB  = 1,
+		ER_MEMORY  = 1,
+		ER_CHANGED  = 1,
+		ER_COMPNOTSUPP  = 1,
+		ER_EOF  = 1,
+		ER_INVAL  = 1,
+		ER_NOZIP  = 1,
+		ER_INTERNAL  = 1,
+		ER_INCONS  = 1,
+		ER_REMOVE  = 1,
+		ER_DELETED  = 1;
+
+	public /*. int .*/ $status = 0;
+	public /*. int .*/ $statusSys = 0;
+	public /*. int .*/ $numFiles = 0;
+	public /*. string .*/ $filename = NULL;
+	public /*. string .*/ $comment = NULL;
+
+
+	/*. mixed .*/ function open(/*. string .*/ $source  /*. , args .*/){}
+	/*. resource .*/ function close(){}
+	/*. bool .*/ function addFile(/*. string .*/ $filepath /*. , args .*/){}
+	/*. resource .*/ function addFromString(/*. string .*/ $name, /*. string .*/ $content){}
+	/*. resource .*/ function statName(/*. string .*/ $filename /*. , args .*/){}
+	/*. resource .*/ function statIndex(/*. int .*/ $index /*. , args .*/){}
+	/*. resource .*/ function locateName(/*. string .*/ $filename /*. , args .*/){}
+	/*. resource .*/ function getNameIndex(/*. int .*/ $index  /*. , args .*/){}
+	/*. resource .*/ function setArchiveComment(/*. string .*/ $name, /*. string .*/ $comment){}
+	/*. resource .*/ function getArchiveComment(){}
+	/*. resource .*/ function setCommentName(/*. string .*/ $name, /*. string .*/ $comment){}
+	/*. resource .*/ function setCommentIndex(/*. int .*/ $index, /*. string .*/ $comment){}
+	/*. resource .*/ function getCommentName(/*. string .*/ $name){}
+	/*. resource .*/ function getCommentIndex(/*. int .*/ $index){}
+	/*. resource .*/ function deleteIndex(/*. int .*/ $index){}
+	/*. resource .*/ function deleteName(/*. string .*/ $name){}
+	/*. resource .*/ function renameIndex(/*. int .*/ $index, /*. string .*/ $new_name){}
+	/*. resource .*/ function renameName(/*. string .*/ $name, /*. string .*/ $new_name){}
+	/*. resource .*/ function unchangeIndex(/*. int .*/ $index){}
+	/*. resource .*/ function unchangeName(/*. string .*/ $name){}
+	/*. resource .*/ function unchangeAll(){}
+	/*. resource .*/ function getFromName(/*. string .*/ $entryname /*. , args .*/){}
+	/*. resource .*/ function getFromIndex(/*. string .*/ $entryname /*. , args .*/){}
+	/*. resource .*/ function getStream(/*. string .*/ $entryname){}
+
+}
+
+?>

@@ -1,0 +1,19 @@
+name = Use of Custom Cookies
+file_type = NET
+grep = /\.Cookies\.Item\(/i
+category = Bad Practice
+severity = 5
+description =
+<p>
+	Since cookies are sent to the client browser, they should only be used to store non-sensitive information,
+	such user-interface settings like last-sorted column. The only exception to this should be a cookie containing
+	a session identifier, which should be a cryptography random number that is used as a key to find information
+	stored on the server.
+</p>
+<p>
+	<h4>References</h4>
+	<ul>
+	    <li><a target="_blank" href="http://en.wikipedia.org/wiki/HTTP_cookie">HTTP Cookie</a> (Wikipedia)</li>
+	</ul>
+</p>
+END;

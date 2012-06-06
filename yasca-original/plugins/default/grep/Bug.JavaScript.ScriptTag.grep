@@ -1,0 +1,29 @@
+name = Script Tag Used in JavaScript file
+file_type = js
+grep = /^\s*<script/i
+category = Bug: Script Tag in JavaScript file
+severity = 2
+description =
+<p>
+	The &lt;script&gt; tag is used within HTML to signal the inclusion of JavaScript code. Such
+	code can be included within a pair of &lt;script&gt; tags, or externally by using the <b>src</b>
+	attribute. For example:
+	<ul>
+		<li>&lt;script src="/scripts/menu.js"&gt;&lt;/script&gt;</li>
+		<li>&lt;script&gt;<br/>
+		    &nbsp;&nbsp;alert('Hello World!');<br/>
+		    &lt;/script&gt;
+		</li>
+	</ul>
+	
+	When an external script is referenced, that script should not contain &lt;script&gt; tags; most
+	browsers will either generate an error message or ignore the referenced content.
+</p>
+<p>
+	<h4>References</h4>
+	<ul>
+		<li><a href="http://www.w3schools.com/js/js_whereto.asp">Tutorial on including external JavaScript</a></li>
+		<li><a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMAScript Language Specification (1999)</a></li>		
+	</ul>
+</p>
+END;

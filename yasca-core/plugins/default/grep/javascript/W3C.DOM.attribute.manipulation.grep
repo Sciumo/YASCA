@@ -1,0 +1,7 @@
+name = W3 Core DOM Attributes
+file_type = js,html
+grep = /\.(((create|set|get|has|remove|)attribute)|name|value)/i
+category = W3 Core
+category_link = http://www.quirksmode.org/dom/w3c_core.html
+severity = 5
+description = Support for DOM attributes is non-existent or incomplete in IE5.5

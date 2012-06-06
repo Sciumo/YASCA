@@ -1,0 +1,30 @@
+<?
+/*. DOC   System V Messages Support
+
+<h2>Requirements</h2>
+
+No external libraries are needed to build this extension.
+
+<h2>Installation</h2>
+
+Support for these functions is not enabled by default.  To enable the
+System V messages support compile PHP with the option --enable-sysvmsg.
+<p>
+
+See: <a href="http://www.php.net/manual/en/ref.sem.php"><code>http://www.php.net/manual/en/ref.sem.php</code></a>
+
+.*/
+
+
+# FIXME: dummy values
+define('MSG_IPC_NOWAIT', 1);
+define('MSG_NOERROR', 1);
+define('MSG_EXCEPT', 1);
+
+/*. bool .*/ function msg_set_queue(/*. resource .*/ $queue, /*. array .*/ $data){}
+/*. array .*/ function msg_stat_queue(/*. resource .*/ $queue){}
+/*. resource .*/ function msg_get_queue(/*. int .*/ $key /*., args .*/){}
+/*. bool .*/ function msg_remove_queue(/*. resource .*/ $queue){}
+/*. mixed .*/ function msg_receive(/*. resource .*/ $queue, /*. int .*/ $desiredmsgtype, /*. int .*/ &$msgtype, /*. int .*/ $maxsize, /*. mixed .*/ $message /*., args .*/){}
+/*. bool .*/ function msg_send(/*. resource .*/ $queue, /*. int .*/ $msgtype, /*. mixed .*/ $message /*., args .*/){}
+?>

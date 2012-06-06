@@ -1,0 +1,60 @@
+Version 1.0 released on 2008-09-30
+
+Version 1.1 released on 2008-12-19
+    Updated PMD to version 4.2.4 (and plugins)
+    Updated FindBugs to version 1.3.6
+    Added FB-Contrib
+    Updated PHP to 5.2.8
+    Minor bug fixes in PMD and FindBugs plugin (cross-platform)
+    Fixed line endings for Unix and Windows
+    Added new plugins
+
+Version 1.2 released on 2009-01-16
+    Enhanced Grep plugin - multiple regex modifiers allowed
+    Ability to ignore certain findings
+    Added external tool Pixy
+    Added plugins for PHP
+    Added plugins for C++
+
+Version 1.3 released on 2009-03-17
+    Many bug fixes - thank you to zaph, jack, and jen140
+    Added external tool JavaScript Lint - thank you to Nick Tulett for the idea
+    Added SQL Report type (SQLite)
+    Added Pre-Processing capability to Grep plugin
+    Updated PHP to 5.2.9 (Windows)
+    Updated PMD to 4.2.5
+    Updated FindBugs to version 1.3.7
+    Updated FB-Contrib to version 3.8.0
+    Added plugins for ColdFusion
+    Added support for JLint and JavaScript Lint under Linux via Wine
+    Removed startup dependencies on extensions - now only loaded if needed    
+    Added external tool "PHPLint" - thank you to Jochen Paul for the code
+
+Version 2.0 released on 2009-05-07
+	Redesign separating Yasca-Core from plugin packages.
+    Added ClamAV plugin
+	Added RATS plugin
+    Added new minor plugins and many new rulesets.
+
+Version 2.01 released on 2009-05-18
+	Fixed a few bugs related to calling external plugins.
+	Added a few minor plugins, including one that finds banned functions (via Microsoft SDL)
+
+Version 2.1 released 2009-07-07
+	Updated Cppcheck to v1.33
+	Updated PHPLint to v0.8 (2009-05-17), Windows Native
+    Added FxCop plugin (requires separate tool installation from Microsoft)
+    Fixed bugs in ClamAV, RATS plugins
+    PHP Updated to v5.3.0 (Windows)
+    New grep plugins added
+
+Version 2.2 released 2010-05-31
+	Over a hundred bug fixes (Thank you to Mike Maass!)
+	New functions, including the Yasca-Appsec package (security plugins only)
+	Native linux support for CppCheck, JavaScript Lint, and RATS
+	New plugins (including integrity checker)
+    Additional text and links in plugin output
+	Improved scanning speed
+	New native Yasca executable for Windows
+	PHP Updated to v5.3.2 (Windows)
+

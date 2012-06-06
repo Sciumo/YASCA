@@ -1,0 +1,78 @@
+<?
+/*. DOC   Stream Functions
+
+See: <a href="http://www.php.net/manual/en/ref.stream.php"><code>http://www.php.net/manual/en/ref.stream.php</code></a>
+
+.*/
+
+
+# FIXME: in effect, this is part of the "standard" module
+
+define('STREAM_NOTIFY_CONNECT', 2);
+define('STREAM_NOTIFY_AUTH_REQUIRED', 3);
+define('STREAM_NOTIFY_AUTH_RESULT', 10);
+define('STREAM_NOTIFY_MIME_TYPE_IS', 4);
+define('STREAM_NOTIFY_FILE_SIZE_IS', 5);
+define('STREAM_NOTIFY_REDIRECTED', 6);
+define('STREAM_NOTIFY_PROGRESS', 7);
+define('STREAM_NOTIFY_FAILURE', 9);
+define('STREAM_NOTIFY_COMPLETED', 8);
+define('STREAM_NOTIFY_RESOLVE', 1);
+define('STREAM_NOTIFY_SEVERITY_INFO', 0);
+define('STREAM_NOTIFY_SEVERITY_WARN', 1);
+define('STREAM_NOTIFY_SEVERITY_ERR', 2);
+define('STREAM_FILTER_READ', 1);
+define('STREAM_FILTER_WRITE', 2);
+define('STREAM_FILTER_ALL', 3);
+define('STREAM_CLIENT_PERSISTENT', 1);
+define('STREAM_CLIENT_ASYNC_CONNECT', 2);
+define('STREAM_CLIENT_CONNECT', 4);
+define('STREAM_PEEK', 2);
+define('STREAM_OOB', 1);
+define('STREAM_SERVER_BIND', 4);
+define('STREAM_SERVER_LISTEN', 8);
+define('STREAM_USE_PATH', 1);
+define('STREAM_IGNORE_URL', 2);
+define('STREAM_ENFORCE_SAFE_MODE', 4);
+define('STREAM_REPORT_ERRORS', 8);
+define('STREAM_MUST_SEEK', 16);
+define('STREAM_URL_STAT_LINK', 1);
+define('STREAM_URL_STAT_QUIET', 2);
+define('STREAM_MKDIR_RECURSIVE', 1);
+
+
+/*. int .*/ function stream_select(/*. array .*/ &$read_streams, /*. array .*/ &$write_streams, /*. array .*/ &$except_streams, /*. int .*/ $tv_sec /*., args .*/){}
+/*. resource .*/ function stream_context_create( /*. args .*/){}
+/*. bool .*/ function stream_context_set_params(/*. args .*/){}
+/*. bool .*/ function stream_context_set_option(/*. args .*/){}
+/*. array .*/ function stream_context_get_options(/*. args .*/){}
+/*. bool .*/ function stream_filter_prepend(/*. resource .*/ $stream, /*. string .*/ $filtername /*., args .*/){}
+/*. bool .*/ function stream_filter_append(/*. resource .*/ $stream, /*. string .*/ $filtername /*., args .*/){}
+/*. resource .*/ function stream_socket_client(/*. string .*/ $remoteaddress /*., args .*/){}
+/*. resource .*/ function stream_socket_server(/*. string .*/ $localaddress /*., args .*/){}
+/*. resource .*/ function stream_socket_accept(/*. resource .*/ $serverstream /*., args .*/){}
+/*. string .*/ function stream_socket_get_name(/*. resource .*/ $stream, /*. bool .*/ $want_peer){}
+/*. string .*/ function stream_socket_recvfrom(/*. resource .*/ $stream, /*. int .*/ $amount /*., args .*/){}
+/*. int .*/ function stream_socket_sendto(/*. resource .*/ $stream, /*. string .*/ $data /*., args .*/){}
+/*. int .*/ function stream_copy_to_stream(/*. resource .*/ $source, /*. resource .*/ $dest /*., args .*/){}
+/*. int .*/ function stream_get_contents(/*. resource .*/ $source /*., args .*/){}
+/*. int   .*/ function stream_set_write_buffer(/*. resource .*/ $stream, /*. int .*/ $buffer){}
+/*. bool  .*/ function stream_set_blocking(/*. resource .*/ $stream, /*. int .*/ $mode){}
+/*. array[string]mixed .*/ function stream_get_meta_data(/*. resource .*/ $stream){}
+/*. string.*/ function stream_get_line(/*. resource .*/ $handle, /*. int .*/ $length /*., args .*/){}
+/*. bool  .*/ function stream_wrapper_register(/*. string .*/ $protocol, /*. string .*/ $classname){}
+/*. bool  .*/ function stream_register_wrapper(/*. string .*/ $protocol, /*. string .*/ $classname){}
+/*. array[int]string .*/ function stream_get_wrappers(){}
+/*. array[int]string .*/ function stream_get_transports(){}
+/*. bool  .*/ function stream_set_timeout(/*. resource .*/ $stream, /*. int .*/ $seconds /*., args .*/){}
+/*. array .*/ function stream_get_filters(){}
+/*. bool .*/ function stream_filter_register(/*. string .*/ $filtername, /*. string .*/ $classname){}
+/*. object .*/ function stream_bucket_make_writeable(/*. resource .*/ $brigade){}
+/*. void .*/ function stream_bucket_prepend(/*. resource .*/ $brigade, /*. resource .*/ $bucket){}
+/*. void .*/ function stream_bucket_append(/*. resource .*/ $brigade, /*. resource .*/ $bucket){}
+/*. resource .*/ function stream_bucket_new(/*. resource .*/ $stream, /*. string .*/ $buffer){}
+/*. bool  .*/ function socket_set_blocking(/*. resource .*/ $stream, /*. int .*/ $mode){}
+/*. bool  .*/ function socket_set_timeout(/*. resource .*/ $stream, /*. int .*/ $seconds /*., args .*/){}
+/*. array[string]mixed .*/ function socket_get_status(/*. resource .*/ $stram){}
+/*. bool .*/ function stream_socket_shutdown(/*. resource .*/ $stream, /*. int .*/ $how){}
+?>

@@ -1,0 +1,18 @@
+name = Constant Memory Allocation
+file_type = C
+grep = /^(?!\/\/)(?:.(?!\/\/))*?\b(malloc|alloc|realloc)\(\s*\d+\s*\)/
+category = Portability: Constant Memory Allocation
+severity = 2
+description =
+<p>
+	Memory allocation functions should normally return results dependent on data type 
+	sizes (i.e. sizeof(int) instead of "4"). Requesting a constant amount of memory can
+	make the solution non-portable.
+</p>
+<p>
+	<h4>References</h4>
+	<ul>
+		<li><a target="_blank" href="http://en.wikipedia.org/wiki/Malloc">Malloc</a> (Wikipedia)</li>
+	</ul>
+</p>
+END;

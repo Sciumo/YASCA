@@ -1,0 +1,18 @@
+name = Use of a short open tag
+file_type = php
+grep = /<\?\s/
+category = Best Practice: Short Open Tag
+category_link = http://www.phpvs.net/2008/06/04/ten-php-best-practices-tips-that-will-get-you-a-job/
+severity = 5
+description =
+<p>
+	A short open tag <b>&lt;?</b> is considered bad form because it can conflict with XML parsers and would 
+	require others to modify their php.ini configuration in order to get the code to work.
+</p>
+<p>
+        <h4>References</h4>
+        <ul>
+		<li><a href="http://www.phpvs.net/2008/06/04/ten-php-best-practices-tips-that-will-get-you-a-job/">Ten PHP Best Practices That Will Get You a Job</a></li>
+        </ul>
+</p>
+END;

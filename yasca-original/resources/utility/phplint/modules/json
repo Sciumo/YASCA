@@ -1,0 +1,15 @@
+<? /*. DOC JSON Functions
+
+This extension implements the JavaScript Object Notation (JSON)
+data-interchange format. The decoding is handled by a parser based on the
+JSON_checker by Douglas Crockford.
+<p>
+
+See: <a href="http://www.php.net/manual/en/ref.json.php">www.php.net/manual/en/ref.json.php</a>.
+
+.*/
+
+/*. mixed .*/ function json_decode(/*. string .*/ $json /*. , args .*/){}
+/*. string .*/ function json_encode(/*. mixed .*/ $value){}
+
+?>

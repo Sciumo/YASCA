@@ -1,0 +1,7 @@
+name = W3 Core Node details
+file_type = js,html
+grep = /\.(node(Name|Type|Value)|tagName)/i
+category = W3 Core
+category_link = http://www.quirksmode.org/dom/w3c_core.html
+severity = 5 
+description = IE5.5 and Konqueror support for Node information is incomplete

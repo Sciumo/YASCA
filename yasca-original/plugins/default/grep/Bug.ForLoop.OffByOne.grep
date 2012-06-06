@@ -1,0 +1,30 @@
+name = Possible Off By One Error in For Loop
+file_type = JAVA
+grep = /for\s*\(.*=\s*0\s*;.*\<=\s*.*\.length\s*;/i
+category = Bug: Possible Off By One Error in For Loop
+severity = 2
+description =
+<p>
+	There appears to be an off-by-one error in a for loop. For example:
+	<code>
+	Foo[] foo = new Foo[10];
+	for (int i=0; i<=foo.length; i++) {
+	    ...
+	} 
+	</code>
+	The code should be fixed to:
+	<code>
+	Foo[] foo = new Foo[10];
+	for (int i=0; i<foo.length; i++) {
+	    ...
+	} 
+	</code>
+
+</p>
+<p>
+	<h4>References</h4>
+	<ul>
+		<li>TODO</li>
+	</ul>
+</p>
+END;

@@ -1,0 +1,29 @@
+name = File Inclusion
+file_type = jsp
+grep = /<jsp:include[^>]*request\./i
+category = Arbitrary Local File Disclosure
+severity = 1
+description = 
+<p>
+	This injection vulnerability allows an attacker to include arbitrary files from 
+	the web/application server into the returned HTML page. An example of this is
+	a JSP page that takes a <b>file</b> parameter, as in:
+	<ul>
+		<li>http://www.server.com/index.jsp?file=home.jsp</li>
+	</ul>
+	
+	The script would presumably include the home.jsp file in its returned content. By
+	changing home.jsp to /etc/passwd or another sensitive file, an attacker would have
+	that file returned instead of home.jsp.
+	
+	It is recommended to perform strict validation in this scenario, where only specific
+	files are allowed to be passed in through the <b>file</b> parameter.
+	These passwords should be changed to something stronger.
+</p>
+<p>
+	<h4>References</h4>
+	<ul>
+		<li>TODO</li>
+	</ul>
+</p>
+END;

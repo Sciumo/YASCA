@@ -1,0 +1,21 @@
+name = Sleep Usage  
+file_type = java
+grep = /sleep\(/i
+category = Stability: Sleeping in a Servlet
+severity = 2
+description =
+<p>
+	Resources should usually be included using relative links, so they can work even if the system directory
+	or mount point changes. In this case, the finding is that a link to a local Windows resource (such as
+	<b>c:\my source code\some file.txt</b> exists in the code base. Unless the target production platform is 
+	Windows, and there is a compelling need for referencing an absolute path, this should be changed.
+</p>
+<p>
+        <h4>References</h4>
+        <ul>
+            <li><a href="http://www.servlets.com/archive/servlet/ReadMsg?msgId=637109&listName=tomcat-user">Message regarding alternative</a></li>
+			<li><a href="http://www.theserverside.com/discussions/thread.tss?thread_id=46465">An alternative</a></li>
+			<li><a href="http://www.fortify.com/vulncat/java/j2ee_badpractices_threads.html">Bad Practice shown at Fortify</a></li>
+        </ul>
+</p>
+END;

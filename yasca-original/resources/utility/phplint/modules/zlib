@@ -1,0 +1,28 @@
+<?
+/*. DOC   Zlib Compression Functions
+
+See: <a href="http://www.php.net/manual/en/ref.zlib.php"><code>http://www.php.net/manual/en/ref.zlib.php</code></a>
+
+.*/
+
+
+# FIXME: dummy values
+define('FORCE_GZIP', 1);
+define('FORCE_DEFLATE', 1);
+
+/*. array .*/ function gzfile(/*. string .*/ $filename /*., args .*/){}
+/*. resource .*/ function gzopen(/*. string .*/ $filename, /*. string .*/ $mode /*., args .*/){}
+/*. int   .*/ function readgzfile(/*. string .*/ $filename /*., args .*/){}
+/*. string.*/ function gzcompress(/*. string .*/ $data /*., args .*/){}
+/*. string.*/ function gzuncompress(/*. string .*/ $data /*., args .*/){}
+/*. string.*/ function gzdeflate(/*. string .*/ $data /*., args .*/){}
+/*. string.*/ function gzinflate(/*. string .*/ $data /*., args .*/){}
+/*. string.*/ function zlib_get_coding_type(){}
+/*. string.*/ function gzencode(/*. string .*/ $data /*., args .*/){}
+/*. string.*/ function ob_gzhandler(/*. string .*/ $str, /*. int .*/ $mode){}
+/*. bool  .*/ function gzrewind(/*. resource .*/ $zp){}
+/*. bool  .*/ function gzeof(/*. resource .*/ $f){}
+/*. string.*/ function gzgetc(/*. resource .*/ $h){}
+/*. string.*/ function gzgets(/*. resource .*/ $f /*., args .*/){}
+/*. bool  .*/ function gzclose(/*.resource.*/ $zp){}
+?>

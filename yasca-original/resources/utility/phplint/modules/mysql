@@ -1,0 +1,171 @@
+<?
+/*. DOC   MySQL Functions
+
+
+See: <a href="http://www.php.net/manual/en/ref.mysql.php"><code>http://www.php.net/manual/en/ref.mysql.php</code></a>
+
+.*/
+
+# Required for E_WARNING:
+/*. require_module 'standard'; .*/
+
+
+# FIXME: dummy values
+define('MYSQL_ASSOC', 1);
+define('MYSQL_NUM', 1);
+define('MYSQL_BOTH', 1);
+define('MYSQL_CLIENT_COMPRESS', 1);
+define('MYSQL_CLIENT_SSL', 1);
+define('MYSQL_CLIENT_INTERACTIVE', 1);
+define('MYSQL_CLIENT_IGNORE_SPACE', 1);
+
+/*. int    .*/ function mysql_affected_rows( /*. args .*/)
+{ trigger_error("", E_WARNING); }
+/*. string .*/ function mysql_client_encoding(/*. args .*/)
+{ trigger_error("", E_WARNING); }
+/*. bool   .*/ function mysql_close(/*. args .*/)
+{ trigger_error("", E_WARNING); }
+/*. resource .*/ function mysql_connect(/*. args .*/){}
+
+/*. bool   .*/ function mysql_create_db(/*. string .*/ $database_name /*., args .*/)
+/*.
+	DOC
+	<@deprecated It is preferable to use <@item mysql_query()> to issue a
+	sql CREATE DATABASE statement instead.>
+.*/
+{}
+
+/*. bool   .*/ function mysql_data_seek(/*. resource .*/ $result, /*. int .*/ $row_number)
+{ trigger_error("", E_WARNING); }
+
+/*. resource .*/ function mysql_db_query(/*.string.*/ $db, /*.string.*/ $query /*., args .*/)
+/*. DOC
+	<@deprecated Use <@item mysql_select_db()> and <@item mysql_query()>
+	instead.
+	Be aware that this function does NOT switch back to the database you
+	were connected before. In other words, you can't use this function
+	to temporarily run a sql query on another database, you would have
+	to manually switch back. Users are strongly encouraged to use the
+	database.table syntax in their sql queries or <@item mysql_select_db()>
+	instead of this function.>
+.*/
+{ trigger_error("", E_WARNING); }
+
+/*. bool   .*/ function mysql_drop_db(/*. string .*/ $database_name /*., args .*/)
+/*. DOC
+	<@deprecated This function is deprecated, it is preferable to use <@item
+	mysql_query()> to issue a sql DROP DATABASE statement instead.>
+.*/
+{ trigger_error("", E_WARNING); }
+
+/*. int    .*/ function mysql_errno(/*. args .*/){}
+/*. string .*/ function mysql_error(/*. args .*/){}
+
+/*. string .*/ function mysql_escape_string(/*.string.*/ $s)
+/*. DOC
+	<@deprecated Use <@item mysql_real_escape_string()>.>
+.*/
+{}
+
+/*. array[]string .*/ function mysql_fetch_array(/*. resource .*/ $res /*., args .*/){}
+/*. array[string]string .*/ function mysql_fetch_assoc(/*. resource .*/ $res){}
+
+/*. if_php_ver_4 .*/
+
+	class mysqlFieldDataDummyClass
+	/*. DOC  Info about a field
+
+		Actually this class is anonymous, but PHPLint requires a name.
+	.*/
+	{
+		var /*. string .*/ $name;
+		var /*. string .*/ $table;
+		var /*. string .*/ $def;
+		var /*. int .*/ $max_length;
+		var /*. int .*/ $not_null;
+		var /*. int .*/ $primary_key;
+		var /*. int .*/ $multiple_key;
+		var /*. int .*/ $unique_key;
+		var /*. int .*/ $numeric;
+		var /*. int .*/ $blob;
+		var /*. string .*/ $type;
+		var /*. int .*/ $unsigned;
+		var /*. int .*/ $zerofill;
+	}
+
+/*. else .*/
+
+	class mysqlFieldDataDummyClass
+	/*. DOC  Info about a field
+
+		Actually this class is anonymous, but PHPLint requires a name.
+	.*/
+	{
+		public /*. string .*/ $name;
+		public /*. string .*/ $table;
+		public /*. string .*/ $def;
+		public /*. int .*/ $max_length;
+		public /*. int .*/ $not_null;
+		public /*. int .*/ $primary_key;
+		public /*. int .*/ $multiple_key;
+		public /*. int .*/ $unique_key;
+		public /*. int .*/ $numeric;
+		public /*. int .*/ $blob;
+		public /*. string .*/ $type;
+		public /*. int .*/ $unsigned;
+		public /*. int .*/ $zerofill;
+	}
+
+/*. end_if_php_ver .*/
+
+/*. mysqlFieldDataDummyClass .*/ function mysql_fetch_field(/*. resource .*/ $res /*., args .*/){}
+
+/*. array  .*/ function mysql_fetch_lengths(/*. resource .*/ $result){}
+/*. mixed  .*/ function mysql_fetch_object(/*. resource .*/ $res){}
+/*. array  .*/ function mysql_fetch_row(/*. resource .*/ $result){}
+/*. string .*/ function mysql_field_flags(/*. resource .*/ $result, /*. int .*/ $field_offset){ trigger_error("", E_WARNING); }
+/*. int    .*/ function mysql_field_len(/*. resource .*/ $result, /*. int .*/ $field_offset){ trigger_error("", E_WARNING); }
+/*. string .*/ function mysql_field_name(/*. resource .*/ $result, /*. int .*/ $field_index){ trigger_error("", E_WARNING); }
+/*. bool   .*/ function mysql_field_seek(/*. resource .*/ $result, /*. int .*/ $field_offset){ trigger_error("", E_WARNING); }
+/*. string .*/ function mysql_field_table(/*. resource .*/ $result, /*. int .*/ $field_offset){ trigger_error("", E_WARNING); }
+/*. string .*/ function mysql_field_type(/*. resource .*/ $result, /*. int .*/ $field_offset){ trigger_error("", E_WARNING); }
+/*. bool   .*/ function mysql_free_result(/*. resource .*/ $result){ trigger_error("", E_WARNING); }
+/*. string .*/ function mysql_get_client_info(){}
+/*. string .*/ function mysql_get_host_info( /*. args .*/){ trigger_error("", E_WARNING); }
+/*. int    .*/ function mysql_get_proto_info( /*. args .*/){ trigger_error("", E_WARNING); }
+/*. string .*/ function mysql_get_server_info( /*. args .*/){ trigger_error("", E_WARNING); }
+/*. string .*/ function mysql_info( /*. args .*/){ trigger_error("", E_WARNING); }
+/*. int    .*/ function mysql_insert_id( /*. args .*/){ trigger_error("", E_WARNING); }
+/*. resource .*/ function mysql_list_dbs( /*. args .*/){ trigger_error("", E_WARNING); }
+
+/*. resource .*/ function mysql_list_fields(/*. string .*/ $database_name, /*. string .*/ $table_name /*., args .*/)
+/*. DOC
+	<@deprecated It is preferable to use <@item mysql_query()> to issue a
+	SQL SHOW COLUMNS FROM table [LIKE 'name'] statement instead.>
+.*/
+{ trigger_error("", E_WARNING); }
+
+/*. resource .*/ function mysql_list_processes( /*. args .*/){ trigger_error("", E_WARNING); }
+
+/*. resource .*/ function mysql_list_tables(/*. string .*/ $database_name /*., args .*/)
+/*. DOC
+	<@deprecated It is preferable to use <@item mysql_query()> to issue a
+	SQL SHOW TABLES [FROM db_name] [LIKE 'pattern'] statement instead.>
+.*/
+{ trigger_error("", E_WARNING); }
+
+/*. int    .*/ function mysql_num_fields(/*. resource .*/ $result){}
+/*. int    .*/ function mysql_num_rows(/*. resource .*/ $res){}
+/*. resource .*/ function mysql_pconnect( /*. args .*/){}
+/*. bool   .*/ function mysql_ping( /*. args .*/){ trigger_error("", E_WARNING); }
+/*. resource .*/ function mysql_query(/*.string.*/ $query /*., args .*/){ trigger_error("", E_WARNING); }
+/*. string .*/ function mysql_real_escape_string(/*. string .*/ $to_be_escaped /*., args .*/){}
+/*. mixed  .*/ function mysql_result(/*. resource .*/ $result, /*. int .*/ $row /*., args .*/){}
+/*. bool   .*/ function mysql_select_db(/*.string.*/ $db /*., args .*/){ trigger_error("", E_WARNING); }
+/*. string .*/ function mysql_stat( /*. args .*/){ trigger_error("", E_WARNING); }
+/*. int    .*/ function mysql_thread_id( /*. args .*/){ trigger_error("", E_WARNING); }
+/*. resource .*/ function mysql_unbuffered_query(/*. string .*/ $query /*., args .*/){ trigger_error("", E_WARNING); }
+/*. int    .*/ function mysql_change_user(/*. string .*/ $user, /*. string .*/ $password /*., args .*/)
+{ trigger_error("", E_WARNING); }
+/*. bool   .*/ function mysql_set_charset(/*. string .*/ $charset /*. , args .*/){ trigger_error("", E_WARNING); }
+?>

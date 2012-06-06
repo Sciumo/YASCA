@@ -1,0 +1,22 @@
+# Todo Add more to this
+name = Incorrect Null Check Logic
+file_type = c, cpp, JAVA
+grep = /[^\!\s*]([a-zA-Z_][a-zA-Z0-9_]*)\s*\|\|\s*\1(\-\>|\.)/i
+grep = /\!([a-zA-Z_][a-zA-Z0-9_]*)\s*\&\&\s*\1(\-\>|\.)/i
+grep = /([a-zA-Z_][a-zA-Z0-9_]*)\s*\!\=\s*NULL\s*\|\|\s*\1(\-\>|\.)/i
+grep = /([a-zA-Z_][a-zA-Z0-9_]*)\s*\!\=\s*NULL\s*\&\&\s*\1(\-\>|\.)/i
+grep = /([a-zA-Z_][a-zA-Z0-9_]*)\s*\=\=\s*NULL\s*\&\&\s*\1(\-\>|\.)/i
+category = Bug: Incorrect Null Check
+severity = 2
+description =
+<p>
+	This appears to be a simple bug related to the null check. If the value is null, then the second
+	part of the expression should not be executed (it will resolve to a null pointer).
+</p>
+<p>
+	<h4>References</h4>
+	<ul>
+		<li>TODO</li>
+	</ul>
+</p>
+END;

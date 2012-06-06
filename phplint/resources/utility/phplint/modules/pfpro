@@ -1,0 +1,15 @@
+<?
+/*. DOC   Verisign Payflow Pro Functions
+
+See: <a href="http://www.php.net/manual/en/ref.pfpro.php"><code>http://www.php.net/manual/en/ref.pfpro.php</code></a>
+
+.*/
+
+
+
+/*. string.*/ function pfpro_version(){}
+/*. bool  .*/ function pfpro_init(){}
+/*. bool  .*/ function pfpro_cleanup(){}
+/*. string.*/ function pfpro_process_raw(/*. string .*/ $parmlist /*., args .*/){}
+/*. array .*/ function pfpro_process(/*. array .*/ $parmlist /*., args .*/){}
+?>

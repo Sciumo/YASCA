@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<ruleset name="Yasca Rulesets"
+    xmlns="http://pmd.sf.net/ruleset/1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0 http://pmd.sf.net/ruleset_xml_schema.xsd"
+    xsi:noNamespaceSchemaLocation="http://pmd.sf.net/ruleset_xml_schema.xsd">
+
+  <description>
+This ruleset contains links to all of the rulesets that are included for use in Yasca by default. Change
+this file for permanent changes, or just rename any of the other rules to eliminate the underscore-prefix.
+  </description>
+
+  <rule ref="./plugins/default/pmd/_favorites.xml"/>
+  <rule ref="./plugins/default/pmd/_basic-jsp.xml"/>
+  <rule ref="./plugins/default/pmd/_basic.xml">
+  	<exclude name="CollapsibleIfStatements"/>
+  	<exclude name="BooleanInstantiation"/>
+  </rule>
+  <rule ref="./plugins/default/pmd/_sunsecure.xml"/>
+  <rule ref="./plugins/default/pmd/_android.xml"/>
+  <rule ref="./plugins/default/pmd/_strings.xml">
+  	<exclude name="StringInstantiation"/>
+  	<exclude name="InefficientEmptyStringCheck"/>
+  	<exclude name="ConsecutiveLiteralAppends"/>
+  </rule>
+  <rule ref="./plugins/default/pmd/_j2ee.xml"/>
+</ruleset>
+
+
+

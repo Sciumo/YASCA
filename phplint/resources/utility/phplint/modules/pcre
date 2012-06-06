@@ -1,0 +1,25 @@
+<?
+/*. DOC   Regular Expression Functions (Perl-Compatible)
+
+See: <a href="http://www.php.net/manual/en/ref.pcre.php"><code>http://www.php.net/manual/en/ref.pcre.php</code></a>
+
+.*/
+
+
+define('PREG_PATTERN_ORDER', 1);
+define('PREG_SET_ORDER', 2);
+define('PREG_OFFSET_CAPTURE', 256);
+define('PREG_SPLIT_NO_EMPTY', 1);
+define('PREG_SPLIT_DELIM_CAPTURE', 2);
+define('PREG_SPLIT_OFFSET_CAPTURE', 4);
+define('PREG_GREP_INVERT', 1);
+
+/*. int   .*/ function preg_match(/*. string .*/ $pattern, /*. string .*/ $subject /*., args .*/){}
+/*. int   .*/ function preg_match_all(/*. string .*/ $pattern, /*. string .*/ $subject, /*. array[int]string .*/ &$matches /*., args .*/){}
+/*. string.*/ function preg_replace(/*. mixed .*/ $regex, /*. mixed .*/ $replace, /*. mixed .*/ $subject /*., args .*/){}
+/*. string.*/ function preg_replace_callback(/*. mixed .*/ $regex, /*. mixed .*/ $string_, /*. mixed .*/ $subject /*., args .*/){}
+/*. array .*/ function preg_split(/*. string .*/ $pattern, /*. string .*/ $subject /*., args .*/){}
+/*. string.*/ function preg_quote(/*. string .*/ $str, /*. string .*/ $delim_char){}
+/*. array .*/ function preg_grep(/*. string .*/ $regex, /*. array .*/ $input){}
+/*. int .*/ function preg_last_error(){}
+?>

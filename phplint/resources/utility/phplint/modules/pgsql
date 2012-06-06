@@ -1,0 +1,118 @@
+<?
+/*. DOC   PostgreSQL Functions
+
+See: <a href="http://www.php.net/manual/en/ref.pgsql.php"><code>http://www.php.net/manual/en/ref.pgsql.php</code></a>
+
+.*/
+
+
+define('PGSQL_ASSOC', 1 /* dummy value */);
+define('PGSQL_NUM', 1 /* dummy value */);
+define('PGSQL_BOTH', 1 /* dummy value */);
+define('PGSQL_CONNECT_FORCE_NEW', 1 /* dummy value */);
+define('PGSQL_CONNECTION_BAD', 1 /* dummy value */);
+define('PGSQL_CONNECTION_OK', 1 /* dummy value */);
+define('PGSQL_SEEK_SET', 1 /* dummy value */);
+define('PGSQL_SEEK_CUR', 1 /* dummy value */);
+define('PGSQL_SEEK_END', 1 /* dummy value */);
+define('PGSQL_EMPTY_QUERY', 1 /* dummy value */);
+define('PGSQL_COMMAND_OK', 1 /* dummy value */);
+define('PGSQL_TUPLES_OK', 1 /* dummy value */);
+define('PGSQL_COPY_OUT', 1 /* dummy value */);
+define('PGSQL_COPY_IN', 1 /* dummy value */);
+define('PGSQL_BAD_RESPONSE', 1 /* dummy value */);
+define('PGSQL_NONFATAL_ERROR', 1 /* dummy value */);
+define('PGSQL_FATAL_ERROR', 1 /* dummy value */);
+define('PGSQL_TRANSACTION_IDLE', 1 /* dummy value */);
+define('PGSQL_TRANSACTION_ACTIVE', 1 /* dummy value */);
+define('PGSQL_TRANSACTION_INTRANS', 1 /* dummy value */);
+define('PGSQL_TRANSACTION_INERROR', 1 /* dummy value */);
+define('PGSQL_TRANSACTION_UNKNOWN', 1 /* dummy value */);
+define('PGSQL_DIAG_SEVERITY', 1 /* dummy value */);
+define('PGSQL_DIAG_SQLSTATE', 1 /* dummy value */);
+define('PGSQL_DIAG_MESSAGE_PRIMARY', 1 /* dummy value */);
+define('PGSQL_DIAG_MESSAGE_DETAIL', 1 /* dummy value */);
+define('PGSQL_DIAG_MESSAGE_HINT', 1 /* dummy value */);
+define('PGSQL_DIAG_STATEMENT_POSITION', 1 /* dummy value */);
+define('PGSQL_DIAG_INTERNAL_POSITION', 1 /* dummy value */);
+define('PGSQL_DIAG_INTERNAL_QUERY', 1 /* dummy value */);
+define('PGSQL_DIAG_CONTEXT', 1 /* dummy value */);
+define('PGSQL_DIAG_SOURCE_FILE', 1 /* dummy value */);
+define('PGSQL_DIAG_SOURCE_LINE', 1 /* dummy value */);
+/*. int    .*/ function pg_affected_rows(/*. resource .*/ $result){}
+/*. bool   .*/ function pg_cancel_query(/*. resource .*/ $connection){}
+/*. string .*/ function pg_client_encoding( /*. args .*/){}
+/*. bool   .*/ function pg_close(/*. args .*/){}
+/*. resource .*/ function pg_connect(/*.string.*/ $conn_str /*., args .*/){}
+/*. bool   .*/ function pg_connection_busy(/*. resource .*/ $connection){}
+/*. bool   .*/ function pg_connection_reset(/*. resource .*/ $connection){}
+/*. int    .*/ function pg_connection_status(/*. resource .*/ $connnection){}
+/*. array  .*/ function pg_convert(/*. resource .*/ $db, /*. string .*/ $table, /*. array .*/ $values /*., args .*/){}
+/*. bool   .*/ function pg_copy_from(/*. resource .*/ $connection, /*. string .*/ $table_name , /*. array .*/ $rows /*., args .*/){}
+/*. array  .*/ function pg_copy_to(/*. resource .*/ $connection, /*. string .*/ $table_name /*., args .*/){}
+/*. string .*/ function pg_dbname( /*. args .*/){}
+/*. mixed  .*/ function pg_delete(/*. resource .*/ $db, /*. string .*/ $table, /*. array .*/ $ids /*., args .*/){}
+/*. bool   .*/ function pg_end_copy( /*. args .*/){}
+/*. string .*/ function pg_escape_bytea(/*.string.*/ $s){}
+/*. string .*/ function pg_escape_string(/*.string.*/ $s){}
+/*. resource .*/ function pg_execute(/*. args .*/){}
+/*. array  .*/ function pg_fetch_all(/*. resource .*/ $result){}
+/*. array[]string .*/ function pg_fetch_array(/*.resource.*/ $res /*., args .*/){}
+/*. array[string]string .*/ function pg_fetch_assoc(/*.resource.*/ $res /*., args .*/){}
+/*. object .*/ function pg_fetch_object(/*. resource .*/ $result /*., args .*/){}
+/*. string .*/ function pg_fetch_result(/*.resource.*/ $res /*., args .*/){}
+/*. array  .*/ function pg_fetch_row(/*. resource .*/ $result /*., args .*/){}
+/*. int    .*/ function pg_field_is_null(/*. resource .*/ $result /*., args .*/){}
+/*. string .*/ function pg_field_name(/*. resource .*/ $result, /*. int .*/ $field_number){}
+/*. int    .*/ function pg_field_num(/*. resource .*/ $result, /*. string .*/ $field_name){}
+/*. int    .*/ function pg_field_prtlen(/*. resource .*/ $result /*., args .*/){}
+/*. int    .*/ function pg_field_size(/*. resource .*/ $result, /*. int .*/ $field_number){}
+/*. string .*/ function pg_field_type(/*. resource .*/ $result, /*. int .*/ $field_number){}
+/*. bool   .*/ function pg_free_result(/*.resource.*/ $res){}
+/*. array  .*/ function pg_get_notify( /*. args .*/){}
+/*. int    .*/ function pg_get_pid( /*. args .*/){}
+/*. resource .*/ function pg_get_result(/*. resource .*/ $connection){}
+/*. string .*/ function pg_host( /*. args .*/){}
+/*. mixed  .*/ function pg_insert(/*. resource .*/ $db, /*. string .*/ $table, /*. array .*/ $values /*., args .*/){}
+/*. string .*/ function pg_last_error(/*. args .*/){}
+/*. string .*/ function pg_last_notice(/*.resource.*/ $res){}
+/*. string .*/ function pg_last_oid(/*. resource .*/ $result){}
+/*. bool   .*/ function pg_lo_close(/*. resource .*/ $large_object){}
+/*. int    .*/ function pg_lo_create( /*. args .*/){}
+/*. bool   .*/ function pg_lo_export( /*. args .*/){}
+/*. int    .*/ function pg_lo_import( /*. args .*/){}
+/*. resource .*/ function pg_lo_open( /*. args .*/){}
+/*. int    .*/ function pg_lo_read_all(/*. resource .*/ $large_object){}
+/*. string .*/ function pg_lo_read(/*. resource .*/ $large_object /*., args .*/){}
+/*. bool   .*/ function pg_lo_seek(/*. resource .*/ $large_object, /*. int .*/ $offset /*., args .*/){}
+/*. int    .*/ function pg_lo_tell(/*. resource .*/ $large_object){}
+/*. bool   .*/ function pg_lo_unlink( /*. args .*/){}
+/*. int .*/ function pg_lo_write(/*. resource .*/ $large_object, /*. string .*/ $buf /*., args .*/){}
+/*. array  .*/ function pg_meta_data(/*. resource .*/ $db, /*. string .*/ $table){}
+/*. int    .*/ function pg_num_fields(/*. resource .*/ $result){}
+/*. int    .*/ function pg_num_rows(/*.resource.*/ $res){}
+/*. int    .*/ function pg_numrows(/*.resource.*/ $res){}
+/*. string .*/ function pg_options( /*. args .*/){}
+/*. string .*/ function pg_parameter_status( /*. args .*/){}
+/*. resource .*/ function pg_pconnect(/*. args .*/){}
+/*. bool   .*/ function pg_ping( /*. args .*/){}
+/*. int    .*/ function pg_port( /*. args .*/){}
+/*. bool   .*/ function pg_put_line( /*. args .*/){}
+/*. resource .*/ function pg_query(/*.resource.*/ $conn, /*.string.*/ $query){}
+/*. string .*/ function pg_result_error_field(/*.resource.*/ $res){}
+/*. string .*/ function pg_result_error(/*. resource .*/ $result){}
+/*. bool   .*/ function pg_result_seek(/*. resource .*/ $result, /*. int .*/ $offset){}
+/*. mixed  .*/ function pg_result_status(/*. resource .*/ $result /*., args .*/){}
+/*. mixed  .*/ function pg_select(/*. resource .*/ $db, /*. string .*/ $table, /*. array .*/ $ids /*., args .*/){}
+/*. bool   .*/ function pg_send_query(/*. resource .*/ $connection, /*. string .*/ $qeury){}
+/*. int    .*/ function pg_set_client_encoding( /*. args .*/){}
+/*. bool   .*/ function pg_trace(/*. string .*/ $filename /*., args .*/){}
+/*. string .*/ function pg_tty( /*. args .*/){}
+/*. string .*/ function pg_unescape_bytea(/*. string .*/ $data){}
+/*. bool   .*/ function pg_untrace( /*. args .*/){}
+/*. mixed  .*/ function pg_update(/*. resource .*/ $db, /*. string .*/ $table, /*. array .*/ $fields, /*. array .*/ $ids /*., args .*/){}
+/*. array  .*/ function pg_version( /*. args .*/){}
+/*. if_php_ver_5 .*/
+	/*. mixed .*/ function pg_field_table(/*. resource .*/ $result, /*. int .*/ $field_number /*. , args .*/){}
+/*. end_if_php_ver .*/
+?>

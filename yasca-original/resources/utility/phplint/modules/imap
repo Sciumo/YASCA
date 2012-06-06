@@ -1,0 +1,139 @@
+<?
+/*. DOC   IMAP, POP3 and NNTP Functions
+
+See: <a href="http://www.php.net/manual/en/ref.imap.php"><code>http://www.php.net/manual/en/ref.imap.php</code></a>
+
+.*/
+
+
+# FIXME: all dummy values
+define('NIL', 1);
+define('IMAP_OPENTIMEOUT', 1);
+define('IMAP_READTIMEOUT', 1);
+define('IMAP_WRITETIMEOUT', 1);
+define('IMAP_CLOSETIMEOUT', 1);
+define('OP_DEBUG', 1);
+define('OP_READONLY', 1);
+define('OP_ANONYMOUS', 1);
+define('OP_SHORTCACHE', 1);
+define('OP_SILENT', 1);
+define('OP_PROTOTYPE', 1);
+define('OP_HALFOPEN', 1);
+define('OP_EXPUNGE', 1);
+define('OP_SECURE', 1);
+define('CL_EXPUNGE', 1);
+define('FT_UID', 1);
+define('FT_PEEK', 1);
+define('FT_NOT', 1);
+define('FT_INTERNAL', 1);
+define('FT_PREFETCHTEXT', 1);
+define('ST_UID', 1);
+define('ST_SILENT', 1);
+define('ST_SET', 1);
+define('CP_UID', 1);
+define('CP_MOVE', 1);
+define('SE_UID', 1);
+define('SE_FREE', 1);
+define('SE_NOPREFETCH', 1);
+define('SO_FREE', 1);
+define('SO_NOSERVER', 1);
+define('SA_MESSAGES', 1);
+define('SA_RECENT', 1);
+define('SA_UNSEEN', 1);
+define('SA_UIDNEXT', 1);
+define('SA_UIDVALIDITY', 1);
+define('SA_ALL', 1);
+define('LATT_NOINFERIORS', 1);
+define('LATT_NOSELECT', 1);
+define('LATT_MARKED', 1);
+define('LATT_UNMARKED', 1);
+define('LATT_REFERRAL', 1);
+define('LATT_HASCHILDREN', 1);
+define('LATT_HASNOCHILDREN', 1);
+define('SORTDATE', 1);
+define('SORTARRIVAL', 1);
+define('SORTFROM', 1);
+define('SORTSUBJECT', 1);
+define('SORTTO', 1);
+define('SORTCC', 1);
+define('SORTSIZE', 1);
+define('TYPETEXT', 1);
+define('TYPEMULTIPART', 1);
+define('TYPEMESSAGE', 1);
+define('TYPEAPPLICATION', 1);
+define('TYPEAUDIO', 1);
+define('TYPEIMAGE', 1);
+define('TYPEVIDEO', 1);
+define('TYPEMODEL', 1);
+define('TYPEOTHER', 1);
+define('ENC7BIT', 1);
+define('ENC8BIT', 1);
+define('ENCBINARY', 1);
+define('ENCBASE64', 1);
+define('ENCQUOTEDPRINTABLE', 1);
+define('ENCOTHER', 1);
+
+/*. object .*/ function imap_header(/*. int .*/ $stream_id, /*. int .*/ $msg_no /*., args .*/){}
+/*. resource .*/ function imap_open(/*. string .*/ $mailbox, /*. string .*/ $user, /*. string .*/ $password /*., args .*/){}
+/*. bool .*/ function imap_reopen(/*. resource .*/ $stream_id, /*. string .*/ $mailbox /*., args .*/){}
+/*. bool .*/ function imap_append(/*. resource .*/ $stream_id, /*. string .*/ $folder, /*. string .*/ $message /*., args .*/){}
+/*. int .*/ function imap_num_msg(/*. resource .*/ $stream_id){}
+/*. bool .*/ function imap_ping(/*. resource .*/ $stream_id){}
+/*. int .*/ function imap_num_recent(/*. resource .*/ $stream_id){}
+/*. array .*/ function imap_get_quota(/*. resource .*/ $stream_id, /*. string .*/ $qroot){}
+/*. array .*/ function imap_get_quotaroot(/*. resource .*/ $stream_id, /*. string .*/ $mbox){}
+/*. bool .*/ function imap_set_quota(/*. resource .*/ $stream_id, /*. string .*/ $qroot, /*. int .*/ $mailbox_size){}
+/*. bool .*/ function imap_setacl(/*. resource .*/ $stream_id, /*. string .*/ $mailbox, /*. string .*/ $id, /*. string .*/ $rights){}
+/*. array .*/ function imap_getacl(/*. resource .*/ $stream_id, /*. string .*/ $mailbox){}
+/*. bool .*/ function imap_expunge(/*. resource .*/ $stream_id){}
+/*. bool .*/ function imap_close(/*. resource .*/ $stream_id /*., args .*/){}
+/*. array .*/ function imap_headers(/*. resource .*/ $stream_id){}
+/*. string .*/ function imap_body(/*. resource .*/ $stream_id, /*. int .*/ $msg_no /*., args .*/){}
+/*. bool .*/ function imap_mail_copy(/*. resource .*/ $stream_id, /*. int .*/ $msg_no, /*. string .*/ $mailbox /*., args .*/){}
+/*. bool .*/ function imap_mail_move(/*. resource .*/ $stream_id, /*. int .*/ $msg_no, /*. string .*/ $mailbox /*., args .*/){}
+/*. bool .*/ function imap_createmailbox(/*. resource .*/ $stream_id, /*. string .*/ $mailbox){}
+/*. bool .*/ function imap_renamemailbox(/*. resource .*/ $stream_id, /*. string .*/ $old_name, /*. string .*/ $new_name){}
+/*. bool .*/ function imap_deletemailbox(/*. resource .*/ $stream_id, /*. string .*/ $mailbox){}
+/*. array .*/ function imap_list(/*. resource .*/ $stream_id, /*. string .*/ $ref, /*. string .*/ $pattern){}
+/*. array .*/ function imap_getmailboxes(/*. resource .*/ $stream_id, /*. string .*/ $ref, /*. string .*/ $pattern){}
+/*. array .*/ function imap_scan(/*. resource .*/ $stream_id, /*. string .*/ $ref, /*. string .*/ $pattern, /*. string .*/ $content){}
+/*. object .*/ function imap_check(/*. resource .*/ $stream_id){}
+/*. bool .*/ function imap_delete(/*. resource .*/ $stream_id, /*. int .*/ $msg_no /*., args .*/){}
+/*. bool .*/ function imap_undelete(/*. resource .*/ $stream_id, /*. int .*/ $msg_no){}
+/*. object .*/ function imap_headerinfo(/*. resource .*/ $stream_id, /*. int .*/ $msg_no /*., args .*/){}
+/*. object .*/ function imap_rfc822_parse_headers(/*. string .*/ $headers /*., args .*/){}
+/*. array .*/ function imap_lsub(/*. resource .*/ $stream_id, /*. string .*/ $ref, /*. string .*/ $pattern){}
+/*. array .*/ function imap_getsubscribed(/*. resource .*/ $stream_id, /*. string .*/ $ref, /*. string .*/ $pattern){}
+/*. bool .*/ function imap_subscribe(/*. resource .*/ $stream_id, /*. string .*/ $mailbox){}
+/*. bool .*/ function imap_unsubscribe(/*. resource .*/ $stream_id, /*. string .*/ $mailbox){}
+/*. object .*/ function imap_fetchstructure(/*. resource .*/ $stream_id, /*. int .*/ $msg_no /*., args .*/){}
+/*. string .*/ function imap_fetchbody(/*. resource .*/ $stream_id, /*. int .*/ $msg_no, /*. string .*/ $section /*., args .*/){}
+/*. string .*/ function imap_base64(/*. string .*/ $text){}
+/*. string .*/ function imap_qprint(/*. string .*/ $text){}
+/*. string .*/ function imap_8bit(/*. string .*/ $text){}
+/*. string .*/ function imap_binary(/*. string .*/ $text){}
+/*. object .*/ function imap_mailboxmsginfo(/*. resource .*/ $stream_id){}
+/*. string .*/ function imap_rfc822_write_address(/*. string .*/ $mailbox, /*. string .*/ $host, /*. string .*/ $personal){}
+/*. array .*/ function imap_rfc822_parse_adrlist(/*. string .*/ $address_string, /*. string .*/ $default_host){}
+/*. string .*/ function imap_utf8(/*. string .*/ $mime_encoded_text){}
+/*. string .*/ function imap_utf7_decode(/*. string .*/ $buf){}
+/*. string .*/ function imap_utf7_encode(/*. string .*/ $buf){}
+/*. bool .*/ function imap_setflag_full(/*. resource .*/ $stream_id, /*. string .*/ $sequence, /*. string .*/ $flag /*., args .*/){}
+/*. bool .*/ function imap_clearflag_full(/*. resource .*/ $stream_id, /*. string .*/ $sequence, /*. string .*/ $flag /*., args .*/){}
+/*. array .*/ function imap_sort(/*. resource .*/ $stream_id, /*. int .*/ $criteria, /*. int .*/ $reverse /*., args .*/){}
+/*. string .*/ function imap_fetchheader(/*. resource .*/ $stream_id, /*. int .*/ $msg_no /*., args .*/){}
+/*. int .*/ function imap_uid(/*. resource .*/ $stream_id, /*. int .*/ $msg_no){}
+/*. int .*/ function imap_msgno(/*. resource .*/ $stream_id, /*. int .*/ $unique_msg_id){}
+/*. object .*/ function imap_status(/*. resource .*/ $stream_id, /*. string .*/ $mailbox, /*. int .*/ $options){}
+/*. object .*/ function imap_bodystruct(/*. resource .*/ $stream_id, /*. int .*/ $msg_no, /*. string .*/ $section){}
+/*. array .*/ function imap_fetch_overview(/*. resource .*/ $stream_id, /*. int .*/ $msg_no /*., args .*/){}
+/*. string .*/ function imap_mail_compose(/*. array .*/ $envelope, /*. array .*/ $body){}
+/*. bool .*/ function imap_mail(/*. string .*/ $to, /*. string .*/ $subject, /*. string .*/ $message /*., args .*/){}
+/*. array .*/ function imap_search(/*. resource .*/ $stream_id, /*. string .*/ $criteria /*., args .*/){}
+/*. array .*/ function imap_alerts(){}
+/*. array .*/ function imap_errors(){}
+/*. string .*/ function imap_last_error(){}
+/*. array .*/ function imap_mime_header_decode(/*. string .*/ $str){}
+/*. array .*/ function imap_thread(/*. resource .*/ $stream_id /*., args .*/){}
+/*. mixed .*/ function imap_timeout(/*. int .*/ $timeout_type /*., args .*/){}
+?>

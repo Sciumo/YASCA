@@ -1,0 +1,46 @@
+<?
+/*. DOC   libxml Functions
+
+See: <a href="http://www.php.net/manual/en/ref.libxml.php"><code>http://www.php.net/manual/en/ref.libxml.php</code></a>
+
+.*/
+
+
+define('LIBXML_VERSION', 1);
+define('LIBXML_NOENT', 1);
+define('LIBXML_DTDLOAD', 1);
+define('LIBXML_DTDATTR', 1);
+define('LIBXML_DTDVALID', 1);
+define('LIBXML_NOERROR', 1);
+define('LIBXML_NOWARNING', 1);
+define('LIBXML_NOBLANKS', 1);
+define('LIBXML_XINCLUDE', 1);
+define('LIBXML_NSCLEAN', 1);
+define('LIBXML_NOCDATA', 1);
+define('LIBXML_NONET', 1);
+define('LIBXML_COMPACT', 1);
+define('LIBXML_NOXMLDECL', 1);
+define('LIBXML_NOEMPTYTAG', 1);
+define('LIBXML_ERR_NONE', 1);
+define('LIBXML_ERR_WARNING', 1);
+define('LIBXML_ERR_ERROR', 1);
+define('LIBXML_ERR_FATAL', 1);
+define('LIBXML_DOTTED_VERSION', '?');
+
+class LibXMLError
+{
+	public /*. int .*/ $code;
+	public /*. int .*/ $column;
+	public /*. string .*/ $file;
+	public /*. int .*/ $level;
+	public /*. int .*/ $line;
+	public /*. string .*/ $message;
+}
+
+/*. void .*/ function libxml_set_streams_context(/*. resource .*/ $streams_context){}
+/*. void .*/ function libxml_use_internal_errors(/*. args .*/){}
+/*. LibXMLError .*/ function libxml_get_last_error(){}
+/*. array[int]LibXMLError .*/ function libxml_get_errors(){}
+/*. void .*/ function libxml_clear_errors() {}
+
+?>

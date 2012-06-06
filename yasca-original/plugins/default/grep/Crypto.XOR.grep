@@ -1,0 +1,33 @@
+name = Use of XOR-based Encryption
+file_type = java,jsp
+grep = /([a-z0-9_]+)\[[^\]]+\\1\.length/i
+category = Using a broken or risky cryptographic algorithm
+category_link = http://www.owasp.org/index.php?title=Using_a_broken_or_risky_cryptographic_algorithm
+severity = 4
+description = 
+<p>
+	The strength of an XOR-based algorithm depends on the length of data being encrypted and
+	the length of the key. For instance, encrypting the string <b>foo bar quux</b> with a
+	key of 'A' (ASCII 65), results in ciphertext of <b>TODO</b>. As you can see, both <b>o</b>'s
+	and both <b>u</b>'s were encrypted to the same value. Using a longer key like 'ABCDEFG' would
+	have resulted in them being different values.
+	
+	As the length of data increases, the strength of XOR-based encryption decreases, and
+	as the length of the key increases, the strength of XOR-based encryption increases. If the
+	key is completely random with a length equal to that of the string being encrypted, it is
+	equivalent to a one-time pad, a "perfect" encryption algorithm.
+	
+	For smaller keys, statistical cryptanalysis methods are usually sufficient to decrypt
+	ciphertext.
+	
+	Therefore, XOR-based encryption should be replaced with a stronger method such as AES or RSA. 
+</p>
+<p>
+	<h4>References</h4>
+	<ul>
+		<li>TODO</li>
+		<li>(<a href="http://www.owasp.org/">OWASP</a>) 
+		<a href="http://www.owasp.org/index.php?title=Using_a_broken_or_risky_cryptographic_algorithm">Using a Broken or Risky Cryptographic Algorithm</a></li>
+	</ul>
+</p>
+END;

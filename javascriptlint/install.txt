@@ -1,0 +1,29 @@
+/-----------------------------------------------------------------------/
+    _     _                         
+   ( )   ( )                           --[ www.yasca.org ]--
+   `\`\_/'/'_ _   ___    ___    _ _   
+     `\ /'/'_` )/',__) /'___) /'_` )
+      | |( (_| |\__, \( (___ ( (_| |
+      (_)`\__,_)(____/`\____)`\__,_)
+
+/-----------------------------------------------------------------------/
+
+                       PLUG-IN INSTALLATION GUIDE
+
+    This plug-in is NOT part of Yasca-Core. It is a separate package
+    that can be utilized by any other program and can be installed
+    into any directory.
+
+    To install this plugin, unzip the distribution file into a
+    directory. For example:
+
+         unzip <distribution.zip> c:\static-analyzers
+
+    Then set the SA_HOME environment variable to that path. 
+    For example:
+
+         SA_HOME=c:\static-analyzers\
+
+    This plugin is adopted from a third-party tool, and released under
+    the same license as the third-party tool. All licenses are stored
+    in the doc/3rdParty/licenses directory within this distribution.

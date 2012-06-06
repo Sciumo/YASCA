@@ -1,0 +1,36 @@
+<?
+/*. DOC   Sybase Functions
+
+See: <a href="http://www.php.net/manual/en/ref.sybase.php"><code>http://www.php.net/manual/en/ref.sybase.php</code></a>
+
+.*/
+
+
+
+/*. int .*/ function sybase_connect( /*. args .*/){}
+/*. int .*/ function sybase_pconnect( /*. args .*/){}
+/*. bool .*/ function sybase_close( /*. args .*/){}
+/*. bool .*/ function sybase_select_db(/*. string .*/ $database /*., args .*/){}
+/*. int .*/ function sybase_query(/*. string .*/ $query /*., args .*/){}
+/*. bool .*/ function sybase_free_result(/*. int .*/ $result){}
+/*. string .*/ function sybase_get_last_message(){}
+/*. int .*/ function sybase_num_rows(/*. int .*/ $result){}
+/*. int .*/ function sybase_num_fields(/*. int .*/ $result){}
+/*. array .*/ function sybase_fetch_row(/*. int .*/ $result){}
+/*. object .*/ function sybase_fetch_object(/*. int .*/ $result){}
+/*. array .*/ function sybase_fetch_array(/*. int .*/ $result){}
+/*. bool .*/ function sybase_data_seek(/*. int .*/ $result, /*. int .*/ $offset){}
+/*. object .*/ function sybase_fetch_field(/*. int .*/ $result /*., args .*/){}
+/*. bool .*/ function sybase_field_seek(/*. int .*/ $result, /*. int .*/ $offset){}
+/*. string .*/ function sybase_result(/*. int .*/ $result, /*. int .*/ $row, /*. mixed .*/ $field){}
+/*. int .*/ function sybase_affected_rows( /*. args .*/){}
+/*. void .*/ function sybase_min_error_severity(/*. int .*/ $severity){}
+/*. void .*/ function sybase_min_message_severity(/*. int .*/ $severity){}
+/*. int .*/ function sybase_unbuffered_query(/*. string .*/ $query /*., args .*/){}
+/*. array .*/ function sybase_fetch_assoc(/*. int .*/ $result){}
+/*. void .*/ function sybase_min_client_severity(/*. int .*/ $severity){}
+/*. void .*/ function sybase_min_server_severity(/*. int .*/ $severity){}
+/*. void .*/ function sybase_deadlock_retry_count(/*. int .*/ $retry_count){}
+/*. bool .*/ function sybase_set_message_handler(/*. mixed .*/ $error_func /*., args .*/){}
+
+?>

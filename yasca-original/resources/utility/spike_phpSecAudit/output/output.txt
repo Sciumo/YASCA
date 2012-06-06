@@ -1,0 +1,21 @@
+
+
+
+Analyzing file: ..\..\test\/CountInForLoop.php . . . . . .
+
+There are no errors that I can find in file: ..\..\test\/CountInForLoop.php
+
+
+
+
+Analyzing file: ..\..\test\/ShortOpenTag.php . . . . . .
+
+There are no errors that I can find in file: ..\..\test\/ShortOpenTag.php
+
+
+
+
+Analyzing file: ..\..\test\/UnquotedArrayKey.php . . . . . .
+
+There are no errors that I can find in file: ..\..\test\/UnquotedArrayKey.php
+

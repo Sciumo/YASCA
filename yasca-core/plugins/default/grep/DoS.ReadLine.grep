@@ -1,0 +1,23 @@
+name = Dangerous Function - BufferedReader.readLine()
+file_type = JAVA
+grep = /\.readLine\(/
+category = Denial of Service
+severity = 4
+category_link = http://www.fortifysoftware.com/vulncat/java/java_input_denial_service.html
+description = 
+<p>
+		The BufferedReader.readLine() function is dangerous because it will continue to 
+		read data until an EOF marker is received. This could be used as a denial of service,
+		both because (a) the thread will continue to run for as long as data is being received,
+		and (b) all data received will be placed in memory (until the memory limit is reached).
+
+		Instead of BufferedReader.readLine(), the BufferedReader.read() function can be used
+		to limit the amount of data read.
+</p>
+<p>
+	<h4>References</h4>
+	<ul>
+		<li><a href="http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=4107821">BufferedReader.readLine bug report.</a></li>
+	</ul>
+</p>
+END;

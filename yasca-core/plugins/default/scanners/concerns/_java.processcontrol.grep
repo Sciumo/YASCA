@@ -1,0 +1,7 @@
+name = Java Process Control
+file_type = java,jsp
+grep = /Runtime\.exec\(|Class\.forName\(|\.getInstance\(/i
+category = Process Control
+severity = 1 
+description = A process control vulnerability may be present. <a target="_blank" href="http://designin.web.boeing.com/osCommandInjection.asp">More Info</a>
+END;

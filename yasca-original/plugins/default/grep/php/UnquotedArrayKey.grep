@@ -1,0 +1,17 @@
+name = Unquoted Array Key
+file_type = php
+grep = /\$[a-z_][a-z0-9_]*\s*\[\s*[a-z_][a-z_0-9]*/i
+category = Best Practice: Always Quote Array Keys
+category_link = http://www.phpvs.net/2008/06/04/ten-php-best-practices-tips-that-will-get-you-a-job/
+severity = 5
+description =
+<p>
+	Always quote array indexes. Use $foo['bar'] instead of $foo[bar].
+</p>
+<p>
+        <h4>References</h4>
+        <ul>
+		<li><a href="http://www.phpvs.net/2008/06/04/ten-php-best-practices-tips-that-will-get-you-a-job/">Ten PHP Best Practices That Will Get You a Job</a></li>
+        </ul>
+</p>
+END;

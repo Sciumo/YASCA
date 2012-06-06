@@ -1,0 +1,11 @@
+<?
+/*. DOC   GNU Recode Functions
+
+See: <a href="http://www.php.net/manual/en/ref.recode.php"><code>http://www.php.net/manual/en/ref.recode.php</code></a>
+
+.*/
+
+
+/*. string.*/ function recode_string(/*. string .*/ $request, /*. string .*/ $str){}
+/*. bool  .*/ function recode_file(/*. string .*/ $request, /*. resource .*/ $input, /*. resource .*/ $output){}
+?>

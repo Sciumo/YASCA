@@ -1,0 +1,31 @@
+name = Cross Site Scripting via #url# or #form# in Cold Fusion
+file_type = COLDFUSION
+grep = /<input .*value=\"\#(url|form)/i
+grep = / =\s*\'\#(url|form)\..*\#\';/i
+
+category = Cross-Site Scripting
+severity = 1
+category_link = http://www.owasp.org/index.php/Cross_Site_Scripting
+description = 
+	<p>
+		Cross-Site Scripting (XSS) vulnerabilities can be exploited by an attacker to 
+		impersonate or perform actions on behalf of legitimate users.
+		
+		This particular issue is caused by inserting information from the URL or a form
+		parameter directly within the returned HTML:
+		<code>
+  &lt;input type="hidden" name="username" value="#url.someParameteer#"/gt;
+		</code>
+		The attacker could exploit this vulnerability by directing a victim to visit a URL
+		with specially crafted JavaScript to perform actions on the site on behalf of the 
+		attacker, or to simply steal the session cookie. 
+	</p>
+	<p>
+		<h4>References</h4>
+		<ul>
+			<li><a href="http://www.owasp.org/index.php/XSS">http://www.owasp.org/index.php/XSS</a></li>
+			<li><a href="http://www.acunetix.com/cross-site-scripting/scanner.htm">Acunetix Web Vulnerability Scanner (<span style="color:red;font-weight:bold;">free</span>, but only does XSS scanning)</a></li>
+			<li><a href="http://www.ibm.com/developerworks/tivoli/library/s-csscript/">Cross-site Scripting article from IBM</a></li>
+		</ul>
+	</p>
+END;

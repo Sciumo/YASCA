@@ -1,0 +1,125 @@
+<?
+/*. DOC   Firebird/InterBase Functions
+
+
+See: <a href="http://www.php.net/manual/en/ref.ibase.php"><code>http://www.php.net/manual/en/ref.ibase.php</code></a>
+
+.*/
+
+define('IBASE_BKP_IGNORE_CHECKSUMS', 1);
+define('IBASE_BKP_IGNORE_LIMBO', 1);
+define('IBASE_BKP_METADATA_ONLY', 1);
+define('IBASE_BKP_NO_GARBAGE_COLLECT', 1);
+define('IBASE_BKP_OLD_DESCRIPTIONS', 1);
+define('IBASE_BKP_NON_TRANSPORTABLE', 1);
+define('IBASE_BKP_CONVERT', 1);
+define('IBASE_RES_DEACTIVATE_IDX', 1);
+define('IBASE_RES_NO_SHADOW', 1);
+define('IBASE_RES_NO_VALIDITY', 1);
+define('IBASE_RES_ONE_AT_A_TIME', 1);
+define('IBASE_RES_REPLACE', 1);
+define('IBASE_RES_CREATE', 1);
+define('IBASE_RES_USE_ALL_SPACE', 1);
+define('IBASE_PRP_PAGE_BUFFERS', 1);
+define('IBASE_PRP_SWEEP_INTERVAL', 1);
+define('IBASE_PRP_SHUTDOWN_DB', 1);
+define('IBASE_PRP_DENY_NEW_TRANSACTIONS', 1);
+define('IBASE_PRP_DENY_NEW_ATTACHMENTS', 1);
+define('IBASE_PRP_RESERVE_SPACE', 1);
+define('IBASE_PRP_RES_USE_FULL', 1);
+define('IBASE_PRP_RES', 1);
+define('IBASE_PRP_WRITE_MODE', 1);
+define('IBASE_PRP_WM_ASYNC', 1);
+define('IBASE_PRP_WM_SYNC', 1);
+define('IBASE_PRP_ACCESS_MODE', 1);
+define('IBASE_PRP_AM_READONLY', 1);
+define('IBASE_PRP_AM_READWRITE', 1);
+define('IBASE_PRP_SET_SQL_DIALECT', 1);
+define('IBASE_PRP_ACTIVATE', 1);
+define('IBASE_PRP_DB_ONLINE', 1);
+define('IBASE_RPR_CHECK_DB', 1);
+define('IBASE_RPR_IGNORE_CHECKSUM', 1);
+define('IBASE_RPR_KILL_SHADOWS', 1);
+define('IBASE_RPR_MEND_DB', 1);
+define('IBASE_RPR_VALIDATE_DB', 1);
+define('IBASE_RPR_FULL', 1);
+define('IBASE_RPR_SWEEP_DB', 1);
+define('IBASE_STS_DATA_PAGES', 1);
+define('IBASE_STS_DB_LOG', 1);
+define('IBASE_STS_HDR_PAGES', 1);
+define('IBASE_STS_IDX_PAGES', 1);
+define('IBASE_STS_SYS_RELATIONS', 1);
+define('IBASE_SVC_SERVER_VERSION', 1);
+define('IBASE_SVC_IMPLEMENTATION', 1);
+define('IBASE_SVC_GET_ENV', 1);
+define('IBASE_SVC_GET_ENV_LOCK', 1);
+define('IBASE_SVC_GET_ENV_MSG', 1);
+define('IBASE_SVC_USER_DBPATH', 1);
+define('IBASE_SVC_SVR_DB_INFO', 1);
+define('IBASE_SVC_GET_USERS', 1);
+define('IBASE_DEFAULT', 1);
+define('IBASE_CREATE', 1);
+define('IBASE_TEXT', 1);
+define('IBASE_FETCH_BLOBS', 1);
+define('IBASE_FETCH_ARRAYS', 1);
+define('IBASE_UNIXTIME', 1);
+define('IBASE_WRITE', 1);
+define('IBASE_READ', 1);
+define('IBASE_COMMITTED', 1);
+define('IBASE_CONSISTENCY', 1);
+define('IBASE_CONCURRENCY', 1);
+define('IBASE_REC_VERSION', 1);
+define('IBASE_REC_NO_VERSION', 1);
+define('IBASE_NOWAIT', 1);
+define('IBASE_WAIT', 1);
+
+/*. resource .*/ function ibase_blob_create( /*. args .*/){}
+/*. resource .*/ function ibase_blob_open( /*. args .*/){}
+/*. bool .*/ function ibase_blob_add(/*. resource .*/ $blob_handle, /*. string .*/ $data){}
+/*. string .*/ function ibase_blob_get(/*. resource .*/ $blob_handle, /*. int .*/ $len){}
+/*. string .*/ function ibase_blob_close(/*. resource .*/ $blob_handle){}
+/*. bool .*/ function ibase_blob_cancel(/*. resource .*/ $blob_handle){}
+/*. array .*/ function ibase_blob_info( /*. args .*/){}
+/*. bool .*/ function ibase_blob_echo( /*. args .*/){}
+/*. string .*/ function ibase_blob_import( /*. args .*/){}
+/*. bool .*/ function ibase_add_user(/*. resource .*/ $service_handle, /*. string .*/ $user_name, /*. string .*/ $password /*., args .*/){}
+/*. bool .*/ function ibase_modify_user(/*. resource .*/ $service_handle, /*. string .*/ $user_name, /*. string .*/ $password /*., args .*/){}
+/*. bool .*/ function ibase_delete_user(/*. resource .*/ $service_handle, /*. string .*/ $user_name, /*. string .*/ $password /*., args .*/){}
+/*. resource .*/ function ibase_service_attach(/*. string .*/ $host, /*. string .*/ $dba_username, /*. string .*/ $dba_password){}
+/*. bool .*/ function ibase_service_detach(/*. resource .*/ $service_handle){}
+/*. mixed .*/ function ibase_backup(/*. resource .*/ $service_handle, /*. string .*/ $source_db, /*. string .*/ $dest_file /*., args .*/){}
+/*. mixed .*/ function ibase_restore(/*. resource .*/ $service_handle, /*. string .*/ $source_file, /*. string .*/ $dest_db /*., args .*/){}
+/*. bool .*/ function ibase_maintain_db(/*. resource .*/ $service_handle, /*. string .*/ $db, /*. int .*/ $action /*., args .*/){}
+/*. string .*/ function ibase_db_info(/*. resource .*/ $service_handle, /*. string .*/ $db, /*. int .*/ $action /*., args .*/){}
+/*. string .*/ function ibase_server_info(/*. resource .*/ $service_handle, /*. int .*/ $action){}
+/*. mixed .*/ function ibase_query( /*. args .*/){}
+/*. int .*/ function ibase_affected_rows( /*. args .*/){}
+/*. int .*/ function ibase_num_rows( /*. resource .*/ $result_identifier ){}
+/*. array .*/ function ibase_fetch_row(/*. resource .*/ $result /*., args .*/){}
+/*. array .*/ function ibase_fetch_assoc(/*. resource .*/ $result /*., args .*/){}
+/*. object .*/ function ibase_fetch_object(/*. resource .*/ $result /*., args .*/){}
+/*. bool .*/ function ibase_name_result(/*. resource .*/ $result, /*. string .*/ $name){}
+/*. bool .*/ function ibase_free_result(/*. resource .*/ $result){}
+/*. resource .*/ function ibase_prepare( /*. args .*/){}
+/*. mixed .*/ function ibase_execute(/*. resource .*/ $query /*., args .*/){}
+/*. bool .*/ function ibase_free_query(/*. resource .*/ $query){}
+/*. int .*/ function ibase_num_fields(/*. resource .*/ $query_result){}
+/*. array .*/ function ibase_field_info(/*. resource .*/ $query_result, /*. int .*/ $field_number){}
+/*. int .*/ function ibase_num_params(/*. resource .*/ $query){}
+/*. array .*/ function ibase_param_info(/*. resource .*/ $query, /*. int .*/ $field_number){}
+/*. string .*/ function ibase_wait_event( /*. args .*/){}
+/*. resource .*/ function ibase_set_event_handler( /*. args .*/){}
+/*. bool .*/ function ibase_free_event_handler(/*. resource .*/ $event){}
+/*. string .*/ function ibase_errmsg(){}
+/*. int .*/ function ibase_errcode(){}
+/*. resource .*/ function ibase_connect(/*. string .*/ $database /*., args .*/){}
+/*. resource .*/ function ibase_pconnect(/*. string .*/ $database /*., args .*/){}
+/*. bool .*/ function ibase_close( /*. args .*/){}
+/*. bool .*/ function ibase_drop_db( /*. args .*/){}
+/*. resource .*/ function ibase_trans( /*. args .*/){}
+/*. bool .*/ function ibase_commit( /*. resource .*/ $link_identifier ){}
+/*. bool .*/ function ibase_rollback( /*. resource .*/ $link_identifier ){}
+/*. bool .*/ function ibase_commit_ret( /*. resource .*/ $link_identifier ){}
+/*. bool .*/ function ibase_rollback_ret( /*. resource .*/ $link_identifier ){}
+/*. int .*/ function ibase_gen_id(/*. string .*/ $generator /*., args .*/){}
+?>

@@ -1,0 +1,21 @@
+name = Dangerous Function - Class.forName()
+file_type = JAVA
+grep = /Class\.forName\(/
+category = Process Control
+severity = 4
+category_link = http://www.fortify.com/vulncat/en/vulncat/java/process_control.html
+description =
+<p>
+    The Class.forName() function is dangerous because it brings a new Java class into the JVM. If an attacker were able to control input
+	passed into this function, it would be possible to change the execution of the application.
+
+	Only load classes from trusted sources, and never use input data directly into Class.forName();
+</p>
+<p>
+    <h4>References</h4>
+    <ul>
+		<li><a target="_blank" href="https://www.securecoding.cert.org/confluence/display/java/SEC33-J.+Do+not+expose+standard+APIs+that+use+the+immediate+caller%27s+class+loader+instance+to+untrusted+code">Do Not Expose Standard APIs That Use the Immediate Caller's Class Loader Instance to Untrusted Code</a></i>
+        <li><a target="_blank" href="http://www.blackhat.com/presentations/bh-usa-09/WILLIAMS/BHUSA09-Williams-EnterpriseJavaRootkits-PAPER.pdf">Java Enterprise Rootkits</a></li>
+    </ul>
+</p>
+END;

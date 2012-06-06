@@ -1,0 +1,22 @@
+name = String Equals Vs '=='
+file_type = java
+grep = /([\!=]=\s*\")/
+category = Code Quality: Incorrect Usage of == or !=
+severity = 2
+description =
+<p>xxx
+	Using the == or != operators should never be used to compare String content. This is
+	because of how Java allocates String objects, and can be illustrated with the following
+	example:
+	<code>
+  System.out.println("foo" == new String("foo"));
+	</code>  
+	If you run this code, you will see that the output is <b>false</b>. 
+</p>
+<p>
+    <h4>References</h4>
+    <ul>
+            <li>TODO</li>
+    </ul>
+</p>
+END;

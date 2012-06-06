@@ -1,0 +1,21 @@
+name = 'Debug' Parameter Found
+file_type = java,jsp
+grep = /\.\s*getParameter.+debug.*\)/i
+category = Authorization: 'Debug' Parameter Found
+severity = 2
+description = 
+<p>
+	A <b>debug</b> parameter was found. This can be used within development, but should
+	never be accessible in a production system, unless appropriate access controls limit
+	the actions performed and data accessed to authorized individuals only. Using a hard
+	to guess parameter like <b>debug4ever9123</b> is <b>NOT</b> sufficient.
+	
+	This parameter should be removed.
+</p>
+<p>
+	<h4>References</h4>
+	<ul>
+		<li>TODO</li>
+	</ul>
+</p>
+END;

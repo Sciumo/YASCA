@@ -1,0 +1,7 @@
+name = Java Input Validation
+file_type = java,jsp
+grep = /(\+|=)\s*request\.getQueryString\(|[+|=]\s*request\.getParameter\(|[+|=]\s*request\.getRequestURL\(/i
+category = Input Validation
+severity = 2 
+description = User input to a web-app is being used, potentially unvalidated (<a target="_blank" href="http://java.sun.com/j2ee/1.4/docs/api/javax/servlet/http/HttpServletRequest.html">HttpServletRequest</a>).
+END;

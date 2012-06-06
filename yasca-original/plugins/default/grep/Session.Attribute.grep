@@ -1,0 +1,8 @@
+name = Unvalidated Data Placed in Session
+file_type = java,jsp
+
+grep = /session\.setAttribute\(\".*\",\s*request.getParameter\(\"/i
+
+category = Unvalidated Data Placed in Session
+severity = 2
+category_link = #

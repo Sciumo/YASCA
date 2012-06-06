@@ -1,0 +1,20 @@
+name = 
+file_type = C
+category = Improper Null Termination
+severity = 3
+grep = /readlink\s*\(.*,\s*MAX.*\)/
+grep = /read\s*\(.*,\s*MAX.*\)/
+
+description =
+<p>
+	This finding can occur when source code does not properly terminate a string or array
+	with a null character.	
+</p>
+
+<p>
+	<h4>References</h4>
+	<ul>
+        <li><a target="_blank" href="http://cwe.mitre.org/data/definitions/170.html">http://cwe.mitre.org/data/definitions/170.html</a></li>
+	</ul>
+</p>
+END;

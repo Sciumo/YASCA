@@ -1,0 +1,102 @@
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	-ms-text-overflow: ellipsis;
+}
+body {
+	background-color: LightCyan;
+    font-family: Candara, Calibri, Verdana, Serif;
+}
+#resultsTable {
+	width: 100%;
+	empty-cells: show;
+}
+#resultsTable th {
+	background-color: lightyellow;
+	color: black;
+	font-weight: bold;
+	border: 1px solid black;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+#resultsTable tr {
+	background-color: white;
+}
+#resultsTable td {
+	border: 1px solid black;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-bottom: 2px;
+	padding-top: 2px;
+	overflow: hidden;
+	white-space: nowrap;
+	width: auto;
+}
+#resultsTable tr[severity="1"] {
+	background-color: red;
+	color: white;
+}
+#resultsTable tr[severity="2"] {
+	background-color: orange;
+}
+#resultsTable tr[severity="3"] {
+	background-color: yellow;
+}
+#resultsTable tr[severity="4"] {
+	background-color: lightskyblue;
+}
+#resultsTable tr[severity="5"] {
+	background-color: #BDFFAE;
+}
+
+table.header {
+	width: 100%;
+	background-color: white;
+	border: 1px ridge darkgray;
+}
+table.header td { 
+	border: 0; 
+	background-color: white; 
+	font-size: normal;
+}
+table.header td.title {
+	font-size: 34px !important;
+	padding-left: 25px !important;
+	padding-right: 25px !important;
+	border-right:  1px ridge darkgray !important;
+	font-weight: bold;
+	white-space: nowrap;
+}
+.header_left {
+	font-weight: bold;
+	text-align: right;
+	white-space: nowrap;
+	width: 130px;
+}
+.header_right {
+	width: 100%;
+	white-space: nowrap;
+}
+
+div.detailsPanel {
+	background-color: white;
+}
+
+.unsafeData {
+	list-style-type: none;
+}
+
+.sourceCode {
+	background-color: #F0F0F0;
+	color: black;
+	border: 2px ridge brown;
+	font-family: Monospace;
+	padding: 4px;
+	font-size: 14px;
+	overflow: hidden;
+	white-space: nowrap
+}

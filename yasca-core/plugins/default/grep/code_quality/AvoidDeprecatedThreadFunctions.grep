@@ -1,0 +1,9 @@
+name = Avoid call to Thread.resume(), Thread.suspend, Thread.stop(), and Thread.destroy()
+file_type = JAVA
+grep = /Thread.*\.resume\(\)/
+grep = /Thread.*\.suspend\(\)/
+grep = /Thread.*\.stop\(\)/
+grep = /Thread.*\.destroy\(\)/
+category = Code Quality
+severity = 2
+category_link = http://www.cigital.com/securitypack/view/index.html

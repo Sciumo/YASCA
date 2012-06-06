@@ -1,0 +1,68 @@
+<?
+/*. DOC   Process Control Functions
+
+See: <a href="http://www.php.net/manual/en/ref.pcntl.php"><code>http://www.php.net/manual/en/ref.pcntl.php</code></a>
+
+.*/
+
+
+# FIXME: dummy values
+define('WNOHANG', 1);
+define('WUNTRACED', 1);
+define('SIG_IGN', 1);
+define('SIG_DFL', 1);
+define('SIG_ERR', 1);
+define('SIGHUP', 1);
+define('SIGINT', 1);
+define('SIGQUIT', 1);
+define('SIGILL', 1);
+define('SIGTRAP', 1);
+define('SIGABRT', 1);
+define('SIGIOT', 1);
+define('SIGBUS', 1);
+define('SIGFPE', 1);
+define('SIGKILL', 1);
+define('SIGUSR1', 1);
+define('SIGSEGV', 1);
+define('SIGUSR2', 1);
+define('SIGPIPE', 1);
+define('SIGALRM', 1);
+define('SIGTERM', 1);
+define('SIGSTKFLT', 1);
+define('SIGCLD', 1);
+define('SIGCHLD', 1);
+define('SIGCONT', 1);
+define('SIGSTOP', 1);
+define('SIGTSTP', 1);
+define('SIGTTIN', 1);
+define('SIGTTOU', 1);
+define('SIGURG', 1);
+define('SIGXCPU', 1);
+define('SIGXFSZ', 1);
+define('SIGVTALRM', 1);
+define('SIGPROF', 1);
+define('SIGWINCH', 1);
+define('SIGPOLL', 1);
+define('SIGIO', 1);
+define('SIGPWR', 1);
+define('SIGSYS', 1);
+define('SIGBABY', 1);
+define('PRIO_PGRP', 1);
+define('PRIO_USER', 1);
+define('PRIO_PROCESS', 1);
+
+/*. int .*/ function pcntl_fork(){}
+/*. int .*/ function pcntl_alarm(/*. int .*/ $seconds){}
+/*. int .*/ function pcntl_waitpid(/*. int .*/ $pid, /*. int .*/ &$status, /*. int .*/ $options){}
+/*. int .*/ function pcntl_wait(/*. int .*/ &$status){}
+/*. bool .*/ function pcntl_wifexited(/*. int .*/ $status){}
+/*. bool .*/ function pcntl_wifstopped(/*. int .*/ $status){}
+/*. bool .*/ function pcntl_wifsignaled(/*. int .*/ $status){}
+/*. int .*/ function pcntl_wexitstatus(/*. int .*/ $status){}
+/*. int .*/ function pcntl_wtermsig(/*. int .*/ $status){}
+/*. int .*/ function pcntl_wstopsig(/*. int .*/ $status){}
+/*. bool .*/ function pcntl_exec(/*. string .*/ $path /*., args .*/){}
+/*. bool .*/ function pcntl_signal(/*. int .*/ $signo, /*. string .*/ $handle /*., args .*/){}
+/*. int .*/ function pcntl_getpriority( /*. args .*/){}
+/*. bool .*/ function pcntl_setpriority(/*. int .*/ $priority /*., args .*/){}
+?>

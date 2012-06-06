@@ -1,0 +1,292 @@
+-- MySQL dump 10.10
+--
+-- Host: localhost    Database: yasca
+-- ------------------------------------------------------
+-- Server version	5.0.26
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `certificate`
+--
+
+DROP TABLE IF EXISTS `certificate`;
+CREATE TABLE `certificate` (
+  `certificate_id` int(4) NOT NULL auto_increment,
+  `target_id` int(4) default NULL,
+  `expiration_dt` datetime default NULL,
+  `subject` varchar(256) default NULL,
+  `upd_dt` datetime default NULL,
+  `upd_by` varchar(32) default NULL,
+  PRIMARY KEY  (`certificate_id`),
+  KEY `Index_2` (`target_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=610 DEFAULT CHARSET=latin1;
+
+--
+-- Table structure for table `certificate_detail`
+--
+
+DROP TABLE IF EXISTS `certificate_detail`;
+CREATE TABLE `certificate_detail` (
+  `detail_id` int(4) NOT NULL auto_increment,
+  `certificate_id` int(11) default NULL,
+  `key_name` varchar(64) default NULL,
+  `key_value` varchar(1024) default NULL,
+  PRIMARY KEY  (`detail_id`),
+  KEY `Index_2` (`certificate_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=83502 DEFAULT CHARSET=latin1;
+
+--
+-- Table structure for table `dbview`
+--
+
+DROP TABLE IF EXISTS `dbview`;
+CREATE TABLE `dbview` (
+  `dbview_id` int(10) unsigned NOT NULL auto_increment,
+  `name` varchar(45) NOT NULL,
+  `definition` text NOT NULL,
+  `upd_dt` datetime NOT NULL,
+  `upd_by` varchar(45) NOT NULL,
+  PRIMARY KEY  (`dbview_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Table structure for table `goto`
+--
+
+DROP TABLE IF EXISTS `goto`;
+CREATE TABLE `goto` (
+  `goto_id` int(10) unsigned NOT NULL auto_increment,
+  `short_url` varchar(60) NOT NULL,
+  `target_url` varchar(2048) NOT NULL,
+  `owner` varchar(45) NOT NULL,
+  `expiration_dt` datetime NOT NULL,
+  `upd_dt` datetime NOT NULL,
+  `upd_by` varchar(45) NOT NULL,
+  PRIMARY KEY  (`goto_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Table structure for table `notification`
+--
+
+DROP TABLE IF EXISTS `notification`;
+CREATE TABLE `notification` (
+  `notification_id` int(11) NOT NULL auto_increment,
+  `profile_id` int(11) default NULL,
+  `interval` int(11) default NULL,
+  `notification_type_cd` char(1) default NULL,
+  `destination` varchar(256) default NULL,
+  PRIMARY KEY  (`notification_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Table structure for table `notification_log`
+--
+
+DROP TABLE IF EXISTS `notification_log`;
+CREATE TABLE `notification_log` (
+  `notification_log_id` int(10) unsigned NOT NULL auto_increment,
+  `notification_id` int(10) unsigned NOT NULL,
+  `target_id` int(10) unsigned NOT NULL,
+  `upd_dt` datetime NOT NULL,
+  `upd_by` varchar(32) NOT NULL,
+  PRIMARY KEY  (`notification_log_id`),
+  KEY `Index_2` (`target_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
+
+--
+-- Table structure for table `tags`
+--
+
+DROP TABLE IF EXISTS `tags`;
+CREATE TABLE `tags` (
+  `tag_id` int(10) unsigned NOT NULL auto_increment,
+  `target_id` int(10) unsigned NOT NULL,
+  `name` varchar(45) NOT NULL,
+  PRIMARY KEY  (`tag_id`),
+  KEY `Index_2` (`name`),
+  KEY `Index_3` (`target_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
+
+--
+-- Table structure for table `target`
+--
+
+DROP TABLE IF EXISTS `target`;
+CREATE TABLE `target` (
+  `target_id` int(11) NOT NULL auto_increment,
+  `group_id` int(11) default NULL,
+  `application_name` varchar(32) default NULL,
+  `target_type_id` int(10) unsigned default NULL,
+  `scope_id` int(10) unsigned NOT NULL,
+  `status_id` int(10) unsigned NOT NULL,
+  `notification_id` int(10) unsigned default NULL,
+  `notification` text,
+  `location` varchar(128) default NULL,
+  `tcp_port` int(4) NOT NULL default '443',
+  `primary_owner` varchar(128) default NULL,
+  `secondary_owner` varchar(128) default NULL,
+  `comments` text,
+  `add_dt` datetime default NULL,
+  `add_by` varchar(32) default NULL,
+  `upd_dt` datetime default NULL,
+  `upd_by` varchar(32) default NULL,
+  KEY `Index_1` (`target_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=1507 DEFAULT CHARSET=latin1;
+
+--
+-- Table structure for table `target_group`
+--
+
+DROP TABLE IF EXISTS `target_group`;
+CREATE TABLE `target_group` (
+  `group_id` int(4) NOT NULL auto_increment,
+  `parent_id` int(4) default NULL,
+  `name` varchar(64) default NULL,
+  PRIMARY KEY  (`group_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+--
+-- Table structure for table `user`
+--
+
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user` (
+  `user_id` int(10) unsigned NOT NULL auto_increment,
+  `username` varchar(64) NOT NULL,
+  `fullname` varchar(45) NOT NULL default '',
+  `password` varchar(80) NOT NULL default '',
+  `access_level` int(10) unsigned NOT NULL default '0',
+  `upd_dt` datetime NOT NULL default '0000-00-00 00:00:00',
+  `upd_by` varchar(7) NOT NULL default '',
+  PRIMARY KEY  (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Table structure for table `user_roles`
+--
+
+DROP TABLE IF EXISTS `user_roles`;
+CREATE TABLE `user_roles` (
+  `user_role_id` int(10) unsigned NOT NULL auto_increment,
+  `user_id` int(10) unsigned NOT NULL default '0',
+  `role_id` int(10) unsigned NOT NULL default '0',
+  `upd_dt` datetime default NULL,
+  `upd_by` varchar(8) default NULL,
+  PRIMARY KEY  (`user_role_id`),
+  KEY `Index_2` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
+
+--
+-- Table structure for table `xlat`
+--
+
+DROP TABLE IF EXISTS `xlat`;
+CREATE TABLE `xlat` (
+  `xlat_id` int(10) unsigned NOT NULL auto_increment,
+  `key_type` varchar(32) NOT NULL default '',
+  `value` varchar(128) NOT NULL default '',
+  PRIMARY KEY  (`xlat_id`),
+  KEY `Index_2` (`key_type`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
+
+--
+-- Table structure for table `yasca_category`
+--
+
+DROP TABLE IF EXISTS `yasca_category`;
+CREATE TABLE `yasca_category` (
+  `category_id` int(11) NOT NULL auto_increment,
+  `name` varchar(256) default NULL,
+  `url` varchar(1024) default NULL,
+  PRIMARY KEY  (`category_id`),
+  KEY `cat_name` (`name`)
+) ENGINE=MyISAM AUTO_INCREMENT=322 DEFAULT CHARSET=latin1;
+
+--
+-- Table structure for table `yasca_description`
+--
+
+DROP TABLE IF EXISTS `yasca_description`;
+CREATE TABLE `yasca_description` (
+  `description_id` int(11) NOT NULL auto_increment,
+  `description` text,
+  PRIMARY KEY  (`description_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=19513 DEFAULT CHARSET=latin1;
+
+--
+-- Table structure for table `yasca_finding`
+--
+
+DROP TABLE IF EXISTS `yasca_finding`;
+CREATE TABLE `yasca_finding` (
+  `finding_id` int(11) NOT NULL auto_increment,
+  `scan_id` int(11) default NULL,
+  `category_id` int(11) default NULL,
+  `severity` int(11) default NULL,
+  `filename` varchar(256) default NULL,
+  `line_number` int(11) default NULL,
+  `file_modify_dt` datetime default NULL,
+  `description_id` int(11) default NULL,
+  `message` varchar(1024) default NULL,
+  `source_context` text,
+  `active_fl` varchar(16) default NULL,
+  PRIMARY KEY  (`finding_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=9094 DEFAULT CHARSET=latin1;
+
+--
+-- Table structure for table `yasca_results`
+--
+
+DROP TABLE IF EXISTS `yasca_results`;
+CREATE TABLE `yasca_results` (
+  `result_id` int(10) unsigned NOT NULL auto_increment,
+  `filename` varchar(128) NOT NULL,
+  `data` longblob NOT NULL,
+  `status_fl` char(1) NOT NULL,
+  `notify_fl` char(1) default 'N',
+  `report_type_cd` varchar(16) NOT NULL,
+  `report_contents` longblob,
+  `scan_start_dt` datetime default NULL,
+  `scan_end_dt` datetime default NULL,
+  `num_findings` int(10) unsigned default NULL,
+  `add_dt` datetime NOT NULL,
+  `add_by` varchar(45) NOT NULL,
+  PRIMARY KEY  (`result_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
+
+--
+-- Table structure for table `yasca_scan`
+--
+
+DROP TABLE IF EXISTS `yasca_scan`;
+CREATE TABLE `yasca_scan` (
+  `scan_id` int(11) NOT NULL auto_increment,
+  `target_dir` varchar(512) default NULL,
+  `options` varchar(1024) default NULL,
+  `scan_dt` datetime default NULL,
+  `scan_by` varchar(16) default NULL,
+  `result_id` int(10) unsigned NOT NULL,
+  PRIMARY KEY  (`scan_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=36 DEFAULT CHARSET=latin1;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2009-07-12  0:57:05

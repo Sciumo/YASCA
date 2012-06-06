@@ -1,0 +1,224 @@
+# Tidy command configurations
+
+# Bool: Add XML processing instructions (default: no) 
+add-xml-decl: yes 
+# add-xml-pi: yes
+
+# Bool: add xml space preserve to pre, style and script elements (default: no) 
+add-xml-space: yes
+
+# String: default alt text for img attributes (default: none) 
+# alt-text:
+
+# Bool: require ?> as processing instruction terminator (default: no) 
+# assume-xml-procins: no
+
+# Bool: Should Microsoft specific HTML be stripped from Word docs 
+# and non-break spaces be turned to spaces bare: yes
+
+# Bool: output line break before each <br> (default: no) 
+break-before-br: yes
+
+# Bool: replace surplus tags and attributes with style rules (default: no) 
+# clean: no
+
+# Select: omit|auto|strict|loose|<fpi>: what kind of doctype is generaged (default: auto) 
+doctype: auto
+
+# Bool: discard paragraph tags rather than create br elements (default: no) 
+# drop-empty-paras: no
+
+# Bool: discard font/center tags rather than create style rules (default: no) 
+# drop-font-tags: no
+
+# Bool: should proprietary attributes be dropped 
+# drop-proprietary-attributes: no
+
+# Bool: insert a p element around text when permitted (default: no) 
+# enclose-block-text: no
+
+# Bool: enclose body text within <p> element (default: no) 
+enclose-text: yes
+
+# Bool: should cdata sections be converted to normal text 
+# escape-cdata: no
+
+# Bool: replace - with = when encountering adjacent -s (default: yes) 
+fix-bad-comments: yes
+
+# Bool: should invalid characters in URIs be escaped 
+fix-uri: yes
+
+# Bool: should Tidy retain comments 
+hide-comments: no
+
+# Bool: omit optional end tags when pretty printing (default: no) 
+hide-endtags: no
+
+# Bool: should Tidy indent CDATA sections 
+indent-cdata: yes
+
+# Bool: Use XML parser (default: no) 
+input-xml: no
+
+# Bool: should class names be combined, if multiple class assignments found 
+# join-classes: no
+
+# Bool: should style names be combined, if multiple style values be found 
+# join-styles: no
+
+# Bool: replace <i> by <em> and <b> by <strong> (default: no) 
+logical-emphasis: yes
+
+# Bool: should attributes with predefined values be lower-cased 
+lower-literals: yes
+
+# Bool: should numeric character references be permitted 
+# ncr: yes
+
+# Bool: write non-XML 1.0 basic entities as numeric (default: no) 
+numeric-entities: no
+
+# Bool: pretty print output as extensible HTML (default: no) 
+output-xhtml: yes
+
+# Bool: Generate output as well-formed XML (default: no) 
+output-xml: no
+
+# Bool: unadorned & characters written as entities (default: yes) 
+quote-ampersand: yes
+
+# Bool: write quotes as entitles (default: no) 
+quote-marks: no
+
+# Bool: non-breaking spaces as entities (default: yes) 
+quote-nbsp: yes
+
+# string: in case of repeated attribute, should value be "keep-first" 
+# or "keep-last" 
+repeated-attributes: keep-last
+
+# Bool: should numeric color attribute values be replaced by names 
+replace-color: yes
+
+# Bool: should only body tag contents be displayed 
+# show-body-only: no
+
+# Not used # slide-style:
+
+# Bool: generate one output file for each H2 encountered (default: no) 
+split: no
+
+# Bool: output attribute names in uppercase (default: no) 
+uppercase-attributes: yes
+
+# Bool: output tag names in upper case (default: no) 
+uppercase-tags: yes
+
+# Bool: strip out MS-Word 2000 html extra lines (default: no) 
+word-2000: yes 
+# Bool: change error output format to one parsable by GNU Emacs (default: no) 
+gnu-emacs: no
+
+# Bool: do not output welcome message or summary (default: no) 
+quiet: no
+
+# Int: what level of errors should be shown (default: 6) 
+# show-errors: 6
+
+# Bool: display warnings (default: yes) 
+show-warnings: yes
+
+# Bool+: (no, yes, auto) indent block level tags (default: no) 
+indent: no
+
+# Bool: each attribute on a new line (default: no) 
+indent-attributes: yes
+
+# Number: how much to indent (default: 2) 
+indent-spaces: 2
+
+# Bool: ensure white space within attributes are maintained (default: no) 
+literal-attributes: yes
+
+# Bool: Pretty print output? (default: yes) 
+markup: yes
+
+# Number: columns between tab stops (default: 4) 
+tab-size: 4
+
+# Number: Right margin for line wrapping (default: 66; set to 0 to disable) 
+wrap: 0
+
+# Bool: allow lines within ASP pseudo elements to be wrapped (default: yes) 
+wrap-asp: yes
+
+# Bool: Wrap attribute values across lines? (default: no) 
+wrap-attributes: no
+
+# Bool: allow lines within JSTE pseudo elements to be wrapped (default: yes) 
+wrap-jste: yes
+
+# Bool: allow lines within PHP pseudo elements to be wrapped (default: yes) 
+wrap-php: yes
+
+# Bool: allow string literal wrapping (default: no) 
+wrap-script-literals: no
+
+# Bool: allow string literal wrapping (default: no) 
+wrap-sections: yes
+
+# Bool: should named character entities be converted to their ASCII equivs. 
+# ascii-chars: yes
+
+# Select: raw|ascii|latin1}utf8|iso2022: characters being input (default: ascii) 
+char-encoding: ascii
+
+# Encoding: what encoding should be used for input (Default: latin1) 
+# ascii, latin1, raw, utf8, iso2022, mac, win1252, utf16 
+# input-encoding:
+
+# string: what language used by tidy (default: none) 
+language: en
+
+# AutoBool: should Unicode Byte Order Mark be written into file (default: auto) 
+# output-bom:
+
+# Encoding: what encoding should be used for output (Default: ascii) 
+# ascii, latin1, raw, utf8, iso2022, mac, win1252, utf16 # output-encoding:
+
+# Enum: what character should be used for end of each output line 
+# LF, CRLF, CR 
+newline: LF
+
+# Bool: replace backslashes with forwardslashes (default: yes) 
+fix-backslash: yes
+
+# string: name for output file (Default: output to stdout) 
+# output-file:
+
+# filename: errors and warnings to this file name (default: output to stderr) 
+# error-file:
+
+# Bool: should output be produced when errors encountered (Default: no) 
+# force-output:
+
+# Bool: do not alter last modified time of output file (default: yes) 
+keep-time: no
+
+# Bool: Meta tag for Tidy? (default: yes) 
+tidy-mark: yes
+
+# Bool: write tidied markup to input file (default: no) 
+write-back: no
+
+# string: declare new block-level tags 
+new-blocklevel-tags: CFFORM, CFGRID, CFHTTP, CFIF, CFLOCK, CFLOOP, CFOUTPUT, CFQUERY, CFREPORT, CFSCRIPT, CFSELECT, CFSWITCH, CFCASE, CFDEFAULTCASE, CFTABLE, CFTRANSACTION, CFTREE, CFTRY, CFCATCH
+
+# string: declare new empty inline tags new-empty-tags:
+
+# string: declare new non-empty inline tags 
+new-inline-tags: CFABORT, CFAPPLET, CFAPPLICATION, CFASSOCIATE, CFAUTHENTICATE, CFBREAK, CFCACHE, CFCOL, CFCOLLECTION, CFCONTENT, CFCOOKIE, CFDIRECTORY, CFELSE, CFELSEIF, CFERROR, CFEXIT, CFFILE, CFFTP, CFGRIDCOLUMN, CFGRIDROW, CFGRIDUPDATE, CFHEADER, CFHTMLHEAD, CFHTTPPARAM, CFINCLUDE, CFINDEX, CFINPUT, CFINSERT, CFLDAP, CFLOCATION, CFMAIL, CFMODULE, CFOBJECT, CFPARAM, CFPOP, CFPROCPARAM, CFPROCRESULT, CFREGISTRY, CFSCHEDULE, CFSEARCH, CFSET, CFSETTING, CFSLIDER, CFSTOREDPROC, CFTEXTINPUT, CFTHROW, CFTREEITEM, CFUPDATE, CFWDDX
+
+# string: declare new pre type elements 
+#new-pre-tags: 

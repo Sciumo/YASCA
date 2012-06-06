@@ -1,0 +1,23 @@
+name = Creating a new CookieManager() Object
+file_type = JAVA
+grep = /new CookieManager\(/i
+category = Specific: HttpUnit - Possible Bug
+severity = 2
+description =
+<p>
+	HttpUnit maintains session state using the CookieManager object. This
+	object can be cleared by using:
+	<code>
+	  page.getWebClient().getCookieManager().clearCookies();
+	</code>
+	
+	Creating a new CookieManager object is usually not necessary, and
+	may indicate a bug.
+</p>
+<p>
+        <h4>References</h4>
+        <ul>
+            <li><a href="http://httpunit.sourceforge.net">HttpUnit Home Page</a></li>
+        </ul>
+</p>
+END;

@@ -1,0 +1,23 @@
+name = Sentence Ended Prematurely (Probably)
+file_type = COBOL
+grep = /ELSE\./
+category = Logic Error
+severity = 2
+description = 
+<p>
+	The period (.) ends a COBOL sentence. In this case, it appears that the period was used accidentally,
+	as in:
+	<code>
+		IF CONDITION
+			DO-SOMETHING
+		ELSE.
+			DO-SOMETHING-ELSE
+	</code>
+</p>
+<p>
+	<h4>References</h4>
+	<ul>
+		<li><a href="http://www.computerworld.com/action/article.do?command=viewArticleBasic&articleId=44582">Security Alert: Moving Cobol to the Web - Safely</a></li>
+	</ul>
+</p>
+END;

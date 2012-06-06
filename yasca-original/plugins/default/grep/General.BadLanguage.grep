@@ -1,0 +1,5 @@
+name = Bad Language
+file_type = java,jsp
+grep = /[^a-z](shit|ass|fuck|crap|dick|shitty|bullshit|doodie)[^a-z]/i
+category = General: Bad Language
+severity = 3

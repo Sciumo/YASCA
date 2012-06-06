@@ -1,0 +1,7 @@
+name = W3 Core DOM getAttribute()
+file_type = js,html
+grep = /\.getAttribute\(/i
+category = W3 Core
+category_link = http://www.quirksmode.org/dom/w3c_core.html
+severity = 2
+description = In IE5-7, accessing the style attribute gives an object, and accessing the onclick attribute gives an anonymous function wrapped around the actual content.

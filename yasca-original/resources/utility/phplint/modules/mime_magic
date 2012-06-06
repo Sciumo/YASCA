@@ -1,0 +1,12 @@
+<?
+/*. DOC   Mimetype Functions
+
+See: <a href="http://www.php.net/manual/en/ref.mime-magic.php"><code>http://www.php.net/manual/en/ref.mime-magic.php</code></a>
+
+<@deprecated This module has been deprecated as the PECL extension fileinfo
+provides the same functionality (and more) in a much cleaner way. >
+.*/
+
+
+/*. string.*/ function mime_content_type(/*. args .*/){}
+?>

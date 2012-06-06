@@ -1,0 +1,29 @@
+name = SQL Injection
+file_type = cfm
+
+preprocess = trim_cfx_ingres_sql
+grep = /cfx_ingres.*\"\s*select .*from .*\'?#(form|url)\./i
+grep = /cfx_ingres.*\"\s*delete .*from .*\'?#(form|url)\./i
+grep = /cfx_ingres.*\"\s*insert into .*\'?#(form|url)\./i
+grep = /cfx_ingres.*\"\s*update .* set .*\'?#(form|url)\./i
+
+category = SQL Injection via cfx_ingres tag
+severity = 1
+category_link = http://www.fortifysoftware.com/vulncat/java/java_input_sql_injection.html
+description =
+<p>
+        <h4>Possible SQL Injection</h4>
+        SQL injection is a code injection technique that exploits a security vulnerability occurring in the database
+        layer of an application. The vulnerability is present when user input is either incorrectly filtered for string literal
+        escape characters embedded in SQL statements or user input is not strongly typed and thereby unexpectedly executed. It
+        is an instance of a more general class of vulnerabilities that can occur whenever one programming or scripting language
+        is embedded inside another. SQL injection attacks are also known as SQL insertion attacks.
+</p>
+<p>
+        <h4>References</h4>
+        <ul>
+		<li><a href="http://www.fortify.com/vulncat/en/vulncat/cfml/sql_injection.html">Vulncat: SQL Injection in Cold Fusion</a></li>
+                <li><a href="http://en.wikipedia.org/wiki/SQL_injection">Wikipedia: SQL Injection</a></li>
+        </ul>
+</p>
+END;

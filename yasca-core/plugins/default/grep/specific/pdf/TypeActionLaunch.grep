@@ -1,0 +1,23 @@
+name = Possible Malware Embedded in PDF
+file_type = pdf
+grep = /\/Launch /
+category = Malware: Embedded "Launch" Command in PDF
+severity = 2
+description = 
+<p>
+	The PDF specification allows for the automatic execution of external programs. Though the user
+	is usually prompted before execution, social engineering can be used to entice a victim to allowing
+	the program to be executed on their behalf.
+</p>
+<p>
+	It is unlikely that a legitimate PDF file will be making /Launch calls to external programs. Please
+	consider reviewing the raw contents of the PDF to determine if the call is legitimate.
+</p>
+<p>
+	<h4>References</h4>
+	<ul>
+		<li><a href="http://blog.didierstevens.com/2010/03/29/escape-from-pdf/">Vulnerability Information</a></li>
+		<li><a href="http://www.adobe.com/devnet/pdf/pdf_reference.html">PDF Specification (Adobe)</a></li>
+	</ul>
+</p>
+END;

@@ -1,0 +1,22 @@
+name = Boolean Expression Is Always True
+file_type = C
+category = PC-Lint Bug of the Month
+severity = 2
+grep = /(.*)\s*!=\s*\|\|\\1\s*!=\s*/
+
+description =
+<p>
+	The boolean expression x != y || x != z is always true:
+	<ul>
+		<li>if x == y, then x != z so the expression is true.</li>
+		<li>if x != y, then x != y so the expression is true.</li>
+	</ul>
+</p>
+
+<p>
+	<h4>References</h4>
+	<ul>
+        <li><a target="_blank" href="http://gimpel.com/html/newbugs/bug774.htm">http://gimpel.com/html/newbugs/bug774.htm</a></li>
+	</ul>
+</p>
+END;

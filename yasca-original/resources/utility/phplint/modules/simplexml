@@ -1,0 +1,39 @@
+<?
+/*. DOC  SimpleXML functions
+
+See: <a href="http://www.php.net/manual/en/ref.simplexml.php"><code>www.php.net/manual/en/ref.simplexml.php</code></a>
+
+<p>
+This module cannot be effectively used under PHPLint because
+the class SimpleXMLElement heavily relies on dynamically created
+properties.
+.*/
+
+/*. if_php_ver_4 .*/
+	%%% This module is not available under PHP 4 %%%
+/*. end_if_php_ver .*/
+
+/*. require_module 'dom'; .*/
+
+
+class SimpleXMLElement
+{
+	/*. void .*/ function __construct(/*. string .*/ $data  /*. , args .*/){}
+	/*. array[int]SimpleXMLElement .*/ function xpath(/*. string .*/ $path){}
+	/*. bool .*/ function registerXPathNamespace(/*. string .*/ $prefix, /*. string .*/ $ns){}
+	/*. string .*/ function asXML(/*. args .*/){}
+	/*. string .*/ function saveXML(/*. args .*/){}
+	/*. string .*/ function getNamespaces(/*. args .*/){}
+	/*. string .*/ function getDocNamespaces(/*. args .*/){}
+	/*. SimpleXMLElement .*/ function children(/*. args .*/){}
+	/*. string .*/ function getName(){}
+	/*. array .*/ function attributes(/*. args .*/){}
+	/*. void .*/ function addChild(/*. string .*/ $qName  /*. , args .*/){}
+	/*. void .*/ function addAttribute(/*. string .*/ $qName, /*. string .*/ $value  /*. , args .*/){}
+}
+
+
+/*. SimpleXMLElement .*/ function simplexml_import_dom(/*. DOMNode .*/ $node /*., args .*/){}
+/*. SimpleXMLElement .*/ function simplexml_load_file(/*. string .*/ $filename /*., args .*/){}
+/*. SimpleXMLElement .*/ function simplexml_load_string(/*. string .*/ $data /*., args .*/){}
+?>

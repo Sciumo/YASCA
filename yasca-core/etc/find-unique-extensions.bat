@@ -1,0 +1,1 @@
+@find | perl -e "while(<STDIN>) { $x=$_; $x=~/\.([^\.]+)\s*$/; print $1 if $1 !~ /^\\/; }" | sort | uniq

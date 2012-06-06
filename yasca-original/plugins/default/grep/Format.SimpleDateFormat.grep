@@ -1,0 +1,26 @@
+name = Invalid Date/Time Format
+file_type = JAVA
+grep = /SimpleDateFormat\(\"yyyy-mm-dd/
+grep = /SimpleDateFormat\(\"hh:MM:ss/
+grep = /SimpleDateFormat\(\"hh:mm:ss\"/
+grep = /SimpleDateFormat\(\"hhmm\"/
+grep = /SimpleDateFormat\(\"hhmmss\"/
+category = Formatting: Invalid Date/Time Format
+severity = 2
+description =
+<p>
+	<h4>Minutes-Month Inversion</h4>
+	The string "M" means month, and "m" means minutes. Using "yyyy-mm-dd" or "hh:MM:ss" are both probably typos.
+
+	<h4>Missing AM/PM</h4>
+        When specifying time formatting in Java, the phrase "hh:mm:ss" is based on 12-hour time, so 5:00 AM and 5:00
+	PM would both be rendered as "05:00:00", possibly confusing the user. Instead, use either "HH:mm:ss", which
+	is based on 24-hour time, or include either AM or PM by using "hh:mm:ss a".
+</p>
+<p>
+        <h4>References</h4>
+        <ul>
+                <li><a href="http://java.sun.com/javase/6/docs/api/java/text/SimpleDateFormat.html">SimpleDateFormat API</a></li>
+        </ul>
+</p>
+END;

@@ -1,0 +1,7 @@
+name = W3 Core DOM MS applyElement()
+file_type = js,html
+grep = /\.applyElement\(/i
+category = W3 Core
+category_link = http://www.quirksmode.org/dom/w3c_core.html
+severity = 4
+description = In IE8b2 the change only shows when you click on the test element.

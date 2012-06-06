@@ -1,0 +1,28 @@
+name = Cross-Site Scripting
+file_type = PHP
+grep = /\.\=?\s*\$REQUEST_URI/
+grep = / \.\=?\s*.*:\s*\$_SERVER\['QUERY_STRING'/
+category = Cross-Site Scripting
+severity = 1
+category_link = http://www.owasp.org/index.php/Cross_Site_Scripting
+description = 
+	<p>
+		Cross-Site Scripting (XSS) vulnerabilities can be exploited by an attacker to 
+		impersonate or perform actions on behalf of legitimate users.
+		
+		This particular issue is caused by the concatenation of a special PHP variable
+        such as $REQUEST_URI into a string which may be added to the page content.
+
+		The attacker could exploit this vulnerability by directing a victim to visit a URL
+		with specially crafted JavaScript to perform actions on the site on behalf of the 
+		attacker, or to simply steal the session cookie. 
+	</p>
+	<p>
+		<h4>References</h4>
+		<ul>
+			<li><a target="_blank" href="http://www.owasp.org/index.php/XSS">http://www.owasp.org/index.php/XSS</a></li>
+			<li><a target="_blank" href="http://www.acunetix.com/cross-site-scripting/scanner.htm">Acunetix Web Vulnerability Scanner (<span style="color:red;font-weight:bold;">free</span>, but only does XSS scanning)</a></li>
+			<li><a target="_blank" href="http://www.ibm.com/developerworks/tivoli/library/s-csscript/">Cross-site Scripting article from IBM</a></li>
+		</ul>
+	</p>
+END;

@@ -1,0 +1,6 @@
+name = Ajax  
+file_type = java,jsp,html,htm,js
+grep = /XMLHttpRequest|XMLHTTP/i
+category = Non-Core Technology: Use of AJAX
+severity = 3 
+description = While AJAX is not by itself bad, there are both security and performance considerations that are oftentimes overlooked.

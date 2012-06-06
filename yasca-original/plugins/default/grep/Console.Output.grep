@@ -1,0 +1,21 @@
+name = Use of a System Output Stream
+file_type = java,jsp
+grep = /System\.out\.print|System\.err\.print/i
+category = Poor Logging Practice: Use of a System Output Stream
+category_link = http://www.owasp.org/index.php?title=Poor_Logging_Practice:_Use_of_a_System_Output_Stream
+severity = 5
+description = 
+<p>
+	Using the System.out.print(ln) or System.err.print(ln) functions is considered poor
+	practice. Instead, a logger should be used throughout the application for all log
+	output.
+</p>
+<p>
+	<h4>References</h4>
+	<ul>
+		<li>Log4j</li>
+		<li>(<a href="http://www.owasp.org/">OWASP</a>) 
+		<a href="http://www.owasp.org/index.php/Poor_Logging_Practice:_Use_of_a_System_Output_Stream">Poor Logging Practice: Use of  System Output Stream</a></li>
+	</ul>
+</p>
+END;

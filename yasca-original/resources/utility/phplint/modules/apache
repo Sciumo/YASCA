@@ -1,0 +1,44 @@
+<?
+/*. DOC   Apache-specific Functions
+
+See: <a href="http://www.php.net/manual/en/ref.apache.php"><code>http://www.php.net/manual/en/ref.apache.php</code></a>
+
+.*/
+
+# required for E_WARNING:
+/*. require_module 'standard'; .*/
+
+
+/*. bool .*/ function apache_child_terminate()
+{ trigger_error("", E_WARNING); }
+/*. string .*/ function apache_note(/*. string .*/ $note_name /*., args .*/){}
+/*. bool .*/ function virtual(/*. string .*/ $filename){}
+/*. array .*/ function getallheaders(){}
+/*. array .*/ function apache_request_headers(){}
+/*. array .*/ function apache_response_headers(){}
+/*. bool .*/ function apache_setenv(/*. string .*/ $variable, /*. string .*/ $value /*., args .*/){}
+/*. object .*/ function apache_lookup_uri(/*. string .*/ $URI){}
+/*. string .*/ function apache_get_version(){}
+/*. array .*/ function apache_get_modules(){}
+/*. bool .*/ function apache_getenv(/*. string .*/ $variable /*., args .*/){}
+/*. array .*/ function apache_request_headers_in(){}
+/*. array .*/ function apache_request_headers_out( /*. args .*/){}
+/*. array .*/ function apache_request_err_headers_out( /*. args .*/){}
+/*. int .*/ function apache_request_server_port(){}
+/*. int .*/ function apache_request_remote_host( /*. args .*/){}
+/*. int .*/ function apache_request_update_mtime( /*. args .*/){}
+/*. void .*/ function apache_request_set_etag(){}
+/*. void .*/ function apache_request_set_last_modified(){}
+/*. int .*/ function apache_request_meets_conditions(){}
+/*. int .*/ function apache_request_discard_request_body(){}
+/*. int .*/ function apache_request_satisfies(){}
+/*. bool .*/ function apache_request_is_initial_req(){}
+/*. bool .*/ function apache_request_some_auth_required(){}
+/*. string .*/ function apache_request_auth_type(){}
+/*. string .*/ function apache_request_auth_name(){}
+/*. boolean .*/ function apache_request_log_error(/*. string .*/ $message /*., args .*/){}
+/*. object .*/ function apache_request_sub_req_lookup_uri(/*. string .*/ $uri){}
+/*. object .*/ function apache_request_sub_req_lookup_file(/*. string .*/ $file){}
+/*. object .*/ function apache_request_sub_req_method_uri(/*. string .*/ $method, /*. string .*/ $uri){}
+/*. int .*/ function apache_request_run(){}
+?>

@@ -1,0 +1,75 @@
+<? /*.
+	DOC Filter Functions
+
+	See: <a href="http://www.php.net/manual/en/ref.filter.php">www.php.net/manual/en/ref.filter.php</a>.
+
+	<@deprecated Very poorly written interface with too many 'mixed' values,
+	difficult to validate automatically, leaving to the programmer all the
+	responsability to handle properly arguments and returned values. The
+	returned values are also 'mixed' with a complex semantic based on the
+	special values NULL, FALSE/TRUE, etc. It is questionable if this library
+	really adds security. [Umberto Salsi] >
+
+.*/
+
+define('INPUT_POST', 1);
+define('INPUT_GET', 1);
+define('INPUT_COOKIE', 1);
+define('INPUT_ENV', 1);
+define('INPUT_SERVER', 1);
+define('INPUT_SESSION', 1);
+define('INPUT_REQUEST', 1);
+define('FILTER_FLAG_NONE', 1);
+define('FILTER_REQUIRE_SCALAR', 1);
+define('FILTER_REQUIRE_ARRAY', 1);
+define('FILTER_FORCE_ARRAY', 1);
+define('FILTER_NULL_ON_FAILURE', 1);
+define('FILTER_VALIDATE_INT', 1);
+define('FILTER_VALIDATE_BOOLEAN', 1);
+define('FILTER_VALIDATE_FLOAT', 1);
+define('FILTER_VALIDATE_REGEXP', 1);
+define('FILTER_VALIDATE_URL', 1);
+define('FILTER_VALIDATE_EMAIL', 1);
+define('FILTER_VALIDATE_IP', 1);
+define('FILTER_DEFAULT', 1);
+define('FILTER_UNSAFE_RAW', 1);
+define('FILTER_SANITIZE_STRING', 1);
+define('FILTER_SANITIZE_STRIPPED', 1);
+define('FILTER_SANITIZE_ENCODED', 1);
+define('FILTER_SANITIZE_SPECIAL_CHARS', 1);
+define('FILTER_SANITIZE_EMAIL', 1);
+define('FILTER_SANITIZE_URL', 1);
+define('FILTER_SANITIZE_NUMBER_INT', 1);
+define('FILTER_SANITIZE_NUMBER_FLOAT', 1);
+define('FILTER_SANITIZE_MAGIC_QUOTES', 1);
+define('FILTER_CALLBACK', 1);
+define('FILTER_FLAG_ALLOW_OCTAL', 1);
+define('FILTER_FLAG_ALLOW_HEX', 1);
+define('FILTER_FLAG_STRIP_LOW', 1);
+define('FILTER_FLAG_STRIP_HIGH', 1);
+define('FILTER_FLAG_ENCODE_LOW', 1);
+define('FILTER_FLAG_ENCODE_HIGH', 1);
+define('FILTER_FLAG_ENCODE_AMP', 1);
+define('FILTER_FLAG_NO_ENCODE_QUOTES', 1);
+define('FILTER_FLAG_EMPTY_STRING_NULL', 1);
+define('FILTER_FLAG_ALLOW_FRACTION', 1);
+define('FILTER_FLAG_ALLOW_THOUSAND', 1);
+define('FILTER_FLAG_ALLOW_SCIENTIFIC', 1);
+define('FILTER_FLAG_SCHEME_REQUIRED', 1);
+define('FILTER_FLAG_HOST_REQUIRED', 1);
+define('FILTER_FLAG_PATH_REQUIRED', 1);
+define('FILTER_FLAG_QUERY_REQUIRED', 1);
+define('FILTER_FLAG_IPV4', 1);
+define('FILTER_FLAG_IPV6', 1);
+define('FILTER_FLAG_NO_RES_RANGE', 1);
+define('FILTER_FLAG_NO_PRIV_RANGE', 1);
+
+/*. bool .*/ function filter_has_var(/*. int .*/ $type, /*. string .*/ $variable_name){}
+/*. int .*/ function filter_id(/*. string .*/ $filtername){}
+/*. mixed .*/ function filter_input_array(/*. int .*/ $type /*. , args .*/){}
+/*. mixed .*/ function filter_input(/*. int .*/ $type, /*. string .*/ $variable_name /*. , args .*/){}
+/*. array[int]string .*/ function filter_list(){}
+/*. mixed .*/ function filter_var_array(/*. array[string]mixed .*/ $data /*. , args .*/){}
+/*. mixed .*/ function filter_var(/*. mixed .*/ $variable /*. , args .*/){}
+
+?>

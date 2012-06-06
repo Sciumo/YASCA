@@ -1,0 +1,66 @@
+<?
+/*. DOC   FrontBase Functions
+
+See: <a href="http://www.php.net/manual/en/ref.fbsql.php"><code>http://www.php.net/manual/en/ref.fbsql.php</code></a>
+
+.*/
+
+
+/*. resource .*/ function fbsql_connect( /*. args .*/){}
+/*. resource .*/ function fbsql_pconnect( /*. args .*/){}
+/*. bool .*/ function fbsql_close( /*. args .*/){}
+/*. void .*/ function fbsql_set_transaction(/*. resource .*/ $link_identifier, /*. int .*/ $locking, /*. int .*/ $isolation){}
+/*. bool .*/ function fbsql_autocommit(/*. resource .*/ $link_identifier /*., args .*/){}
+/*. bool .*/ function fbsql_commit( /*. args .*/){}
+/*. bool .*/ function fbsql_rollback( /*. args .*/){}
+/*. string .*/ function fbsql_create_blob(/*. string .*/ $blob_data /*., args .*/){}
+/*. string .*/ function fbsql_create_clob(/*. string .*/ $clob_data /*., args .*/){}
+/*. bool .*/ function fbsql_set_lob_mode(/*. resource .*/ $result, /*. int .*/ $lob_mode){}
+/*. string .*/ function fbsql_read_blob(/*. string .*/ $blob_handle /*., args .*/){}
+/*. string .*/ function fbsql_read_clob(/*. string .*/ $clob_handle /*., args .*/){}
+/*. int .*/ function fbsql_blob_size(/*. string .*/ $blob_handle /*., args .*/){}
+/*. int .*/ function fbsql_clob_size(/*. string .*/ $clob_handle /*., args .*/){}
+/*. string .*/ function fbsql_hostname(/*. resource .*/ $link_identifier /*., args .*/){}
+/*. string .*/ function fbsql_database(/*. resource .*/ $link_identifier /*., args .*/){}
+/*. string .*/ function fbsql_database_password(/*. resource .*/ $link_identifier /*., args .*/){}
+/*. string .*/ function fbsql_username(/*. resource .*/ $link_identifier /*., args .*/){}
+/*. string .*/ function fbsql_password(/*. resource .*/ $link_identifier /*., args .*/){}
+/*. bool .*/ function fbsql_set_password(/*. resource .*/ $link_identifier, /*. string .*/ $user, /*. string .*/ $password, /*. string .*/ $old_password){}
+/*. bool .*/ function fbsql_select_db( /*. args .*/){}
+/*. int .*/ function fbsql_change_user(/*. string .*/ $user, /*. string .*/ $password /*., args .*/){}
+/*. bool .*/ function fbsql_create_db(/*. string .*/ $database_name /*., args .*/){}
+/*. int .*/ function fbsql_drop_db(/*. string .*/ $database_name /*., args .*/){}
+/*. bool .*/ function fbsql_start_db(/*. string .*/ $database_name /*., args .*/){}
+/*. bool .*/ function fbsql_stop_db(/*. string .*/ $database_name /*., args .*/){}
+/*. int .*/ function fbsql_db_status(/*. string .*/ $database_name /*., args .*/){}
+/*. resource .*/ function fbsql_query(/*. string .*/ $query /*., args .*/){}
+/*. resource .*/ function fbsql_db_query(/*. string .*/ $database_name, /*. string .*/ $query /*., args .*/){}
+/*. resource .*/ function fbsql_list_dbs( /*. args .*/){}
+/*. resource .*/ function fbsql_list_tables(/*. string .*/ $database /*., args .*/){}
+/*. resource .*/ function fbsql_list_fields(/*. string .*/ $database_name, /*. string .*/ $table_name /*., args .*/){}
+/*. string .*/ function fbsql_error( /*. args .*/){}
+/*. int .*/ function fbsql_errno( /*. args .*/){}
+/*. bool .*/ function fbsql_warnings( /*. args .*/){}
+/*. int .*/ function fbsql_affected_rows( /*. args .*/){}
+/*. int .*/ function fbsql_insert_id( /*. args .*/){}
+/*. mixed .*/ function fbsql_result(/*. int .*/ $result /*., args .*/){}
+/*. bool .*/ function fbsql_next_result(/*. int .*/ $result){}
+/*. int .*/ function fbsql_num_rows(/*. int .*/ $result){}
+/*. int .*/ function fbsql_num_fields(/*. int .*/ $result){}
+/*. array .*/ function fbsql_fetch_row(/*. resource .*/ $result){}
+/*. object .*/ function fbsql_fetch_assoc(/*. resource .*/ $result){}
+/*. object .*/ function fbsql_fetch_object(/*. resource .*/ $result /*., args .*/){}
+/*. array .*/ function fbsql_fetch_array(/*. resource .*/ $result /*., args .*/){}
+/*. bool .*/ function fbsql_data_seek(/*. int .*/ $result, /*. int .*/ $row_number){}
+/*. array .*/ function fbsql_fetch_lengths(/*. int .*/ $result){}
+/*. object .*/ function fbsql_fetch_field(/*. int .*/ $result /*., args .*/){}
+/*. bool .*/ function fbsql_field_seek(/*. int .*/ $result /*., args .*/){}
+/*. string .*/ function fbsql_field_name(/*. int .*/ $result /*., args .*/){}
+/*. string .*/ function fbsql_field_table(/*. int .*/ $result /*., args .*/){}
+/*. mixed .*/ function fbsql_field_len(/*. int .*/ $result /*., args .*/){}
+/*. string .*/ function fbsql_field_type(/*. int .*/ $result /*., args .*/){}
+/*. string .*/ function fbsql_field_flags(/*. int .*/ $result /*., args .*/){}
+/*. string .*/ function fbsql_table_name(/*. resource .*/ $result, /*. int .*/ $index){}
+/*. bool .*/ function fbsql_free_result(/*. resource .*/ $result){}
+/*. array .*/ function fbsql_get_autostart_info( /*. args .*/){}
+?>

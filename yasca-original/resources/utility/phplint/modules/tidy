@@ -1,0 +1,391 @@
+<?
+/*. DOC   Tidy Functions
+
+See: <a href="http://www.php.net/manual/en/ref.tidy.php"><code>http://www.php.net/manual/en/ref.tidy.php</code></a>
+
+.*/
+
+define("TIDY_TAG_UNKNOWN", 1);
+define("TIDY_TAG_A", 1);
+define("TIDY_TAG_ABBR", 1);
+define("TIDY_TAG_ACRONYM", 1);
+define("TIDY_TAG_ALIGN", 1);
+define("TIDY_TAG_APPLET", 1);
+define("TIDY_TAG_AREA", 1);
+define("TIDY_TAG_B", 1);
+define("TIDY_TAG_BASE", 1);
+define("TIDY_TAG_BASEFONT", 1);
+define("TIDY_TAG_BDO", 1);
+define("TIDY_TAG_BGSOUND", 1);
+define("TIDY_TAG_BIG", 1);
+define("TIDY_TAG_BLINK", 1);
+define("TIDY_TAG_BLOCKQUOTE", 1);
+define("TIDY_TAG_BODY", 1);
+define("TIDY_TAG_BR", 1);
+define("TIDY_TAG_BUTTON", 1);
+define("TIDY_TAG_CAPTION", 1);
+define("TIDY_TAG_CENTER", 1);
+define("TIDY_TAG_CITE", 1);
+define("TIDY_TAG_CODE", 1);
+define("TIDY_TAG_COL", 1);
+define("TIDY_TAG_COLGROUP", 1);
+define("TIDY_TAG_COMMENT", 1);
+define("TIDY_TAG_DD", 1);
+define("TIDY_TAG_DEL", 1);
+define("TIDY_TAG_DFN", 1);
+define("TIDY_TAG_DIR", 1);
+define("TIDY_TAG_DIV", 1);
+define("TIDY_TAG_DL", 1);
+define("TIDY_TAG_DT", 1);
+define("TIDY_TAG_EM", 1);
+define("TIDY_TAG_EMBED", 1);
+define("TIDY_TAG_FIELDSET", 1);
+define("TIDY_TAG_FONT", 1);
+define("TIDY_TAG_FORM", 1);
+define("TIDY_TAG_FRAME", 1);
+define("TIDY_TAG_FRAMESET", 1);
+define("TIDY_TAG_H1", 1);
+define("TIDY_TAG_H2", 1);
+define("TIDY_TAG_H3", 1);
+define("TIDY_TAG_H4", 1);
+define("TIDY_TAG_H5", 1);
+define("TIDY_TAG_H6", 1);
+define("TIDY_TAG_HEAD", 1);
+define("TIDY_TAG_HR", 1);
+define("TIDY_TAG_HTML", 1);
+define("TIDY_TAG_I", 1);
+define("TIDY_TAG_IFRAME", 1);
+define("TIDY_TAG_ILAYER", 1);
+define("TIDY_TAG_IMG", 1);
+define("TIDY_TAG_INPUT", 1);
+define("TIDY_TAG_INS", 1);
+define("TIDY_TAG_ISINDEX", 1);
+define("TIDY_TAG_KBD", 1);
+define("TIDY_TAG_KEYGEN", 1);
+define("TIDY_TAG_LABEL", 1);
+define("TIDY_TAG_LAYER", 1);
+define("TIDY_TAG_LEGEND", 1);
+define("TIDY_TAG_LI", 1);
+define("TIDY_TAG_LINK", 1);
+define("TIDY_TAG_LISTING", 1);
+define("TIDY_TAG_MAP", 1);
+define("TIDY_TAG_MARQUEE", 1);
+define("TIDY_TAG_MENU", 1);
+define("TIDY_TAG_META", 1);
+define("TIDY_TAG_MULTICOL", 1);
+define("TIDY_TAG_NOBR", 1);
+define("TIDY_TAG_NOEMBED", 1);
+define("TIDY_TAG_NOFRAMES", 1);
+define("TIDY_TAG_NOLAYER", 1);
+define("TIDY_TAG_NOSAVE", 1);
+define("TIDY_TAG_NOSCRIPT", 1);
+define("TIDY_TAG_OBJECT", 1);
+define("TIDY_TAG_OL", 1);
+define("TIDY_TAG_OPTGROUP", 1);
+define("TIDY_TAG_OPTION", 1);
+define("TIDY_TAG_P", 1);
+define("TIDY_TAG_PARAM", 1);
+define("TIDY_TAG_PLAINTEXT", 1);
+define("TIDY_TAG_PRE", 1);
+define("TIDY_TAG_Q", 1);
+define("TIDY_TAG_RP", 1);
+define("TIDY_TAG_RT", 1);
+define("TIDY_TAG_RTC", 1);
+define("TIDY_TAG_RUBY", 1);
+define("TIDY_TAG_S", 1);
+define("TIDY_TAG_SAMP", 1);
+define("TIDY_TAG_SCRIPT", 1);
+define("TIDY_TAG_SELECT", 1);
+define("TIDY_TAG_SERVER", 1);
+define("TIDY_TAG_SERVLET", 1);
+define("TIDY_TAG_SMALL", 1);
+define("TIDY_TAG_SPACER", 1);
+define("TIDY_TAG_SPAN", 1);
+define("TIDY_TAG_STRIKE", 1);
+define("TIDY_TAG_STRONG", 1);
+define("TIDY_TAG_STYLE", 1);
+define("TIDY_TAG_SUB", 1);
+define("TIDY_TAG_TABLE", 1);
+define("TIDY_TAG_TBODY", 1);
+define("TIDY_TAG_TD", 1);
+define("TIDY_TAG_TEXTAREA", 1);
+define("TIDY_TAG_TFOOT", 1);
+define("TIDY_TAG_TH", 1);
+define("TIDY_TAG_THEAD", 1);
+define("TIDY_TAG_TITLE", 1);
+define("TIDY_TAG_TR", 1);
+define("TIDY_TAG_TT", 1);
+define("TIDY_TAG_U", 1);
+define("TIDY_TAG_UL", 1);
+define("TIDY_TAG_VAR", 1);
+define("TIDY_TAG_WBR", 1);
+define("TIDY_TAG_XMP", 1);
+define("TIDY_ATTR_UNKNOWN", 1);
+define("TIDY_ATTR_ABBR", 1);
+define("TIDY_ATTR_ACCEPT", 1);
+define("TIDY_ATTR_ACCEPT_CHARSET", 1);
+define("TIDY_ATTR_ACCESSKEY", 1);
+define("TIDY_ATTR_ACTION", 1);
+define("TIDY_ATTR_ADD_DATE", 1);
+define("TIDY_ATTR_ALIGN", 1);
+define("TIDY_ATTR_ALINK", 1);
+define("TIDY_ATTR_ALT", 1);
+define("TIDY_ATTR_ARCHIVE", 1);
+define("TIDY_ATTR_AXIS", 1);
+define("TIDY_ATTR_BACKGROUND", 1);
+define("TIDY_ATTR_BGCOLOR", 1);
+define("TIDY_ATTR_BGPROPERTIES", 1);
+define("TIDY_ATTR_BORDER", 1);
+define("TIDY_ATTR_BORDERCOLOR", 1);
+define("TIDY_ATTR_BOTTOMMARGIN", 1);
+define("TIDY_ATTR_CELLPADDING", 1);
+define("TIDY_ATTR_CELLSPACING", 1);
+define("TIDY_ATTR_CHAR", 1);
+define("TIDY_ATTR_CHAROFF", 1);
+define("TIDY_ATTR_CHARSET", 1);
+define("TIDY_ATTR_CHECKED", 1);
+define("TIDY_ATTR_CITE", 1);
+define("TIDY_ATTR_CLASS", 1);
+define("TIDY_ATTR_CLASSID", 1);
+define("TIDY_ATTR_CLEAR", 1);
+define("TIDY_ATTR_CODE", 1);
+define("TIDY_ATTR_CODEBASE", 1);
+define("TIDY_ATTR_CODETYPE", 1);
+define("TIDY_ATTR_COLOR", 1);
+define("TIDY_ATTR_COLS", 1);
+define("TIDY_ATTR_COLSPAN", 1);
+define("TIDY_ATTR_COMPACT", 1);
+define("TIDY_ATTR_CONTENT", 1);
+define("TIDY_ATTR_COORDS", 1);
+define("TIDY_ATTR_DATA", 1);
+define("TIDY_ATTR_DATAFLD", 1);
+define("TIDY_ATTR_DATAPAGESIZE", 1);
+define("TIDY_ATTR_DATASRC", 1);
+define("TIDY_ATTR_DATETIME", 1);
+define("TIDY_ATTR_DECLARE", 1);
+define("TIDY_ATTR_DEFER", 1);
+define("TIDY_ATTR_DIR", 1);
+define("TIDY_ATTR_DISABLED", 1);
+define("TIDY_ATTR_ENCODING", 1);
+define("TIDY_ATTR_ENCTYPE", 1);
+define("TIDY_ATTR_FACE", 1);
+define("TIDY_ATTR_FOR", 1);
+define("TIDY_ATTR_FRAME", 1);
+define("TIDY_ATTR_FRAMEBORDER", 1);
+define("TIDY_ATTR_FRAMESPACING", 1);
+define("TIDY_ATTR_GRIDX", 1);
+define("TIDY_ATTR_GRIDY", 1);
+define("TIDY_ATTR_HEADERS", 1);
+define("TIDY_ATTR_HEIGHT", 1);
+define("TIDY_ATTR_HREF", 1);
+define("TIDY_ATTR_HREFLANG", 1);
+define("TIDY_ATTR_HSPACE", 1);
+define("TIDY_ATTR_HTTP_EQUIV", 1);
+define("TIDY_ATTR_ID", 1);
+define("TIDY_ATTR_ISMAP", 1);
+define("TIDY_ATTR_LABEL", 1);
+define("TIDY_ATTR_LANG", 1);
+define("TIDY_ATTR_LANGUAGE", 1);
+define("TIDY_ATTR_LAST_MODIFIED", 1);
+define("TIDY_ATTR_LAST_VISIT", 1);
+define("TIDY_ATTR_LEFTMARGIN", 1);
+define("TIDY_ATTR_LINK", 1);
+define("TIDY_ATTR_LONGDESC", 1);
+define("TIDY_ATTR_LOWSRC", 1);
+define("TIDY_ATTR_MARGINHEIGHT", 1);
+define("TIDY_ATTR_MARGINWIDTH", 1);
+define("TIDY_ATTR_MAXLENGTH", 1);
+define("TIDY_ATTR_MEDIA", 1);
+define("TIDY_ATTR_METHOD", 1);
+define("TIDY_ATTR_MULTIPLE", 1);
+define("TIDY_ATTR_NAME", 1);
+define("TIDY_ATTR_NOHREF", 1);
+define("TIDY_ATTR_NORESIZE", 1);
+define("TIDY_ATTR_NOSHADE", 1);
+define("TIDY_ATTR_NOWRAP", 1);
+define("TIDY_ATTR_OBJECT", 1);
+define("TIDY_ATTR_OnAFTERUPDATE", 1);
+define("TIDY_ATTR_OnBEFOREUNLOAD", 1);
+define("TIDY_ATTR_OnBEFOREUPDATE", 1);
+define("TIDY_ATTR_OnBLUR", 1);
+define("TIDY_ATTR_OnCHANGE", 1);
+define("TIDY_ATTR_OnCLICK", 1);
+define("TIDY_ATTR_OnDATAAVAILABLE", 1);
+define("TIDY_ATTR_OnDATASETCHANGED", 1);
+define("TIDY_ATTR_OnDATASETCOMPLETE", 1);
+define("TIDY_ATTR_OnDBLCLICK", 1);
+define("TIDY_ATTR_OnERRORUPDATE", 1);
+define("TIDY_ATTR_OnFOCUS", 1);
+define("TIDY_ATTR_OnKEYDOWN", 1);
+define("TIDY_ATTR_OnKEYPRESS", 1);
+define("TIDY_ATTR_OnKEYUP", 1);
+define("TIDY_ATTR_OnLOAD", 1);
+define("TIDY_ATTR_OnMOUSEDOWN", 1);
+define("TIDY_ATTR_OnMOUSEMOVE", 1);
+define("TIDY_ATTR_OnMOUSEOUT", 1);
+define("TIDY_ATTR_OnMOUSEOVER", 1);
+define("TIDY_ATTR_OnMOUSEUP", 1);
+define("TIDY_ATTR_OnRESET", 1);
+define("TIDY_ATTR_OnROWENTER", 1);
+define("TIDY_ATTR_OnROWEXIT", 1);
+define("TIDY_ATTR_OnSELECT", 1);
+define("TIDY_ATTR_OnSUBMIT", 1);
+define("TIDY_ATTR_OnUNLOAD", 1);
+define("TIDY_ATTR_PROFILE", 1);
+define("TIDY_ATTR_PROMPT", 1);
+define("TIDY_ATTR_RBSPAN", 1);
+define("TIDY_ATTR_READONLY", 1);
+define("TIDY_ATTR_REL", 1);
+define("TIDY_ATTR_REV", 1);
+define("TIDY_ATTR_RIGHTMARGIN", 1);
+define("TIDY_ATTR_ROWS", 1);
+define("TIDY_ATTR_ROWSPAN", 1);
+define("TIDY_ATTR_RULES", 1);
+define("TIDY_ATTR_SCHEME", 1);
+define("TIDY_ATTR_SCOPE", 1);
+define("TIDY_ATTR_SCROLLING", 1);
+define("TIDY_ATTR_SELECTED", 1);
+define("TIDY_ATTR_SHAPE", 1);
+define("TIDY_ATTR_SHOWGRID", 1);
+define("TIDY_ATTR_SHOWGRIDX", 1);
+define("TIDY_ATTR_SHOWGRIDY", 1);
+define("TIDY_ATTR_SIZE", 1);
+define("TIDY_ATTR_SPAN", 1);
+define("TIDY_ATTR_SRC", 1);
+define("TIDY_ATTR_STANDBY", 1);
+define("TIDY_ATTR_START", 1);
+define("TIDY_ATTR_STYLE", 1);
+define("TIDY_ATTR_SUMMARY", 1);
+define("TIDY_ATTR_TABINDEX", 1);
+define("TIDY_ATTR_TARGET", 1);
+define("TIDY_ATTR_TEXT", 1);
+define("TIDY_ATTR_TITLE", 1);
+define("TIDY_ATTR_TOPMARGIN", 1);
+define("TIDY_ATTR_TYPE", 1);
+define("TIDY_ATTR_USEMAP", 1);
+define("TIDY_ATTR_VALIGN", 1);
+define("TIDY_ATTR_VALUE", 1);
+define("TIDY_ATTR_VALUETYPE", 1);
+define("TIDY_ATTR_VERSION", 1);
+define("TIDY_ATTR_VLINK", 1);
+define("TIDY_ATTR_VSPACE", 1);
+define("TIDY_ATTR_WIDTH", 1);
+define("TIDY_ATTR_WRAP", 1);
+define("TIDY_ATTR_XML_LANG", 1);
+define("TIDY_ATTR_XML_SPACE", 1);
+define("TIDY_ATTR_XMLNS", 1);
+define("TIDY_NODETYPE_ROOT", 1);
+define("TIDY_NODETYPE_DOCTYPE", 1);
+define("TIDY_NODETYPE_COMMENT", 1);
+define("TIDY_NODETYPE_PROCINS", 1);
+define("TIDY_NODETYPE_TEXT", 1);
+define("TIDY_NODETYPE_START", 1);
+define("TIDY_NODETYPE_END", 1);
+define("TIDY_NODETYPE_STARTEND", 1);
+define("TIDY_NODETYPE_CDATA", 1);
+define("TIDY_NODETYPE_SECTION", 1);
+define("TIDY_NODETYPE_ASP", 1);
+define("TIDY_NODETYPE_JSTE", 1);
+define("TIDY_NODETYPE_PHP", 1);
+define("TIDY_NODETYPE_XMLDECL", 1);
+
+/*. if_php_ver_4 .*/
+
+	class tidyNode
+	{
+		var /*. string .*/ $value;
+		var /*. string .*/ $name;
+		var /*. int .*/ $type;
+		var /*. int .*/ $id;
+		var $attribute = /*. (array[string]string) .*/ NULL;
+		var $child = /*. (array[int]tidyNode) .*/ NULL;
+		/*. boolean .*/ function hasChildren(){}
+		/*. boolean .*/ function hasSiblings(){}
+		/*. boolean .*/ function isComment(){}
+		/*. boolean .*/ function isHtml(){}
+		/*. boolean .*/ function isXhtml(){}
+		/*. boolean .*/ function isXml(){}
+		/*. boolean .*/ function isText(){}
+		/*. boolean .*/ function isJste(){}
+		/*. boolean .*/ function isAsp(){}
+		/*. boolean .*/ function isPhp(){}
+		/*. tidyNode .*/ function getParent(){}
+	}
+
+/*. else .*/
+
+	class tidyNode
+	{
+		public /*. string .*/ $value;
+		public /*. string .*/ $name;
+		public /*. int .*/ $type;
+		public /*. int .*/ $line;
+		public /*. int .*/ $column;
+		public /*. boolean .*/ $proprietary;
+		public /*. int .*/ $id;
+		public $attribute = /*. (array[string]string) .*/ NULL;
+		public $child = /*. (array[int]tidyNode) .*/ NULL;
+		public /*. boolean .*/ function hasChildren(){}
+		public /*. boolean .*/ function hasSiblings(){}
+		public /*. boolean .*/ function isComment(){}
+		public /*. boolean .*/ function isHtml(){}
+		public /*. boolean .*/ function isXhtml(){}
+		public /*. boolean .*/ function isXml(){}
+		public /*. boolean .*/ function isText(){}
+		public /*. boolean .*/ function isJste(){}
+		public /*. boolean .*/ function isAsp(){}
+		public /*. boolean .*/ function isPhp(){}
+		public /*. tidyNode .*/ function getParent(){}
+	}
+
+/*. end_if_php_ver .*/
+
+class Tidy
+{
+	/*. bool .*/ function parseString(/*. string .*/ $input /*., args .*/){}
+	/*. string .*/ function getErrorBuffer( /*. args .*/){}
+	/*. string .*/ function getOutput(){}
+	/*. boolean .*/ function parseFile(/*. string .*/ $file /*., args .*/){}
+	/*. boolean .*/ function cleanRepair(){}
+	/*. string .*/ function repairString(/*. string .*/ $data /*., args .*/){}
+	/*. boolean .*/ function repairFile(/*. string .*/ $filename /*., args .*/){}
+	/*. boolean .*/ function diagnose(){}
+	/*. string .*/ function getRelease(){}
+	/*. array .*/ function getConfig(){}
+	/*. int .*/ function getStatus(){}
+	/*. int .*/ function getHtmlVer(){}
+	/*. boolean .*/ function isXhtml(){}
+	/*. int .*/ function errorCount(){}
+	/*. int .*/ function warningCount(){}
+	/*. int .*/ function accessCount(){}
+	/*. int .*/ function configCount(){}
+	/*. mixed .*/ function getOpt(/*. string .*/ $option){}
+	/*. tidyNode .*/ function getRoot(){}
+	/*. tidyNode .*/ function getHtml(){}
+	/*. tidyNode .*/ function getHead(){}
+	/*. tidyNode .*/ function getBody(){}
+}
+
+/*. bool .*/ function tidy_parse_string(/*. string .*/ $input /*., args .*/){}
+/*. string .*/ function tidy_get_error_buffer( /*. args .*/){}
+/*. string .*/ function tidy_get_output(){}
+/*. boolean .*/ function tidy_parse_file(/*. string .*/ $file /*., args .*/){}
+/*. boolean .*/ function tidy_clean_repair(){}
+/*. string .*/ function tidy_repair_string(/*. string .*/ $data /*., args .*/){}
+/*. boolean .*/ function tidy_repair_file(/*. string .*/ $filename /*., args .*/){}
+/*. boolean .*/ function tidy_diagnose(){}
+/*. string .*/ function tidy_get_release(){}
+/*. array .*/ function tidy_get_config(){}
+/*. int .*/ function tidy_get_status(){}
+/*. int .*/ function tidy_get_html_ver(){}
+/*. boolean .*/ function tidy_is_xhtml(){}
+/*. int .*/ function tidy_error_count(){}
+/*. int .*/ function tidy_warning_count(){}
+/*. int .*/ function tidy_access_count(){}
+/*. int .*/ function tidy_config_count(){}
+/*. mixed .*/ function tidy_getopt(/*. string .*/ $option){}
+/*. tidyNode .*/ function tidy_get_root(){}
+/*. tidyNode .*/ function tidy_get_html(){}
+/*. tidyNode .*/ function tidy_get_head(){}
+/*. tidyNode .*/ function tidy_get_body(/*. resource .*/ $tidy){}
+?>

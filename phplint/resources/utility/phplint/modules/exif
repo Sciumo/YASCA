@@ -1,0 +1,14 @@
+<?
+/*. DOC   Exif Functions
+
+See: <a href="http://www.php.net/manual/en/ref.exif.php"><code>http://www.php.net/manual/en/ref.exif.php</code></a>
+
+.*/
+
+
+/*. string.*/ function exif_tagname(/*. string .*/ $index){}
+/*. array .*/ function exif_read_data(/*. string .*/ $filename /*., args .*/){}
+/*. string.*/ function exif_thumbnail(/*. string .*/ $filename /*., args .*/){}
+/*. int   .*/ function exif_imagetype(/*. string .*/ $imagefile){}
+
+?>

@@ -1,0 +1,18 @@
+name = Long Session Timeout
+file_type = COLDFUSION
+preprocess = cfml_fix_tag_attributes
+grep = /\<cfapplication .*(sessionmanagement=\"[^(yes)]+){0,1}\"/i
+category = Session Management
+severity = 2
+category_link = http://livedocs.adobe.com/coldfusion/6/Developing_ColdFusion_MX_Applications_with_CFML/sharedVars5.htm
+description = 
+	<p>
+        ColdFusion sessions should always timeout after a reasonable period of time.
+	</p>
+	<p>
+		<h4>References</h4>
+		<ul>
+			<li><a href="http://livedocs.adobe.com/coldfusion/6/Developing_ColdFusion_MX_Applications_with_CFML/sharedVars5.htm">Adobe LiveDocs</a></li>
+		</ul>
+	</p>
+END;

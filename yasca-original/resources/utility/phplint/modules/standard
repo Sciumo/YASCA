@@ -1,0 +1,1145 @@
+<?
+/*. DOC  Standard library.
+
+	Also referred as the "core" library, it is a collection of the
+	most used constants, functions and classes. The standard library
+	is available on any PHP installation.
+
+	<p>
+	Some of the constant's values are actually dummy values intended
+	only to give the right type to the constant, since the actual value
+	do not care to PHPLint.
+
+	<p>
+	See: <a href="http://www.php.net/manual/en/"><code>http://www.php.net/manual/en/</code></a>
+.*/
+
+define('ABDAY_1', 131072);
+define('ABDAY_2', 131073);
+define('ABDAY_3', 131074);
+define('ABDAY_4', 131075);
+define('ABDAY_5', 131076);
+define('ABDAY_6', 131077);
+define('ABDAY_7', 131078);
+define('ABMON_1', 131086);
+define('ABMON_10', 131095);
+define('ABMON_11', 131096);
+define('ABMON_12', 131097);
+define('ABMON_2', 131087);
+define('ABMON_3', 131088);
+define('ABMON_4', 131089);
+define('ABMON_5', 131090);
+define('ABMON_6', 131091);
+define('ABMON_7', 131092);
+define('ABMON_8', 131093);
+define('ABMON_9', 131094);
+define('ALT_DIGITS', 131119);
+define('AM_STR', 131110);
+define('ASSERT_ACTIVE', 1);
+define('ASSERT_BAIL', 3);
+define('ASSERT_CALLBACK', 2);
+define('ASSERT_QUIET_EVAL', 5);
+define('ASSERT_WARNING', 4);
+define('CASE_LOWER', 0);
+define('CASE_UPPER', 1);
+define('CHAR_MAX', 127);
+define('CODESET', 14);
+define('CONNECTION_ABORTED', 1);
+define('CONNECTION_NORMAL', 0);
+define('CONNECTION_TIMEOUT', 2);
+define('COUNT_NORMAL', 0);
+define('COUNT_RECURSIVE', 1);
+define('CREDITS_ALL', -1);
+define('CREDITS_DOCS', 16);
+define('CREDITS_FULLPAGE', 32);
+define('CREDITS_GENERAL', 2);
+define('CREDITS_GROUP', 1);
+define('CREDITS_MODULES', 8);
+define('CREDITS_QA', 64);
+define('CREDITS_SAPI', 4);
+define('CRNCYSTR', 262159);
+define('CRYPT_BLOWFISH', 0);
+define('CRYPT_EXT_DES', 0);
+define('CRYPT_MD5', 1);
+define('CRYPT_SALT_LENGTH', 12);
+define('CRYPT_STD_DES', 1);
+define('C_EXPLICIT_ABSTRACT', 32);
+define('C_FINAL', 64);
+define('C_IMPLICIT_ABSTRACT', 16);
+define('DAY_1', 131079);
+define('DAY_2', 131080);
+define('DAY_3', 131081);
+define('DAY_4', 131082);
+define('DAY_5', 131083);
+define('DAY_6', 131084);
+define('DAY_7', 131085);
+define('DEFAULT_INCLUDE_PATH', '.:');
+define('DIRECTORY_SEPARATOR', '/');
+define('DNS_A', 1);
+define('DNS_AAAA', 134217728);
+define('DNS_ALL', 234936371);
+define('DNS_ANY', 268435456);
+define('DNS_CNAME', 16);
+define('DNS_HINFO', 4096);
+define('DNS_MX', 16384);
+define('DNS_NAPTR', 67108864);
+define('DNS_NS', 2);
+define('DNS_PTR', 2048);
+define('DNS_SOA', 32);
+define('DNS_SRV', 33554432);
+define('DNS_TXT', 32768);
+define('D_FMT', 131113);
+define('D_T_FMT', 131112);
+define('ENT_COMPAT', 2);
+define('ENT_NOQUOTES', 0);
+define('ENT_QUOTES', 3);
+define('ERA', 131116);
+define('ERA_D_FMT', 131118);
+define('ERA_D_T_FMT', 131120);
+define('ERA_T_FMT', 131121);
+define('EXTR_IF_EXISTS', 6);
+define('EXTR_OVERWRITE', 0);
+define('EXTR_PREFIX_ALL', 3);
+define('EXTR_PREFIX_IF_EXISTS', 5);
+define('EXTR_PREFIX_INVALID', 4);
+define('EXTR_PREFIX_SAME', 2);
+define('EXTR_REFS', 256);
+define('EXTR_SKIP', 1);
+define('E_ALL', 2047);
+define('E_COMPILE_ERROR', 64);
+define('E_COMPILE_WARNING', 128);
+define('E_CORE_ERROR', 16);
+define('E_CORE_WARNING', 32);
+define('E_ERROR', 1);
+define('E_NOTICE', 8);
+define('E_PARSE', 4);
+define('E_RECOVERABLE_ERROR', 4096);
+define('E_STRICT', 2048);
+define('E_USER_ERROR', 256);
+define('E_USER_NOTICE', 1024);
+define('E_USER_WARNING', 512);
+define('E_WARNING', 2);
+define('FILE_APPEND', 8);
+define('FILE_IGNORE_NEW_LINES', 2);
+define('FILE_NO_DEFAULT_CONTEXT', 16);
+define('FILE_SKIP_EMPTY_LINES', 4);
+define('FILE_USE_INCLUDE_PATH', 1);
+define('FNM_CASEFOLD', 16);
+define('FNM_NOESCAPE', 2);
+define('FNM_PATHNAME', 1);
+define('FNM_PERIOD', 4);
+define('GLOB_BRACE', 1024);
+define('GLOB_MARK', 2);
+define('GLOB_NOCHECK', 16);
+define('GLOB_NOESCAPE', 64);
+define('GLOB_NOSORT', 4);
+define('GLOB_ONLYDIR', 8192);
+define('HTML_ENTITIES', 1);
+define('HTML_SPECIALCHARS', 0);
+define('IMAGETYPE_BMP', 6);
+define('IMAGETYPE_GIF', 1);
+define('IMAGETYPE_IFF', 14);
+define('IMAGETYPE_JB2', 12);
+define('IMAGETYPE_JP2', 10);
+define('IMAGETYPE_JPC', 9);
+define('IMAGETYPE_JPEG', 2);
+define('IMAGETYPE_JPEG2000', 9);
+define('IMAGETYPE_JPX', 11);
+define('IMAGETYPE_PNG', 3);
+define('IMAGETYPE_PSD', 5);
+define('IMAGETYPE_SWF', 4);
+define('IMAGETYPE_TIFF_II', 7);
+define('IMAGETYPE_TIFF_MM', 8);
+define('IMAGETYPE_WBMP', 15);
+define('IMAGETYPE_XBM', 16);
+define('INF', 0.0); /*. DOC (dummy value) .*/
+define('INFO_ALL', -1);
+define('INFO_CONFIGURATION', 4);
+define('INFO_CREDITS', 2);
+define('INFO_ENVIRONMENT', 16);
+define('INFO_GENERAL', 1);
+define('INFO_LICENSE', 64);
+define('INFO_MODULES', 8);
+define('INFO_VARIABLES', 32);
+define('INI_ALL', 7);
+define('INI_PERDIR', 2);
+define('INI_SYSTEM', 4);
+define('INI_USER', 1);
+define('LC_ALL', 6);
+define('LC_COLLATE', 3);
+define('LC_CTYPE', 0);
+define('LC_MESSAGES', 5);
+define('LC_MONETARY', 4);
+define('LC_NUMERIC', 1);
+define('LC_TIME', 2);
+define('LOCK_EX', 2);
+define('LOCK_NB', 4);
+define('LOCK_SH', 1);
+define('LOCK_UN', 3);
+define('LOG_ALERT', 1);
+define('LOG_AUTH', 32);
+define('LOG_AUTHPRIV', 80);
+define('LOG_CONS', 2);
+define('LOG_CRIT', 2);
+define('LOG_CRON', 72);
+define('LOG_DAEMON', 24);
+define('LOG_DEBUG', 7);
+define('LOG_EMERG', 0);
+define('LOG_ERR', 3);
+define('LOG_INFO', 6);
+define('LOG_KERN', 0);
+define('LOG_LOCAL0', 128);
+define('LOG_LOCAL1', 136);
+define('LOG_LOCAL2', 144);
+define('LOG_LOCAL3', 152);
+define('LOG_LOCAL4', 160);
+define('LOG_LOCAL5', 168);
+define('LOG_LOCAL6', 176);
+define('LOG_LOCAL7', 184);
+define('LOG_LPR', 48);
+define('LOG_MAIL', 16);
+define('LOG_NDELAY', 8);
+define('LOG_NEWS', 56);
+define('LOG_NOTICE', 5);
+define('LOG_NOWAIT', 16);
+define('LOG_ODELAY', 4);
+define('LOG_PERROR', 32);
+define('LOG_PID', 1);
+define('LOG_SYSLOG', 40);
+define('LOG_USER', 8);
+define('LOG_UUCP', 64);
+define('LOG_WARNING', 4);
+define('MON_1', 131098);
+define('MON_10', 131107);
+define('MON_11', 131108);
+define('MON_12', 131109);
+define('MON_2', 131099);
+define('MON_3', 131100);
+define('MON_4', 131101);
+define('MON_5', 131102);
+define('MON_6', 131103);
+define('MON_7', 131104);
+define('MON_8', 131105);
+define('MON_9', 131106);
+define('M_1_PI', 0.31830988618379);
+define('M_2_PI', 0.63661977236758);
+define('M_2_SQRTPI', 1.1283791670955);
+define('M_ABSTRACT', 2);
+define('M_E', 2.718281828459);
+define('M_FINAL', 4);
+define('M_LN10', 2.302585092994);
+define('M_LN2', 0.69314718055995);
+define('M_LOG10E', 0.43429448190325);
+define('M_LOG2E', 1.442695040889);
+define('M_PI', 3.1415926535898);
+define('M_PI_2', 1.5707963267949);
+define('M_PI_4', 0.78539816339745);
+define('M_PRIVATE', 1024);
+define('M_PROTECTED', 512);
+define('M_PUBLIC', 256);
+define('M_SQRT1_2', 0.70710678118655);
+define('M_SQRT2', 1.4142135623731);
+define('M_STATIC', 1);
+define('NAN', 0.0); /*. DOC (dummy value) .*/
+define('NOEXPR', 327681);
+define('PATHINFO_BASENAME', 2);
+define('PATHINFO_DIRNAME', 1);
+define('PATHINFO_EXTENSION', 4);
+/*. if_php_ver_5 .*/ define('PATHINFO_FILENAME', 8); /*. end_if_php_ver .*/
+define('PATH_SEPARATOR', ':');
+define('PEAR_EXTENSION_DIR', '/usr/local/php-5.0.1/lib/php/extensions/no-debug-non-zts-20040412');
+define('PEAR_INSTALL_DIR', '');
+define('PHP_BINDIR', '/usr/local/php-5.0.1/bin');
+define('PHP_CONFIG_FILE_PATH', '/usr/local/php-5.0.1/lib');
+define('PHP_CONFIG_FILE_SCAN_DIR', '');
+define('PHP_DATADIR', '/usr/local/php-5.0.1/share/php');
+define('PHP_EXTENSION_DIR', '/usr/local/php-5.0.1/lib/php/extensions/no-debug-non-zts-20040412');
+define('PHP_LIBDIR', '/usr/local/php-5.0.1/lib/php');
+define('PHP_LOCALSTATEDIR', '/usr/local/php-5.0.1/var');
+define('PHP_OS', 'Linux');
+define('PHP_OUTPUT_HANDLER_CONT', 2);
+define('PHP_OUTPUT_HANDLER_END', 4);
+define('PHP_OUTPUT_HANDLER_START', 1);
+define('PHP_PREFIX', '/usr/local/php-5.0.1');
+define('PHP_SAPI', 'cgi');
+define('PHP_SHLIB_SUFFIX', 'so');
+define('PHP_SYSCONFDIR', '/usr/local/php-5.0.1/etc');
+define('PHP_VERSION', '5.0.1');
+define('PHP_INT_SIZE', 4);
+define('PHP_INT_MAX', 2147483647);
+define('PM_STR', 131111);
+define('PSFS_ERR_FATAL', 0);
+define('PSFS_FEED_ME', 1);
+define('PSFS_FLAG_FLUSH_CLOSE', 2);
+define('PSFS_FLAG_FLUSH_INC', 1);
+define('PSFS_FLAG_NORMAL', 0);
+define('PSFS_PASS_ON', 2);
+define('P_PRIVATE', 1024);
+define('P_PROTECTED', 512);
+define('P_PUBLIC', 256);
+define('P_STATIC', 1);
+define('RADIXCHAR', 65536);
+define('SEEK_CUR', 1);
+define('SEEK_END', 2);
+define('SEEK_SET', 0);
+define('SORT_ASC', 4);
+define('SORT_DESC', 3);
+define('SORT_NUMERIC', 1);
+define('SORT_REGULAR', 0);
+define('SORT_STRING', 2);
+define('STR_PAD_BOTH', 2);
+define('STR_PAD_LEFT', 0);
+define('STR_PAD_RIGHT', 1);
+define('SUNFUNCS_RET_DOUBLE', 2);
+define('SUNFUNCS_RET_STRING', 1);
+define('SUNFUNCS_RET_TIMESTAMP', 0);
+define('THOUSEP', 65537);
+define('T_FMT', 131114);
+define('T_FMT_AMPM', 131115);
+define('UPLOAD_ERR_OK', 0);
+define('UPLOAD_ERR_INI_SIZE', 1);
+define('UPLOAD_ERR_FORM_SIZE', 2);
+define('UPLOAD_ERR_PARTIAL', 3);
+define('UPLOAD_ERR_NO_FILE', 4);
+define('UPLOAD_ERR_NO_TMP_DIR', 6);
+define('UPLOAD_ERR_CANT_WRITE', 7);
+define('UPLOAD_ERR_EXTENSION', 8);
+define('YESEXPR', 327680);
+define('ZEND_THREAD_SAFE', false);
+
+/* FIXME: $argc,$argv are actually defined only in the CLI and CGI versions
+and are set only if "register_argc_argv = on" in php.ini. */
+$argc = 0;
+$argv = /*. (array[int]string) .*/ array();
+
+/*. mixed .*/ function constant(/*. string .*/ $name){}
+/*. string.*/ function bin2hex(/*. string .*/ $str){}
+/*. int   .*/ function sleep(/*. int .*/ $secs){}
+/*. void  .*/ function usleep(/*. int .*/ $microsecs){}
+/*. mixed .*/ function time_nanosleep(/*.int.*/ $secs, /*.int.*/ $nanosecs){}
+/*. int   .*/ function time(){}
+/*. int   .*/ function mktime(/*. args .*/){}
+/*. int   .*/ function gmmktime(/*. args .*/){}
+/*. string.*/ function strftime(/*.string .*/ $fmt /*., args .*/){}
+/*. string.*/ function gmstrftime(/*. string .*/ $fmt /*., args .*/){}
+/*. int   .*/ function strtotime(/*. string .*/ $time /*., args .*/){}
+/*. string.*/ function date(/*. string .*/ $fmt /*., args .*/){}
+/*. int   .*/ function idate(/*. string .*/ $fmt /*., args .*/){}
+/*. string.*/ function gmdate(/*. string .*/ $fmt /*., args .*/){}
+/*. array[string]mixed .*/ function getdate(/*. args .*/){}
+/*. array[]int .*/ function localtime(/*. args .*/){}
+/*. bool  .*/ function checkdate(/*.int.*/ $month, /*.int.*/ $day, /*.int.*/ $year){}
+/*. void  .*/ function flush(){}
+/*. string.*/ function wordwrap(/*.string.*/ $s /*., args .*/){}
+/*. string.*/ function htmlspecialchars(/*. string .*/ $s /*., args .*/){}
+/*. string.*/ function htmlentities(/*. string .*/ $s /*., args .*/){}
+/*. string.*/ function html_entity_decode(/*. string .*/ $s /*., args .*/){}
+/*. array[string]string .*/ function get_html_translation_table(/*. args .*/){}
+##/*. string.*/ function sha1(/*. string .*/ $s /*., args .*/){}
+##/*. string.*/ function sha1_file(/*. string .*/ $fn /*., args .*/){}
+##/*. string.*/ function md5(/*. string .*/ $s /*., args .*/){}
+##/*. string.*/ function md5_file(/*.string.*/ $filename /*., args .*/){}
+/*. int   .*/ function crc32(/*. string .*/ $str){}
+// FIXME:
+/*. array .*/ function iptcparse(/*. string .*/ $iptcblock){}
+/*. mixed .*/ function iptcembed(/*. string .*/ $iptcdata, /*. string .*/ $jpeg_file_name /*., args .*/){}
+/*. bool  .*/ function phpinfo(/*. args .*/){}
+/*. string.*/ function phpversion(/*. args .*/){}
+/*. bool  .*/ function phpcredits(/*. args .*/){}
+/*. string.*/ function php_logo_guid(){}
+/*. string.*/ function zend_logo_guid(){}
+/*. string.*/ function php_sapi_name(){}
+/*. string.*/ function php_uname(/*. args .*/){}
+/*. string.*/ function php_ini_scanned_files(){}
+/*. int   .*/ function strnatcmp(/*.string.*/ $s1, /*.string.*/ $s2){}
+/*. int   .*/ function strnatcasecmp(/*.string.*/ $s1, /*.string.*/ $s2){}
+/*. int   .*/ function strcasecmp(/*.string.*/ $s1, /*.string.*/ $s2){}
+/*. int   .*/ function substr_count(/*.string.*/ $haystack, /*.string.*/ $needle){}
+/*. int   .*/ function strspn(/*. string .*/ $str1, /*. string .*/ $str2 /*., args .*/){}
+/*. int   .*/ function strcspn(/*. string .*/ $str1, /*. string .*/ $str2 /*., args .*/){}
+/*. string.*/ function strtok(/*. string .*/ $str, /*. string .*/ $token){}
+/*. string.*/ function strtoupper(/*. string .*/ $s){}
+/*. string.*/ function strtolower(/*. string .*/ $s){}
+/*. int .*/ function strpos(/*.string.*/ $haystack, /*.mixed.*/ $needle /*., args .*/){}
+/*. int .*/ function stripos(/*. string .*/ $haystack, /*. string .*/ $needle /*., args .*/){}
+/*. int .*/ function strrpos(/*. string .*/ $haystack, /*. string .*/ $needle /*., args .*/){}
+/*. int .*/ function strripos(/*. string .*/ $haystack, /*. string .*/ $needle /*., args .*/){}
+/*. string.*/ function strrev(/*. string .*/ $s){}
+/*. string .*/ function hebrev(/*. string .*/ $str /*., args .*/){}
+/*. string .*/ function hebrevc(/*. string .*/ $str /*., args .*/){}
+/*. string.*/ function nl2br(/*. string .*/ $s){}
+/*. string.*/ function basename(/*. string .*/ $path /*., args .*/){}
+/*. string.*/ function dirname(/*. string .*/ $path){}
+/*. array[string]string .*/ function pathinfo(/*. string .*/ $path /*., args .*/){}
+/*. string.*/ function stripslashes(/*.string.*/ $s){}
+/*. string.*/ function stripcslashes(/*. string .*/ $str){}
+/*. string.*/ function strstr(/*.string.*/ $haystack, /*.mixed.*/ $needle){}
+/*. string.*/ function strchr(/*.string.*/ $haystack, /*.string.*/ $needle){}
+/*. string.*/ function stristr(/*.string.*/ $haystack, /*.mixed.*/ $needle){}
+/*. string.*/ function strrchr(/*.string.*/ $haystack, /*.mixed.*/ $needle){}
+/*. string.*/ function str_shuffle(/*. string .*/ $str){}
+/*. mixed .*/ function str_word_count(/*. string .*/ $str /*., args .*/){}
+/*. array[int]string .*/ function str_split(/*.string.*/ $s /*., args .*/){}
+/*. string.*/ function strpbrk(/*. string .*/ $haystack, /*.string.*/ $charlist){}
+/*. int   .*/ function substr_compare(/*. string .*/ $main_str, /*. string .*/ $str, /*. int .*/ $offset /*., args .*/){}
+/*. int   .*/ function strcoll(/*. string .*/ $str1, /*. string .*/ $str2){}
+/*. string.*/ function money_format(/*. string .*/ $format, /*. float .*/ $number_)
+/*. DOC <@deprecated this function is not available on Windows> .*/
+{}
+/*. string.*/ function substr(/*.string.*/ $s, /*.int.*/ $start /*., args .*/){}
+/*. mixed .*/ function substr_replace(/*. mixed .*/ $s, /*. string .*/ $replacement, /*. int .*/ $start /*., args .*/){}
+/*. string.*/ function quotemeta(/*. string .*/ $str){}
+/*. string.*/ function ucfirst(/*.string.*/ $str){}
+/*. string.*/ function ucwords(/*.string.*/ $str){}
+/*. string.*/ function strtr(/*.string.*/ $s, /*.mixed.*/ $x /*., args .*/){}
+/*. string.*/ function addslashes(/*.string.*/ $str){}
+/*. string.*/ function addcslashes(/*.string.*/ $str, /*.string.*/ $charlist){}
+/*. string.*/ function rtrim(/*.string.*/ $s /*., args .*/){}
+/*. string.*/ function chop(/*.string.*/ $s /*., args .*/){}
+/*. mixed .*/ function str_replace(/*.mixed.*/ $search, /*.mixed.*/ $replace, /*.mixed.*/ $subject /*., args .*/){}
+/*. mixed .*/ function str_ireplace(/*.mixed.*/ $search, /*.mixed.*/ $replace, /*.mixed.*/ $subject /*., args .*/){}
+/*. string.*/ function str_repeat(/*.string.*/ $s, /*.int.*/ $n){}
+/*. mixed .*/ function count_chars(/*. string .*/ $str /*., args .*/){}
+/*. string.*/ function chunk_split(/*.string.*/ $body, /*. args .*/){}
+/*. string.*/ function trim(/*.string.*/ $s /*., args .*/){}
+/*. string.*/ function ltrim(/*. string .*/ $str /*., args .*/){}
+/*. string.*/ function strip_tags(/*. string .*/ $str /*., args .*/){}
+/*. int   .*/ function similar_text(/*. string .*/ $first, /*. string .*/ $second /*., args .*/){}
+/*. array[int]string .*/ function explode(/*.string.*/ $sep, /*.string.*/ $s /*., args .*/){}
+/*. string.*/ function implode(/*.string.*/ $glue, /*. array[]string .*/ $pieces){}
+/*. string.*/ function join(/*.string.*/ $glue, /*. array[]string .*/ $pieces){}
+/*. string.*/ function setlocale(/*. int .*/ $category, /*. mixed .*/ $locale /*., args .*/){}
+/*. array[string]mixed .*/ function localeconv(){}
+/*. string.*/ function nl_langinfo(/*. int .*/ $item){}
+/*. string.*/ function soundex(/*. string .*/ $str){}
+/*. int   .*/ function levenshtein(/*. string .*/ $str1, /*. string .*/ $str2 /*., args .*/){}
+/*. string.*/ function chr(/*.int.*/ $c){}
+/*. int   .*/ function ord(/*.string.*/ $s){}
+/*. void  .*/ function parse_str(/*. string .*/ $str /*., args .*/){}
+/*. string.*/ function str_pad(/*. string .*/ $input, /*. int .*/ $pad_length /*., args .*/){}
+/*. string.*/ function sprintf(/*.string.*/ $fmt /*., args .*/){}
+/*. string.*/ function printf(/*.string.*/ $fmt /*., args .*/){}
+/*. int   .*/ function vprintf(/*. string .*/ $format, /*. array .*/ $args_){}
+/*. string.*/ function vsprintf(/*. string .*/ $format, /*. array .*/ $args_){}
+/*. int   .*/ function fprintf(/*.resource.*/ $f, /*.string.*/ $fmt /*., args .*/){}
+/*. int   .*/ function vfprintf(/*. resource .*/ $handle, /*. string .*/ $format, /*. array .*/ $args_){}
+/*. mixed .*/ function sscanf(/*.string.*/ $str, /*.string.*/ $fmt /*., args .*/){}
+/*. mixed .*/ function fscanf(/*. resource .*/ $handle, /*. string .*/ $format /*., args .*/){}
+/*. array[string]string .*/ function parse_url(/*. string .*/ $url /*. , args .*/){ trigger_error("", E_WARNING); }
+/*. string.*/ function urlencode(/*. string .*/ $s){}
+/*. string.*/ function urldecode(/*. string .*/ $s){}
+/*. string.*/ function rawurlencode(/*. string .*/ $str){}
+/*. string.*/ function rawurldecode(/*. string .*/ $str){}
+/*. string.*/ function http_build_query(/*. array .*/ $formdata /*., args .*/){}
+/*. string.*/ function readlink(/*. string .*/ $path){}
+/*. int   .*/ function linkinfo(/*. string .*/ $path){}
+/*. bool  .*/ function symlink(/*. string .*/ $target, /*. string .*/ $link){}
+/*. bool  .*/ function link(/*. string .*/ $target, /*. string .*/ $link){}
+/*. bool  .*/ function unlink(/*. string .*/ $filename /*., args .*/)
+{ trigger_error("", E_WARNING); }
+/*. string.*/ function exec(/*. string .*/ $command /*., args .*/){}
+/*. string.*/ function system(/*. string .*/ $command /*., args .*/){}
+/*. string.*/ function escapeshellcmd(/*. string .*/ $command){}
+/*. string.*/ function escapeshellarg(/*. string .*/ $arg){}
+/*. void  .*/ function passthru(/*. string .*/ $command /*., args .*/){}
+/*. string.*/ function shell_exec(/*. string .*/ $cmd){}
+/*. resource .*/ function proc_open(/*. string .*/ $cmd, /*. array[int][int]string .*/ $descriptorspec, /*. array[]resource .*/ &$pipes /*., args .*/){}
+/*. int   .*/ function proc_close(/*. resource .*/ $process){}
+/*. int   .*/ function proc_terminate(/*. resource .*/ $process /*., args .*/){}
+/*. array[string]mixed .*/ function proc_get_status(/*. resource .*/ $process){}
+/*. bool  .*/ function proc_nice(/*. int .*/ $increment){}
+/*. int   .*/ function rand(/*. args .*/){}
+/*. void  .*/ function srand(/*. args .*/){}
+/*. int   .*/ function getrandmax(){}
+/*. int   .*/ function mt_rand(/*. args .*/){}
+/*. void  .*/ function mt_srand(/*. args .*/){}
+/*. int   .*/ function mt_getrandmax(){}
+/*. int   .*/ function getservbyname(/*. int .*/ $service, /*. string .*/ $protocol){}
+/*. string.*/ function getservbyport(/*. int .*/ $port, /*. string .*/ $protocol){}
+/*. int   .*/ function getprotobyname(/*. string .*/ $name){}
+/*. string.*/ function getprotobynumber(/*. int .*/ $number_){}
+/*. int   .*/ function getmyuid(){}
+/*. int   .*/ function getmygid(){}
+/*. int   .*/ function getmypid(){}
+/*. int   .*/ function getmyinode(){}
+/*. int   .*/ function getlastmod(){}
+/*. string.*/ function base64_decode(/*. string .*/ $s){}
+/*. string.*/ function base64_encode(/*. string .*/ $s){}
+/*. string.*/ function convert_uuencode(/*. string .*/ $data){}
+/*. string.*/ function convert_uudecode(/*. string .*/ $data){}
+/*. float .*/ function abs(/*. float .*/ $n){}
+/*. float .*/ function acos(/*. float .*/ $x){}
+/*. float .*/ function acosh(/*. float .*/ $x){}
+/*. float .*/ function asin(/*. float .*/ $x){}
+/*. float .*/ function asinh(/*. float .*/ $x){}
+/*. float .*/ function atan(/*. float .*/ $x){}
+/*. float .*/ function atan2(/*. float .*/ $y, /*. float .*/ $x){}
+/*. float .*/ function atanh(/*. float .*/ $x){}
+/*. float .*/ function ceil(/*. float .*/ $x){}
+/*. float .*/ function cos(/*. float .*/ $x){}
+/*. float .*/ function cosh(/*. float .*/ $x){}
+/*. float .*/ function expm1(/*. float .*/ $x){}
+/*. float .*/ function floor(/*. float .*/ $x){}
+/*. float .*/ function log1p(/*. float .*/ $x){}
+/*. float .*/ function round(/*. float .*/ $x /*., args .*/){}
+/*. float .*/ function sin(/*. float .*/ $x){}
+/*. float .*/ function sinh(/*. float .*/ $x){}
+/*. float .*/ function tan(/*. float .*/ $x){}
+/*. float .*/ function tanh(/*. float .*/ $x){}
+/*. float .*/ function pi(){}
+/*. bool  .*/ function is_finite(/*. float .*/ $val){}
+/*. bool  .*/ function is_nan(/*. float .*/ $val){}
+/*. bool  .*/ function is_infinite(/*. float .*/ $val){}
+/*. float .*/ function pow(/*. float .*/ $base, /*. float .*/ $esp){}
+/*. float .*/ function exp(/*. float .*/ $x){}
+/*. float .*/ function log(/*. float .*/ $x){}
+/*. float .*/ function log10(/*. float .*/ $x){}
+/*. float .*/ function sqrt(/*. float .*/ $x){}
+/*. float .*/ function hypot(/*. float .*/ $x, /*. float .*/ $y){}
+/*. float .*/ function deg2rad(/*. float .*/ $number_){}
+/*. float .*/ function rad2deg(/*. float .*/ $number_){}
+/*. float .*/ function bindec(/*. string .*/ $binary){}
+/*. float .*/ function hexdec(/*. string .*/ $hex){}
+/*. float .*/ function octdec(/*. string .*/ $oct){}
+/*. string.*/ function decbin(/*. int .*/ $number_){}
+/*. string.*/ function decoct(/*. int .*/ $number_){}
+/*. string.*/ function dechex(/*. int .*/ $number_){}
+/*. string.*/ function base_convert(/*. string .*/ $number_, /*. int .*/ $frombase, /*. int .*/ $tobase){}
+/*. string.*/ function number_format(/*.float.*/ $n /*., args .*/){}
+/*. float .*/ function fmod(/*. float .*/ $x, /*. float .*/ $y){}
+/*. int   .*/ function ip2long(/*. string .*/ $ip_address){}
+/*. string.*/ function long2ip(/*. int .*/ $proper_address){}
+/*. string.*/ function getenv(/*. string .*/ $varname){}
+/*. bool  .*/ function putenv(/*. string .*/ $setting){}
+/*. array[string][int]string .*/ function getopt(/*. string .*/ $options /*., args .*/){}
+/*. string.*/ function microtime(/*. args .*/){}
+/*. array[string]int .*/ function gettimeofday(){}
+/*. array[string]int .*/ function getrusage(/*. args .*/){}
+/*. string.*/ function uniqid(/*. string .*/ $prefix /*., args .*/){}
+/*. string.*/ function quoted_printable_decode(/*. string .*/ $str){}
+/*. string.*/ function convert_cyr_string(/*. string .*/ $str, /*. string .*/ $from, /*. string .*/ $to){}
+/*. string.*/ function get_current_user(){}
+/*. void  .*/ function set_time_limit(/*. int .*/ $seconds){}
+/*. string.*/ function get_cfg_var(/*. string .*/ $varname){}
+/*. bool  .*/ function set_magic_quotes_runtime(/*. int .*/ $new_setting){}
+/*. int   .*/ function get_magic_quotes_gpc(){}
+/*. int   .*/ function get_magic_quotes_runtime(){}
+/*. bool  .*/ function import_request_variables(/*. string .*/ $types /*., args .*/){}
+/*. bool  .*/ function error_log(/*. string .*/ $message /*., args .*/){}
+/*. mixed .*/ function call_user_func(/*. mixed .*/ $func /*., args .*/){}
+/*. mixed .*/ function call_user_func_array(/*. mixed .*/ $func, /*. array[int]mixed .*/ $param_arr){}
+/*. mixed .*/ function call_user_method(/*. string .*/ $method_name, /*. object .*/ &$obj /*., args .*/)
+/*. DOC
+<@deprecated Use <@item call_user_func_array()> instead.> .*/{}
+/*. mixed .*/ function call_user_method_array(/*. string .*/ $method_name, /*. object .*/ &$obj, /*. array[int]mixed .*/ $paramarr)
+/*. DOC
+<@deprecated Use <@item call_user_func_array()> instead.> .*/{}
+/*. string.*/ function serialize(/*. mixed .*/ $value){}
+/*. mixed .*/ function unserialize(/*. string .*/ $s){}
+/*. void  .*/ function var_dump(/*. mixed .*/ $x /*., args .*/){}
+/*. string.*/ function var_export(/*. mixed .*/ $x /*., args .*/){}
+/*. void  .*/ function debug_zval_dump(/*. mixed .*/ $variable){}
+/*. bool  .*/ function print_r(/*. mixed .*/ $expr /*., args .*/){}
+/*. void  .*/ function register_shutdown_function(/*. mixed .*/ $func /*., args .*/){}
+/*. bool  .*/ function register_tick_function(/*. mixed .*/ $func /*., args .*/){}
+/*. void  .*/ function unregister_tick_function(/*. string .*/ $func){}
+/*. mixed .*/ function highlight_file(/*. string .*/ $filename /*., args .*/){}
+/*. mixed .*/ function show_source(/*. string .*/ $filename /*., args .*/){}
+/*. mixed .*/ function highlight_string(/*. string .*/ $str /*., args .*/){}
+/*. string.*/ function php_strip_whitespace(/*. string .*/ $filename){}
+
+/*. bool  .*/ function php_check_syntax(/*. string .*/ $filename /*., args .*/)
+/*. DOC
+	<@deprecated For technical reasons, this function is deprecated and
+	removed from PHP.  Instead, use <code>php -l somefile.php</code> from
+	the commandline. Or, even better, use PHPLint. >
+.*/
+{}
+
+/*. string.*/ function ini_get(/*. string .*/ $varname)
+/*. DOC Gets the value of a configuration option
+
+    Returns the value of the configuration option on success. Failure,
+    such as querying for a non-existent value, will return an empty string.
+
+    Boolean values are returned as "0" for FALSE, "1" for "TRUE".  Some
+    parameters have the default value NULL, and this value gets returned
+    if the paramenter isn't defined in the php.ini.  Some values uses a
+    special format, for example "upload_max_filesize = 10M": take a look
+    to the official WEB site for an example on how to parse these values.
+
+    A typical example:
+
+<pre>
+if ( ini_get("magic_quotes_gpc") === "1" )
+	$s = <@item stripslashes($s)>;
+</pre>
+.*/ {}
+
+/*. array[string][string]mixed .*/ function ini_get_all(/*. args .*/){}
+/*. string.*/ function ini_set(/*. string .*/ $varname, /*. string .*/ $newvalue){}
+/*. string.*/ function ini_alter(/*. string .*/ $varname, /*. string .*/ $newvalue){}
+/*. void  .*/ function ini_restore(/*. string .*/ $varname){}
+/*. string.*/ function get_include_path(){}
+/*. string.*/ function set_include_path(/*. string .*/ $new_inc_path){}
+/*. void  .*/ function restore_include_path(){}
+/*. bool  .*/ function setcookie(/*. string .*/ $n /*., args .*/){}
+/*. bool  .*/ function setrawcookie(/*. string .*/ $n /*., args .*/){}
+/*. void  .*/ function header(/*. string .*/ $s /*., args .*/){}
+/*. bool  .*/ function headers_set(/*. args .*/){}
+/*. array[int]string .*/ function headers_list(){}
+/*. int   .*/ function connection_aborted(){}
+/*. int   .*/ function connection_status(){}
+/*. int   .*/ function ignore_user_abort(/*. args .*/){}
+/*. array[string][string]mixed .*/ function parse_ini_file(/*. string .*/ $filename /*., args .*/){}
+/*. bool  .*/ function is_uploaded_file(/*. string .*/ $fn){}
+/*. bool  .*/ function move_uploaded_file(/*. string .*/ $fn, /*. string .*/ $dst){}
+/*. string.*/ function gethostbyaddr(/*.string.*/ $ip){}
+/*. string.*/ function gethostbyname(/*.string.*/ $hn){}
+/*. array[int]string .*/ function gethostbynamel(/*. string .*/ $hostname){}
+/*. bool  .*/ function dns_check_record(/*. string .*/ $host /*., args .*/){}
+/*. bool  .*/ function checkdnsrr(/*. string .*/ $host /*., args .*/){}
+/*. bool  .*/ function dns_get_mx(/*. string .*/ $hostname, /*. array[int]string .*/ &$mxhosts /*., args .*/){}
+/*. bool  .*/ function getmxrr(/*. string .*/ $hostname, /*. array[int]string .*/ &$a /*., args .*/){}
+/*. array[int][string]mixed .*/ function dns_get_record(/*. string .*/ $hostname /*., args .*/){}
+/*. int   .*/ function intval(/*. mixed .*/ $v /*., args .*/){}
+/*. float .*/ function floatval(/*. mixed .*/ $v){}
+/*. float .*/ function doubleval(/*. mixed .*/ $v){}
+/*. string.*/ function strval(/*. mixed .*/ $v){}
+/*. string.*/ function gettype(/*. mixed .*/ $variable){}
+/*. bool  .*/ function settype(/*. mixed .*/ &$v, /*. string .*/ $type){}
+/*. bool  .*/ function is_null(/*. mixed .*/ $v){}
+/*. bool  .*/ function is_resource(/*.mixed.*/ $v){}
+/*. bool  .*/ function is_bool(/*.mixed.*/ $v){}
+/*. bool  .*/ function is_long(/*.mixed.*/ $v){}
+/*. bool  .*/ function is_float(/*.mixed.*/ $v){}
+/*. bool  .*/ function is_int(/*.mixed.*/ $v){}
+/*. bool  .*/ function is_integer(/*.mixed.*/ $v){}
+/*. bool  .*/ function is_double(/*.mixed.*/ $v){}
+/*. bool  .*/ function is_real(/*.mixed.*/ $v){}
+/*. bool  .*/ function is_numeric(/*.mixed.*/ $v){}
+/*. bool  .*/ function is_string(/*.mixed.*/ $v){}
+/*. bool  .*/ function is_array(/*.mixed.*/ $v){}
+/*. bool  .*/ function is_object(/*.mixed.*/ $v){}
+/*. bool  .*/ function is_scalar(/*.mixed.*/ $v){}
+/*. bool  .*/ function is_callable(/*.mixed.*/ $f /*., args .*/){}
+
+/*. bool  .*/ function dl(/*. string .*/ $lib)
+/*. DOC
+	<@deprecated As of PHP 5, the dl() function is deprecated in every SAPI
+	except CLI. Use Extension Loading Directives method instead.>
+.*/
+{}
+
+/*. int   .*/ function pclose(/*. resource .*/ $handle){}
+/*. resource .*/ function popen(/*. string .*/ $cmd, /*. string .*/ $mode)
+{ trigger_error("", E_WARNING); }
+/*. int   .*/ function readfile(/*. string .*/ $fn /*., args .*/)
+{ trigger_error("", E_WARNING); }
+/*. bool  .*/ function rewind(/*. resource .*/ $handle){}
+/*. bool  .*/ function rmdir(/*. string .*/ $dirname /*., args .*/)
+{ trigger_error("", E_WARNING); }
+/*. int   .*/ function umask(/*. args .*/){}
+/*. bool  .*/ function fclose(/*.resource.*/ $f){}
+/*. bool  .*/ function feof(/*. resource .*/ $f){}
+/*. string.*/ function fgetc(/*. resource .*/ $h){}
+/*. string.*/ function fgets(/*. resource .*/ $f /*., args .*/){}
+/*. string.*/ function fgetss(/*. resource .*/ $f /*., args .*/){}
+/*. string.*/ function fread(/*.resource.*/ $f, /*.int.*/ $length){}
+
+/*.resource.*/function fopen(/*.string.*/ $filename, /*.string.*/ $mode,
+	/*.args.*/)
+/*. DOC Open a file
+
+	Actually, on error the resulting value is FALSE. Accordingly to
+	the PHPLint type model, a NULL value would be more appropriate
+	in this case. The simplest way to detect failure is
+
+<pre>
+$f = @fopen("x.txt", "w");
+if( $f === FALSE )  die("can't open x.txt: $php_errormsg");
+fwrite($f, "something");
+fclose($f);
+</pre>
+
+	In the example above we omitted the detection of errors that
+	may arise calling fwrite() and fclose().
+	A better way in PHP5 is mapping errors and warnings to some
+	exception, and then using the try/catch statement:
+
+<pre>
+set_error_handler("my_error_handler_raising_exception");
+...
+
+try {
+	$f = fopen("x.txt", "w");
+	fwrite($f, "something");
+	fclose($f);
+}
+catch (Exception $e) { 
+	# Probably here we should do something more useful:
+	die("write failed on x.txt: " . $e->getMessage());
+}
+</pre>
+
+.*/
+{ trigger_error("", E_WARNING); }
+
+/*. int   .*/ function fpassthru(/*. resource .*/ $handle){}
+/*. bool  .*/ function ftruncate(/*. resource .*/ $handle, /*. int .*/ $size){}
+/*. array[string]int .*/ function fstat(/*. resource .*/ $handle){}
+/*. int   .*/ function fseek(/*. resource .*/ $handle, /*. int .*/ $offset /*., args .*/){}
+/*. int   .*/ function ftell(/*. resource .*/ $handle){}
+/*. bool  .*/ function fflush(/*. resource .*/ $handle){}
+/*. int   .*/ function fwrite(/*. resource .*/ $handle, /*. string .*/ $s /*., args .*/){}
+/*. int   .*/ function fputs(/*. resource .*/ $handle, /*. string .*/ $s /*., args .*/){}
+/*. bool  .*/ function mkdir(/*. string .*/ $pathname /*., args .*/)
+{ trigger_error("", E_WARNING); }
+/*. bool  .*/ function rename(/*. string .*/ $oldname, /*. string .*/ $newname /*., args .*/)
+{ trigger_error("", E_WARNING); }
+/*. bool  .*/ function copy(/*. string .*/ $source, /*. string .*/ $dest)
+{ trigger_error("", E_WARNING); }
+/*. string.*/ function tempnam(/*. string .*/ $dir, /*. string .*/ $prefix){}
+/*. resource .*/ function tmpfile(){}
+/*. array[int]string .*/ function file(/*. string .*/ $filename /*., args .*/)
+{ trigger_error("", E_WARNING); }
+/*. string.*/ function file_get_contents(/*.string.*/ $fn /*., args .*/)
+{ trigger_error("", E_WARNING); }
+/*. int   .*/ function file_put_contents(/*.string.*/ $fn, /*.string.*/ $data /*., args .*/)
+{ trigger_error("", E_WARNING); }
+/*. array[int]string .*/ function fgetcsv(/*. resource .*/ $handle /*., args .*/){}
+/*. bool  .*/ function flock(/*. resource .*/ $handle, /*. int .*/ $op /*., args .*/){}
+/*. array[string]string .*/ function get_meta_tags(/*. string .*/ $fn /*., args .*/){}
+/*. int   .*/ function set_file_buffer(/*. resource .*/ $stream, /*. int .*/ $buffer){}
+/*. string.*/ function realpath(/*. string .*/ $path){}
+/*. bool  .*/ function fnmatch(/*. string .*/ $pattern, /*. string .*/ $str /*., args .*/){}
+# FIXME:
+/*. if_php_ver_4 .*/
+	/*. resource .*/ function fsockopen(/*.string.*/ $target /*., args .*/){}
+/*. else .*/
+	/*. resource .*/ function fsockopen(/*.string.*/ $target, $port=0, &$errno=0, &$errstr="", $timeout=0.0){}
+/*. end_if_php_ver .*/
+/*. resource .*/ function pfsockopen(/*. string .*/ $hostname /*., args .*/){}
+/*. string.*/ function pack(/*. string .*/ $format /*., args .*/){}
+/*. array[string]mixed .*/ function unpack(/*. string .*/ $format, /*. string .*/ $data){}
+/*. mixed .*/ function get_browser( /*. args .*/){}
+/*. string.*/ function crypt(/*. string .*/ $str /*., args .*/){}
+/*. resource .*/ function opendir(/*. string .*/ $path /*., args .*/)
+{ trigger_error("", E_WARNING); }
+/*. void  .*/ function closedir(/*. resource .*/ $dirhandle){}
+/*. bool  .*/ function chdir(/*. string .*/ $dir)
+{ trigger_error("", E_WARNING); }
+/*. bool  .*/ function chroot(/*. string .*/ $dir)
+{ trigger_error("", E_WARNING); }
+/*. string.*/ function getcwd(){}
+/*. void  .*/ function rewinddir(/*. resource .*/ $dir_handle){}
+/*. string.*/ function readdir(/*. resource .*/ $dir_handle){}
+
+/*. if_php_ver_4 .*/
+
+class Directory {
+	var /*. string .*/ $path;
+	var /*. resource .*/ $hanlde;
+	/*. string .*/ function read(){}
+	/*. void .*/ function rewind(){}
+	/*. void .*/ function close(){}
+}
+
+/*. else .*/
+
+class Directory {
+	public /*. string .*/ $path;
+	public /*. resource .*/ $hanlde;
+	public /*. string .*/ function read(){}
+	public /*. void .*/ function rewind(){}
+	public /*. void .*/ function close(){}
+}
+
+/*. end_if_php_ver .*/
+
+/*. Directory .*/ function dir(/*. string .*/ $directory /*., args .*/){}
+/*. array[int]string .*/ function scandir(/*. string .*/ $dir /*., args .*/)
+{ trigger_error("", E_WARNING); }
+/*. array[int]string .*/ function glob(/*. string .*/ $pattern /*., args .*/){}
+/*. int   .*/ function fileatime(/*. string .*/ $fn){}
+/*. int   .*/ function filectime(/*. string .*/ $fn){}
+/*. int   .*/ function filegroup(/*. string .*/ $fn)
+{ trigger_error("", E_WARNING); }
+/*. int   .*/ function fileinode(/*. string .*/ $fn){}
+/*. int   .*/ function filemtime(/*. string .*/ $fn){}
+/*. int   .*/ function fileowner(/*. string .*/ $fn){}
+/*. int   .*/ function fileperms(/*. string .*/ $fn){}
+/*. int   .*/ function filesize(/*. string .*/ $filename)
+{ trigger_error("", E_WARNING); }
+/*. string.*/ function filetype(/*. string .*/ $fn){}
+/*. bool  .*/ function file_exists(/*.string.*/ $fn){}
+/*. bool  .*/ function is_writable(/*. string .*/ $fn){}
+/*. bool  .*/ function is_writeable(/*. string .*/ $fn){}
+/*. bool  .*/ function is_readable(/*. string .*/ $fn){}
+/*. bool  .*/ function is_executable(/*. string .*/ $fn){}
+/*. bool  .*/ function is_file(/*. string .*/ $fn){}
+/*. bool  .*/ function is_dir(/*. string .*/ $fn){}
+/*. bool  .*/ function is_link(/*. string .*/ $fn){}
+/*. array[]int .*/ function stat(/*. string .*/ $fn){}
+/*. array[]int .*/ function lstat(/*. string .*/ $fn){}
+/*. bool  .*/ function chown(/*. string .*/ $fn, /*. mixed .*/ $user){}
+/*. bool  .*/ function chgrp(/*. string .*/ $fn, /*. mixed .*/ $group){}
+/*. bool  .*/ function chmod(/*. string .*/ $fn, /*. int .*/ $mode){}
+/*. bool  .*/ function touch(/*. string .*/ $fn /*., args .*/){}
+/*. void  .*/ function clearstatcache(){}
+/*. float .*/ function disk_total_space(/*. string .*/ $dir){}
+/*. float .*/ function disk_free_space(/*. string .*/ $dir){}
+/*. float .*/ function diskfreespace(/*. string .*/ $dir){}
+/*. bool  .*/ function mail(/*. string .*/ $to, /*. string .*/ $subj, /*. string .*/ $msg /*., args .*/){}
+/*. int   .*/ function ezmlm_hash(/*. string .*/ $addr){}
+/*. bool  .*/ function openlog(/*. string .*/ $ident, /*. int .*/ $option, /*. int .*/ $facility){}
+/*. bool  .*/ function syslog(/*.int.*/ $priority, /*.string.*/ $msg){}
+/*. bool  .*/ function closelog(){}
+/*. void  .*/ function define_syslog_variables(){}
+/*. float .*/ function lcg_value(){}
+/*. string.*/ function metaphone(/*. string .*/ $str /*., args .*/){}
+/*. bool  .*/ function ob_start(/*. args .*/){}
+/*. void  .*/ function ob_flush(){}
+/*. void  .*/ function ob_clean(){}
+/*. bool  .*/ function ob_end_flush(){}
+/*. bool  .*/ function ob_end_clean(){}
+/*. bool  .*/ function ob_get_flush(){}
+/*. bool  .*/ function ob_get_clean(){}
+/*. int   .*/ function ob_get_length(){}
+/*. int   .*/ function ob_get_level(){}
+/*. array .*/ function ob_get_status( /*. args .*/){}
+/*. string.*/ function ob_get_contents(){}
+/*. void  .*/ function ob_implicit_flush( /*. args .*/){}
+/*. array .*/ function ob_list_handlers(){}
+/*. bool  .*/ function ksort(/*. array .*/ $array_arg /*., args .*/){}
+/*. bool  .*/ function krsort(/*. array .*/ $array_arg /*., args .*/){}
+/*. void  .*/ function natsort(/*. array .*/ $array_arg){}
+/*. void  .*/ function natcasesort(/*. array .*/ $array_arg){}
+/*. bool  .*/ function asort(/*. array .*/ &$a /*., args .*/){}
+/*. bool  .*/ function arsort(/*. array .*/ &$a /*., args .*/){}
+/*. bool  .*/ function sort(/*. array .*/ &$a /*., args .*/){}
+/*. bool  .*/ function rsort(/*. array .*/ &$a /*., args .*/){}
+/*. bool  .*/ function usort(/*. array .*/ &$a, /*. mixed .*/ $cmp_func){}
+/*. bool  .*/ function uasort(/*. array .*/ &$a, /*. mixed .*/ $cmp_func){}
+/*. bool  .*/ function uksort(/*. array .*/ &$a, /*. mixed .*/ $cmp_func){}
+/*. bool  .*/ function shuffle(/*. array .*/ $array_arg){}
+/*. bool  .*/ function array_walk(/*. array .*/ $input, /*. mixed .*/ $funcname /*., args .*/){}
+/*. bool  .*/ function array_walk_recursive(/*. array .*/ $input, /*. mixed .*/ $funcname /*., args .*/){}
+/*. int   .*/ function count(/*. array .*/ $a /*., args .*/){}
+/*. int   .*/ function sizeof(/*. array .*/ $a /*., args .*/){}
+/*. mixed .*/ function end(/*. array .*/ $a){}
+/*. mixed .*/ function prev(/*. array .*/ $a){}
+/*. mixed .*/ function next(/*. array .*/ $a){}
+/*. mixed .*/ function reset(/*. array .*/ $a){}
+/*. mixed .*/ function current(/*. array .*/ $a){}
+/*. mixed .*/ function key(/*. array .*/ $array_arg){}
+/*. float .*/ function min(/*.float.*/ $a, /*.float.*/ $b /*., args .*/){}
+/*. float .*/ function max(/*.float.*/ $a, /*.float.*/ $b /*., args .*/)
+/*. DOC
+
+	Actually the max() function has a more complex semantic that cannot
+	be effectively expressed using the restrictive syntax of PHPLint.
+	The arguments can be of the type int or float, and the result can
+	be either int or float; a single array of numbers is also allowed.
+	The syntax described here should be the most useful one, with two or
+	more int or float numbers and returning a float.
+.*/
+{}
+/*. bool  .*/ function in_array(/*. mixed .*/ $needle, /*. array .*/ $haystack /*., args .*/){}
+/*. mixed .*/ function array_search(/*. mixed .*/ $needle, /*. array .*/ $hatstack /*., args .*/){}
+/*. int   .*/ function extract(/*. array[string]mixed .*/ $var_array /*., args .*/){}
+/*. array[string]mixed .*/ function compact(/*. mixed .*/ $var_names /*., args .*/){}
+/*. array .*/ function range(/*. mixed .*/ $low, /*. mixed .*/ $high /*., args .*/){}
+/*. bool  .*/ function array_change_key_case(/*. array .*/ $a /*., args .*/){}
+/*. array[int]array .*/ function array_chunk(/*. array .*/ $a, /*. int .*/ $size /*., args .*/){}
+/*. array .*/ function array_combine(/*. array .*/ $keys, /*. array .*/ $values){}
+/*. array .*/ function array_count_values(/*. array .*/ $input){}
+/*. array .*/ function array_diff(/*. array .*/ $arr1, /*. array .*/ $arr2 /*., args .*/){}
+/*. array .*/ function array_diff_assoc(/*. array .*/ $arr1, /*. array .*/ $arr2 /*., args .*/){}
+/*. array .*/ function array_diff_uassoc(/*. array .*/ $arr1, /*. array .*/ $arr2 /*., args .*/){}
+/*. array .*/ function array_fill(/*. int .*/ $start_key, /*. int .*/ $num, /*. mixed .*/ $val){}
+/*. array .*/ function array_filter(/*. array .*/ $input /*., args .*/){}
+/*. array .*/ function array_flip(/*. array .*/ $input){}
+/*. array .*/ function array_intersect(/*. array .*/ $arr1, /*. array .*/ $arr2 /*., args .*/){}
+/*. array .*/ function array_intersect_assoc(/*. array .*/ $arr1, /*. array .*/ $arr2 /*., args .*/){}
+/*. array .*/ function array_intersect_uassoc(/*. array .*/ $arr1, /*. array .*/ $arr2 /*., args .*/){}
+/*. bool  .*/ function array_key_exists(/*. mixed .*/ $key, /*. array .*/ $search){}
+/*. array[int]mixed .*/ function array_keys(/*. array .*/ $input /*., args .*/){}
+/*. array .*/ function array_map(/*. mixed .*/ $callback, /*. array .*/ $a1 /*., args .*/){}
+/*. array .*/ function array_merge(/*. array .*/ $a1, /*. array .*/ $a2 /*., args .*/){}
+/*. array .*/ function array_merge_recursive(/*. array .*/ $arr1, /*. array .*/ $arr2 /*., args .*/){}
+/*. bool  .*/ function array_multisort(/*. array .*/ $ar1 /*., args .*/){}
+/*. array .*/ function array_pad(/*. array .*/ $input, /*. int .*/ $pad_size, /*. mixed .*/ $pad_value){}
+/*. mixed .*/ function array_pop(/*. array .*/ $stack){}
+/*. int   .*/ function array_push(/*. array .*/ $stack, /*. mixed .*/ $var_ /*., args .*/){}
+/*. mixed .*/ function array_rand(/*. array .*/ $input /*., args .*/){}
+/*. mixed .*/ function array_reduce(/*. array .*/ $input, /*. mixed .*/ $string_ /*., args .*/){}
+/*. array .*/ function array_reverse(/*. array .*/ $input /*., args .*/){}
+/*. mixed .*/ function array_shift(/*. array .*/ &$a){}
+/*. array .*/ function array_slice(/*. array .*/ $input, /*. int .*/ $offset /*., args .*/){}
+/*. array .*/ function array_splice(/*. array .*/ $input, /*. int .*/ $offset /*., args .*/){}
+/*. mixed .*/ function array_sum(/*. array .*/ $input){}
+/*. array .*/ function array_udiff(/*. array .*/ $arr1, /*. array .*/ $arr2 /*., args .*/){}
+/*. array .*/ function array_udiff_assoc(/*. array .*/ $arr1, /*. array .*/ $arr2 /*., args .*/){}
+/*. array .*/ function array_udiff_uassoc(/*. array .*/ $arr1, /*. array .*/ $arr2 /*., args .*/){}
+/*. array .*/ function array_uintersect(/*. array .*/ $arr1, /*. array .*/ $arr2 /*., args .*/){}
+/*. array .*/ function array_uintersect_assoc(/*. array .*/ $arr1, /*. array .*/ $arr2 /*., args .*/){}
+/*. array .*/ function array_uintersect_uassoc(/*. array .*/ $arr1, /*. array .*/ $arr2 /*., args .*/){}
+/*. array .*/ function array_unique(/*. array .*/ $input){}
+/*. int   .*/ function array_unshift(/*. array .*/ $stack, /*. mixed .*/ $var_ /*., args .*/){}
+/*. array .*/ function array_values(/*. array .*/ $input){}
+
+
+
+
+/*. int   .*/ function assert(/*. args .*/){}
+/*. mixed .*/ function assert_options(/*. int .*/ $what /*., args .*/){}
+/*. int   .*/ function version_compare(/*. string .*/ $ver1, /*. string .*/ $ver2 /*., args .*/){}
+/*. int   .*/ function ftok(/*. string .*/ $pathname, /*. string .*/ $proj){}
+/*. string.*/ function str_rot13(/*. string .*/ $str){}
+/*. bool  .*/ function output_add_rewrite_var(/*. string .*/ $name, /*. string .*/ $value){}
+/*. bool  .*/ function output_reset_rewrite_vars(){}
+/*. mixed .*/ function date_sunrise(/*. mixed .*/ $time /*., args .*/){}
+/*. mixed .*/ function date_sunset(/*. mixed .*/ $time /*., args .*/){}
+###/*. bool  .*/ function trigger_error(/*.string.*/ $msg /*., args .*/){}
+/*. int   .*/ function strlen(/*.string.*/ $s){}
+/*. int   .*/ function strcmp(/*.string.*/ $a, /*.string.*/ $b){}
+/*. bool  .*/ function ctype_cntrl(/*. string .*/ $text){}
+/*. int   .*/ function func_num_args(){}
+/*. mixed .*/ function func_get_arg(/*. int .*/ $n){}
+/*. array[int]mixed .*/ function func_get_args(){}
+/*. array .*/ function each(/*. array .*/ $a){}
+/*. bool  .*/ function empty(/*. mixed .*/ $variable){}
+/*. void  .*/ function unset(/*. mixed .*/ $var_, /*. args .*/){}
+/*. mixed .*/ function eval(/*. string .*/ $cmd)
+/*. DOC
+<@deprecated the contents of the eval() cannot be parsed by PHPLint.> .*/{}
+/*. bool  .*/ function defined(/*. string.*/ $c){}
+/*. bool  .*/ function headers_sent(/*. args .*/){}
+/*. mixed .*/ function set_error_handler(/*.mixed.*/ $cb /*., args.*/){}
+/*. int   .*/ function error_reporting(/*. args .*/){}
+/*. bool  .*/ function function_exists(/*. string .*/ $func_name){}
+/*. bool  .*/ function method_exists(/*. object .*/ $obj, /*. string .*/ $method){}
+/*. string.*/ function get_class(/*. object .*/ $obj){}
+/*. string.*/ function zend_version(){}
+/*. bool  .*/ function is_subclass_of(/*. object .*/ $obj, /*.string.*/ $class_name){}
+
+
+class stdClass{}
+
+class __PHP_Incomplete_Class
+/*. DOC Unserializing an object of an undefided class result in an object belonging to this dummy class .*/
+{}
+
+class php_user_filter{}
+
+/*. bool  .*/ function my_drawtext(/*. resource .*/ $image, /*. string .*/ $text, /*. resource .*/ $font, /*. int .*/ $x, /*. int .*/ $y /*., args .*/){}
+/*. int   .*/ function strncmp(/*. string .*/ $str1, /*. string .*/ $str2, /*. int .*/ $len){}
+/*. int   .*/ function strncasecmp(/*. string .*/ $str1, /*. string .*/ $str2, /*. int .*/ $len){}
+/*. string.*/ function get_parent_class(/*. mixed .*/ $object_){}
+
+/*. if_php_ver_4 .*/
+
+	/*. bool  .*/ function is_a(/*. object .*/ $object_, /*. string .*/ $class_name){}
+
+/*. else .*/
+
+	/*. bool  .*/ function is_a(/*. object .*/ $object_, /*. string .*/ $class_name)
+	/*. DOC <@deprecated please use the instanceof operator> .*/
+	{}
+
+/*. end_if_php_ver .*/
+
+/*. array[string]mixed .*/ function get_class_vars(/*. string .*/ $class_name){}
+/*. array[string]mixed .*/ function get_object_vars(/*. object .*/ $obj){}
+/*. array[int]string .*/ function get_class_methods(/*. mixed .*/ $class_){}
+/*. bool  .*/ function class_exists(/*. string .*/ $classname /*., args .*/){}
+/*. bool  .*/ function interface_exists(/*. string .*/ $classname /*., args .*/){}
+/*. void  .*/ function leak(/*. int .*/ $num_bytes=3){}
+/*. array[int]string .*/ function get_included_files(){}
+/*. void  .*/ function restore_error_handler(){}
+/*. array[int]string .*/ function get_declared_classes(){}
+/*. array[int]string .*/ function get_declared_interfaces(){}
+/*. array[string][int]string .*/ function get_defined_functions(){}
+/*. array[string]mixed .*/ function get_defined_vars(){}
+/*. string.*/ function create_function(/*. string .*/ $args_, /*. string .*/ $code){}
+/*. string.*/ function get_resource_type(/*. resource .*/ $res){}
+/*. array[int]string .*/ function get_loaded_extensions(){}
+/*. array[string]mixed .*/ function get_defined_constants(){}
+/*. void  .*/ function debug_print_backtrace(){}
+/*. array[int][string]mixed .*/ function debug_backtrace(){}
+/*. bool  .*/ function extension_loaded(/*. string .*/ $extension_name){}
+/*. array[int]string .*/ function get_extension_funcs(/*. string .*/ $extension_name){}
+/*. string.*/ function confirm_extname_compiled(/*. string .*/ $arg){}
+/*. int   .*/ function memory_get_usage(){}
+/*. string.*/ function uuencode(/*. string .*/ $data){}
+/*. string.*/ function uudecode(/*. string .*/ $data){}
+/*. string.*/ function php_real_logo_guid(){}
+/*. string.*/ function php_egg_logo_guid(){}
+/*. string.*/ function image_type_to_extension(/*. int .*/ $imagetype /*., args .*/){}
+/*. string.*/ function image_type_to_mime_type(/*. int .*/ $imgtype){}
+/*. array[int]string .*/ function get_headers(/*. string .*/ $url /*., args .*/){ trigger_error("", E_WARNING); }
+/*. array[string]mixed .*/ function error_get_last(){}
+
+
+
+/*. if_php_ver_5 .*/
+
+define('__CLASS__', 'DUMMY_CONSTANT_CLASS');
+define('__FILE__', 'DUMMY_CONSTANT_FILE');
+define('__FUNCTION__', 'DUMMY_CONSTANT_FUNCTION');
+define('__LINE__', 100000);
+define('__METHOD__', 'DUMMY_CONSTANT_METHOD');
+
+/*. bool  .*/ function time_sleep_until(/*. float .*/ $timestamp)
+{ trigger_error("", E_WARNING); }
+
+/*. array .*/ function array_fill_keys(/*. array .*/ $keys, /*. mixed .*/ $value){}
+/*. int .*/ function memory_get_peak_usage(/*. args .*/){}
+
+/*. string.*/ function set_exception_handler(/*. mixed .*/ $exception_handler){}
+/*. void  .*/ function restore_exception_handler(){}
+/*. string .*/ function sys_get_temp_dir(){}
+
+class Exception
+{
+	protected $message = "";      /*. DOC Exception message .*/
+	protected $code = 0;          /*. DOC User defined exception code .*/
+	protected /*.string.*/ $file; /*. DOC Source filename of exception .*/
+	protected /*.int   .*/ $line; /*. DOC Source line of exception .*/
+
+	/*.void.*/ function __construct($message = "", $code = 0){}
+
+	final /*.string.*/ function getMessage()
+	/*. DOC Message of exception .*/ {}
+
+	final /*.int   .*/ function getCode()
+	/*. DOC Code of exception .*/ {}
+	
+	final /*.string.*/ function getFile()
+	/*. DOC Source filename .*/ {}
+	
+	final /*.int   .*/ function getLine()
+	/*. DOC Source line .*/ {}
+	
+	final /*.array[int][string]mixed .*/ function getTrace()
+	/*. DOC An array of the backtrace() .*/ {}
+	
+	final /*.string.*/ function getTraceAsString()
+	/*. DOC Formatted string of trace .*/ {}
+
+	/*.string.*/ function __toString()
+	/*. DOC Formatted string for display .*/ {}
+}
+
+class ErrorException extends Exception
+/*.
+	DOC Generic exception into which errors can be mapped
+	
+
+
+.*/
+{
+	protected /*. int .*/ $severity;
+
+	/*. void .*/ function __construct(
+		$message = "",
+		$code = 0,
+		$severity = E_ERROR,
+		$filename = /*. (string) .*/ NULL,
+		$lineno = 0
+	)
+	/*. DOC   Encapsulate errors in exceptions
+
+		$message is the human-readable description of the
+		exception, while $code lets the program to detect the
+		specific condition occurred. The $severity is the usual
+		log level (see the E_* constants).  $filename and $lineno
+		lets to indicate an alternate position; customized
+		error handling functions can indicate the real source
+		of the error rather that the point where the exception
+		was thrown.
+	.*/
+	{ parent::__construct(); }
+
+	/*. int .*/ function getSeverity(){}
+}
+
+/*. end_if_php_ver .*/
+
+
+
+/*. if_php_ver_5 .*/
+
+	define('DATE_ATOM', '?');
+	define('DATE_COOKIE', '?');
+	define('DATE_ISO8601', '?');
+	define('DATE_RFC822', '?');
+	define('DATE_RFC850', '?');
+	define('DATE_RFC1036', '?');
+	define('DATE_RFC1123', '?');
+	define('DATE_RFC2822', '?');
+	define('DATE_RFC3339', '?');
+	define('DATE_RSS', '?');
+	define('DATE_W3C', '?');
+
+	/*. forward class DateTime{} .*/
+
+	class DateTimeZone
+	/*. DOC
+
+	See: <a href="http://www.php.net/manual/en/ref.datetime.php"><code>http://www.php.net/manual/en/ref.datetime.php</code></a>
+
+	.*/
+	{
+		static /*. array .*/ function listAbbreviations(){}
+		static /*. array[int]string .*/ function listIdentifiers(){}
+		static /*. string .*/ function getName(){}
+		static /*. int .*/ function getOffset(/*. DateTime .*/ $datetime){}
+		/*. void .*/ function __construct(/*. string .*/ $timezone){}
+		/*. array[string][string]mixed .*/ function getTransitions(){}
+	}
+
+	class DateTime
+	/*. DOC
+
+	See: <a href="http://www.php.net/manual/en/ref.datetime.php"><code>http://www.php.net/manual/en/ref.datetime.php</code></a>
+
+	.*/
+	{
+		/*. void .*/ function __construct(/*. args .*/){}
+		/*. void .*/ function setDate(/*. int .*/ $year, /*. int .*/ $month, /*. int .*/ $day){}
+		/*. string .*/ function format(/*. string .*/ $format){}
+		/*. void .*/ function setISODate(/*. int .*/ $year, /*. int .*/ $week /*., args .*/){}
+		/*. void .*/ function modify(/*. string .*/ $modify){}
+		/*. int .*/ function getOffset(){}
+		/*. void .*/ function setTime(/*. int .*/ $hour, /*. int .*/ $minute /*., args .*/){}
+		/*. DateTimeZone .*/ function getTimezone(){}
+		/*. void .*/ function setTimezone(/*. DateTimeZone .*/ $tz){}
+	}
+
+	/*. DateTime .*/ function date_create( /*. args .*/){}
+	/*. void .*/ function date_date_set(/*. DateTime .*/ $obj, /*. int .*/ $year, /*. int .*/ $month, /*. int .*/ $day){}
+	/*. string .*/ function date_default_timezone_get(){}
+	/*. bool .*/ function date_default_timezone_set(/*. string .*/ $timezone_identifier){}
+	/*. string .*/ function date_format(DateTime $obj, /*. string .*/ $format){}
+	/*. void .*/ function date_isodate_set(/*. DateTime .*/ $obj, /*. int .*/ $year, /*. int .*/ $week /*., args .*/){}
+	/*. void .*/ function date_modify(DateTime $obj, /*. string .*/ $modify){}
+	/*. int .*/ function date_offset_get(/*. DateTime .*/ $obj){}
+	/*. array[string]mixed .*/ function date_parse(/*. string .*/ $date){}
+	/*. array[string]string .*/ function date_sun_info(/*. int .*/ $time, /*. float .*/ $latitude, /*. float .*/ $longitude){}
+	/*. void .*/ function date_time_set(/*. DateTime .*/ $obj, /*. int .*/ $hour, /*. int .*/ $minute /*., args .*/){}
+
+	/*. DateTimeZone .*/ function date_timezone_get(/*. DateTime .*/ $obj){}
+	/*. void .*/ function date_timezone_set(/*. DateTime .*/ $obj, /*. DateTimeZone .*/ $tz){}
+ 	/*. array .*/ function timezone_abbreviations_list(){}
+	/*. array[int]string .*/ function timezone_identifiers_list(){}
+	/*. string .*/ function timezone_name_from_abbr(/*. string .*/ $abbr /*., args .*/){}
+	/*. string .*/ function timezone_name_get(/*. DateTimeZone .*/ $obj){}
+	/*. int .*/ function timezone_offset_get(/*. DateTimeZone .*/ $tz, /*. DateTime .*/ $date){}
+	/*. DateTimeZone .*/ function timezone_open(/*. string .*/ $timezone){}
+	/*. array[string][string]mixed .*/ function timezone_transitions_get(/*. DateTimeZone .*/ $tz){}
+
+/*. end_if_php_ver .*/
+
+?>

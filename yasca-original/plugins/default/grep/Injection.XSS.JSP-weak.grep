@@ -1,0 +1,8 @@
+name = Possible Cross Site Scripting via request object in JSP
+file_type = jsp
+;grep = /\<\%=\s*request\.get(?!(Parameter|QueryString)).*\(/i
+grep = /\<\%=\s*request\.getParameter\(/i
+grep = /\<\%=\s*request\.getQueryString\(/i
+category = Cross-Site Scripting
+severity = 4
+category_link = http://www.owasp.org/index.php/Cross_Site_Scripting

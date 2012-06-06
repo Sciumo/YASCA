@@ -1,0 +1,42 @@
+<?
+/*. DOC   mSQL Functions
+
+See: <a href="http://www.php.net/manual/en/ref.msql.php"><code>http://www.php.net/manual/en/ref.msql.php</code></a>
+
+.*/
+
+
+# FIXME: dummy values
+define('MSQL_ASSOC', 1);
+define('MSQL_NUM', 1);
+define('MSQL_BOTH', 1);
+
+/*. int .*/ function msql_connect( /*. args .*/){}
+/*. int .*/ function msql_pconnect( /*. args .*/){}
+/*. bool .*/ function msql_close( /*. args .*/){}
+/*. bool .*/ function msql_select_db(/*. string .*/ $database_name /*., args .*/){}
+/*. bool .*/ function msql_create_db(/*. string .*/ $database_name /*., args .*/){}
+/*. bool .*/ function msql_drop_db(/*. string .*/ $database_name /*., args .*/){}
+/*. resource .*/ function msql_query(/*. string .*/ $query /*., args .*/){}
+/*. resource .*/ function msql_db_query(/*. string .*/ $database_name, /*. string .*/ $query /*., args .*/){}
+/*. resource .*/ function msql_list_dbs( /*. args .*/){}
+/*. resource .*/ function msql_list_tables(/*. string .*/ $database_name /*., args .*/){}
+/*. resource .*/ function msql_list_fields(/*. string .*/ $database_name, /*. string .*/ $table_name /*., args .*/){}
+/*. string .*/ function msql_error(){}
+/*. string .*/ function msql_result(/*. int .*/ $query, /*. int .*/ $row /*., args .*/){}
+/*. int .*/ function msql_num_rows(/*. resource .*/ $query){}
+/*. int .*/ function msql_num_fields(/*. resource .*/ $query){}
+/*. array .*/ function msql_fetch_row(/*. resource .*/ $query){}
+/*. object .*/ function msql_fetch_object(/*. resource .*/ $query /*., args .*/){}
+/*. array .*/ function msql_fetch_array(/*. resource .*/ $query /*., args .*/){}
+/*. bool .*/ function msql_data_seek(/*. resource .*/ $query, /*. int .*/ $row_number){}
+/*. object .*/ function msql_fetch_field(/*. resource .*/ $query /*., args .*/){}
+/*. bool .*/ function msql_field_seek(/*. resource .*/ $query, /*. int .*/ $field_offset){}
+/*. string .*/ function msql_field_name(/*. resource .*/ $query, /*. int .*/ $field_index){}
+/*. string .*/ function msql_field_table(/*. resource .*/ $query, /*. int .*/ $field_offset){}
+/*. int .*/ function msql_field_len(/*. int .*/ $query, /*. int .*/ $field_offet){}
+/*. string .*/ function msql_field_type(/*. resource .*/ $query, /*. int .*/ $field_offset){}
+/*. string .*/ function msql_field_flags(/*. resource .*/ $query, /*. int .*/ $field_offset){}
+/*. bool .*/ function msql_free_result(/*. resource .*/ $query){}
+/*. int .*/ function msql_affected_rows(/*. resource .*/ $query){}
+?>

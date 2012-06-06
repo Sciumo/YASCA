@@ -1,0 +1,78 @@
+<?
+/*. DOC   Oracle Functions (PDO_OCI)
+
+See: <a href="http://www.php.net/manual/en/ref.oci.php"><code>http://www.php.net/manual/en/ref.oci.php</code></a>
+
+.*/
+
+
+
+/*. bool .*/ function oci_define_by_name(/*. resource .*/ $stmt, /*. string .*/ $name, /*. mixed .*/ &$var_ /*., args .*/){}
+/*. bool .*/ function oci_bind_by_name(/*. resource .*/ $stmt, /*. string .*/ $name, /*. mixed .*/ &$var_ /*., args .*/){}
+/*. bool .*/ function oci_free_descriptor(){}
+/*. bool .*/ function oci_lob_save( /*. string .*/ $data /*., args .*/){}
+/*. bool .*/ function oci_lob_import( /*. string .*/ $filename ){}
+/*. string .*/ function oci_lob_load(){}
+/*. string .*/ function oci_lob_read( /*. int .*/ $length ){}
+/*. bool .*/ function oci_lob_eof(){}
+/*. int .*/ function oci_lob_tell(){}
+/*. bool .*/ function oci_lob_rewind(){}
+/*. bool .*/ function oci_lob_seek( /*. int .*/ $offset /*., args .*/){}
+/*. int .*/ function oci_lob_size(){}
+/*. int .*/ function oci_lob_write( /*. string .*/ $string_ /*., args .*/){}
+/*. bool .*/ function oci_lob_append( /*. object .*/ $lob ){}
+/*. bool .*/ function oci_lob_truncate( /*. args .*/){}
+/*. int .*/ function oci_lob_erase( /*. args .*/){}
+/*. bool .*/ function oci_lob_flush( /*. args .*/){}
+/*. bool .*/ function ocisetbufferinglob( /*. boolean .*/ $flag ){}
+/*. bool .*/ function ocigetbufferinglob(){}
+/*. bool .*/ function oci_lob_copy( /*. object .*/ $lob_to, /*. object .*/ $lob_from /*., args .*/){}
+/*. bool .*/ function oci_lob_is_equal( /*. object .*/ $lob1, /*. object .*/ $lob2 ){}
+/*. bool .*/ function oci_lob_export( /*. args .*/){}
+/*. bool .*/ function oci_lob_write_temporary(/*. string .*/ $var_ /*., args .*/){}
+/*. bool .*/ function oci_lob_close(){}
+/*. object .*/ function oci_new_descriptor(/*. resource .*/ $connection /*., args .*/){}
+/*. bool .*/ function oci_rollback(/*. resource .*/ $conn){}
+/*. bool .*/ function oci_commit(/*. resource .*/ $conn){}
+/*. string .*/ function oci_field_name(/*. resource .*/ $stmt, /*. int .*/ $col){}
+/*. int .*/ function oci_field_size(/*. resource .*/ $stmt, /*. int .*/ $col){}
+/*. int .*/ function oci_field_scale(/*. resource .*/ $stmt, /*. int .*/ $col){}
+/*. int .*/ function oci_field_precision(/*. resource .*/ $stmt, /*. int .*/ $col){}
+/*. mixed .*/ function oci_field_type(/*. resource .*/ $stmt, /*. int .*/ $col){}
+/*. int .*/ function oci_field_type_raw(/*. resource .*/ $stmt, /*. int .*/ $col){}
+/*. bool .*/ function oci_field_is_null(/*. resource .*/ $stmt, /*. int .*/ $col){}
+/*. void .*/ function oci_internal_debug(/*. int .*/ $onoff){}
+/*. bool .*/ function oci_execute(/*. resource .*/ $stmt /*., args .*/){}
+/*. bool .*/ function oci_cancel(/*. resource .*/ $stmt){}
+/*. bool .*/ function oci_fetch(/*. resource .*/ $stmt){}
+/*. int .*/ function ocifetchinto(/*. resource .*/ $stmt, /*. array .*/ &$output /*., args .*/){}
+/*. int .*/ function oci_fetch_all(/*. resource .*/ $stmt, /*. array .*/ &$output /*., args .*/){}
+/*. object .*/ function oci_fetch_object( /*. resource .*/ $stmt ){}
+/*. array .*/ function oci_fetch_row( /*. resource .*/ $stmt ){}
+/*. array .*/ function oci_fetch_assoc( /*. resource .*/ $stmt ){}
+/*. array .*/ function oci_fetch_array( /*. resource .*/ $stmt /*., args .*/){}
+/*. bool .*/ function oci_free_statement(/*. resource .*/ $stmt){}
+/*. bool .*/ function oci_close(/*. resource .*/ $conn){}
+/*. resource .*/ function oci_new_connect(/*. string .*/ $user, /*. string .*/ $pass /*., args .*/){}
+/*. resource .*/ function oci_connect(/*. string .*/ $user, /*. string .*/ $pass /*., args .*/){}
+/*. resource .*/ function oci_pconnect(/*. string .*/ $user, /*. string .*/ $pass /*., args .*/){}
+/*. array .*/ function oci_error( /*. args .*/){}
+/*. int .*/ function oci_num_fields(/*. resource .*/ $stmt){}
+/*. resource .*/ function oci_parse(/*. resource .*/ $conn, /*. string .*/ $query){}
+/*. bool .*/ function oci_set_prefetch(/*. resource .*/ $stmt, /*. int .*/ $prefetch_rows){}
+/*. bool .*/ function oci_password_change(/*. resource .*/ $conn, /*. string .*/ $username, /*. string .*/ $old_password, /*. string .*/ $new_password){}
+/*. resource .*/ function oci_new_cursor(/*. resource .*/ $conn){}
+/*. string .*/ function oci_result(/*. resource .*/ $stmt, /*. mixed .*/ $column){}
+/*. string .*/ function oci_server_version(/*. resource .*/ $conn){}
+/*. string .*/ function oci_statement_type(/*. resource .*/ $stmt){}
+/*. int .*/ function oci_num_rows(/*. resource .*/ $stmt){}
+/*. bool .*/ function oci_free_collection(){}
+/*. bool .*/ function oci_collection_append(/*. string .*/ $value){}
+/*. string .*/ function oci_collection_element_get(/*. int .*/ $ndx){}
+/*. bool .*/ function oci_collection_assign(/*. object .*/ $from){}
+/*. bool .*/ function oci_collection_element_assign(/*. int .*/ $index, /*. string .*/ $val){}
+/*. int .*/ function oci_collection_size(){}
+/*. int .*/ function oci_collection_max(){}
+/*. bool .*/ function oci_collection_trim(/*. int .*/ $num){}
+/*. object .*/ function oci_new_collection(/*. resource .*/ $connection, /*. string .*/ $tdo /*., args .*/){}
+?>

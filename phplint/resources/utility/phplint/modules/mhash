@@ -1,0 +1,32 @@
+<?
+/*. DOC   Mhash Functions
+
+See: <a href="http://www.php.net/manual/en/ref.mhash.php"><code>http://www.php.net/manual/en/ref.mhash.php</code></a>
+
+.*/
+
+define("MHASH_ADLER32"   , 4);
+define("MHASH_CRC32"     , 4);
+define("MHASH_CRC32B"    , 4);
+define("MHASH_GOST"      , 32);
+define("MHASH_HAVAL128"  , 16);
+define("MHASH_HAVAL160"  , 20);
+define("MHASH_HAVAL192"  , 24);
+define("MHASH_HAVAL224"  , 28);
+define("MHASH_HAVAL256"  , 32);
+define("MHASH_MD4"       , 16);
+define("MHASH_MD5"       , 16);
+define("MHASH_RIPEMD160" , 20);
+define("MHASH_SHA1"      , 20);
+define("MHASH_SHA256"    , 32);
+define("MHASH_TIGER"     , 24);
+define("MHASH_TIGER128"  , 16);
+define("MHASH_TIGER160"  , 20);
+
+
+/*. int   .*/ function mhash_count(){}
+/*. int   .*/ function mhash_get_block_size(/*. int .*/ $hash){}
+/*. string.*/ function mhash_get_hash_name(/*. int .*/ $hash){}
+/*. string.*/ function mhash(/*. int .*/ $hash, /*. string .*/ $data /*., args .*/){}
+/*. string.*/ function mhash_keygen_s2k(/*. int .*/ $hash, /*. string .*/ $input_password, /*. string .*/ $salt, /*. int .*/ $bytes){}
+?>

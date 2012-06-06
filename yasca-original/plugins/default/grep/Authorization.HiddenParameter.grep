@@ -1,0 +1,16 @@
+name = Using a Hidden Form Field
+file_type = aspx,asp,vb,html,htm,js,cgi,jsp,jsx
+grep = /input\s*type\s*=\s*\"?hidden\"?/i
+category = Use of a Hidden Form Field
+severity = 5
+description =
+<p>
+	Hidden form fields can be manipulated by an attacker.
+</p>
+<p>
+	<h4>References</h4>
+	<ul>
+		<li>TODO</li>
+	</ul>
+</p>
+END;

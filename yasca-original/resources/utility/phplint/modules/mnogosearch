@@ -1,0 +1,146 @@
+<?
+/*. DOC   mnoGoSearch Functions
+
+See: <a href="http://www.php.net/manual/en/ref.mnogosearch.php"><code>http://www.php.net/manual/en/ref.mnogosearch.php</code></a>
+
+.*/
+
+
+# FIXME: dummy values
+define('UDM_FIELD_URLID', 1);
+define('UDM_FIELD_URL', 1);
+define('UDM_FIELD_CONTENT', 1);
+define('UDM_FIELD_TITLE', 1);
+define('UDM_FIELD_KEYWORDS', 1);
+define('UDM_FIELD_DESC', 1);
+define('UDM_FIELD_DESCRIPTION', 1);
+define('UDM_FIELD_TEXT', 1);
+define('UDM_FIELD_SIZE', 1);
+define('UDM_FIELD_RATING', 1);
+define('UDM_FIELD_SCORE', 1);
+define('UDM_FIELD_MODIFIED', 1);
+define('UDM_FIELD_ORDER', 1);
+define('UDM_FIELD_CRC', 1);
+define('UDM_FIELD_CATEGORY', 1);
+define('UDM_FIELD_LANG', 1);
+define('UDM_FIELD_CHARSET', 1);
+define('UDM_FIELD_SITEID', 1);
+define('UDM_FIELD_POP_RANK', 1);
+define('UDM_FIELD_ORIGINID', 1);
+define('UDM_PARAM_PAGE_SIZE', 1);
+define('UDM_PARAM_PAGE_NUM', 1);
+define('UDM_PARAM_SEARCH_MODE', 1);
+define('UDM_PARAM_CACHE_MODE', 1);
+define('UDM_PARAM_TRACK_MODE', 1);
+define('UDM_PARAM_PHRASE_MODE', 1);
+define('UDM_PARAM_CHARSET', 1);
+define('UDM_PARAM_LOCAL_CHARSET', 1);
+define('UDM_PARAM_BROWSER_CHARSET', 1);
+define('UDM_PARAM_STOPTABLE', 1);
+define('UDM_PARAM_STOP_TABLE', 1);
+define('UDM_PARAM_STOPFILE', 1);
+define('UDM_PARAM_STOP_FILE', 1);
+define('UDM_PARAM_WEIGHT_FACTOR', 1);
+define('UDM_PARAM_WORD_MATCH', 1);
+define('UDM_PARAM_MAX_WORD_LEN', 1);
+define('UDM_PARAM_MAX_WORDLEN', 1);
+define('UDM_PARAM_MIN_WORD_LEN', 1);
+define('UDM_PARAM_MIN_WORDLEN', 1);
+define('UDM_PARAM_ISPELL_PREFIXES', 1);
+define('UDM_PARAM_ISPELL_PREFIX', 1);
+define('UDM_PARAM_PREFIXES', 1);
+define('UDM_PARAM_PREFIX', 1);
+define('UDM_PARAM_CROSS_WORDS', 1);
+define('UDM_PARAM_CROSSWORDS', 1);
+define('UDM_PARAM_VARDIR', 1);
+define('UDM_PARAM_DATADIR', 1);
+define('UDM_PARAM_HLBEG', 1);
+define('UDM_PARAM_HLEND', 1);
+define('UDM_PARAM_SYNONYM', 1);
+define('UDM_PARAM_STORED', 1);
+define('UDM_PARAM_GROUPBYSITE', 1);
+define('UDM_PARAM_QSTRING', 1);
+define('UDM_PARAM_REMOTE_ADDR', 1);
+define('UDM_PARAM_QUERY', 1);
+define('UDM_PARAM_SITEID', 1);
+define('UDM_PARAM_DETECT_CLONES', 1);
+define('UDM_PARAM_SORT_ORDER', 1);
+define('UDM_PARAM_RESULTS_LIMIT', 1);
+define('UDM_PARAM_EXCERPT_SIZE', 1);
+define('UDM_PARAM_EXCERPT_PADDING', 1);
+define('UDM_LIMIT_CAT', 1);
+define('UDM_LIMIT_URL', 1);
+define('UDM_LIMIT_TAG', 1);
+define('UDM_LIMIT_LANG', 1);
+define('UDM_LIMIT_DATE', 1);
+define('UDM_LIMIT_TYPE', 1);
+define('UDM_PARAM_FOUND', 1);
+define('UDM_PARAM_NUM_ROWS', 1);
+define('UDM_PARAM_WORDINFO', 1);
+define('UDM_PARAM_WORDINFO_ALL', 1);
+define('UDM_PARAM_WORD_INFO', 1);
+define('UDM_PARAM_SEARCHTIME', 1);
+define('UDM_PARAM_SEARCH_TIME', 1);
+define('UDM_PARAM_FIRST_DOC', 1);
+define('UDM_PARAM_LAST_DOC', 1);
+define('UDM_MODE_ALL', 1);
+define('UDM_MODE_ANY', 1);
+define('UDM_MODE_BOOL', 1);
+define('UDM_MODE_PHRASE', 1);
+define('UDM_CACHE_ENABLED', 1);
+define('UDM_CACHE_DISABLED', 1);
+define('UDM_TRACK_ENABLED', 1);
+define('UDM_TRACK_DISABLED', 1);
+define('UDM_PHRASE_ENABLED', 1);
+define('UDM_PHRASE_DISABLED', 1);
+define('UDM_ENABLED', 1);
+define('UDM_DISABLED', 1);
+define('UDM_CROSS_WORDS_ENABLED', 1);
+define('UDM_CROSSWORDS_ENABLED', 1);
+define('UDM_CROSS_WORDS_DISABLED', 1);
+define('UDM_CROSSWORDS_DISABLED', 1);
+define('UDM_PREFIXES_ENABLED', 1);
+define('UDM_PREFIX_ENABLED', 1);
+define('UDM_ISPELL_PREFIXES_ENABLED', 1);
+define('UDM_ISPELL_PREFIX_ENABLED', 1);
+define('UDM_PREFIXES_DISABLED', 1);
+define('UDM_PREFIX_DISABLED', 1);
+define('UDM_ISPELL_PREFIXES_DISABLED', 1);
+define('UDM_ISPELL_PREFIX_DISABLED', 1);
+define('UDM_ISPELL_TYPE_AFFIX', 1);
+define('UDM_ISPELL_TYPE_SPELL', 1);
+define('UDM_ISPELL_TYPE_DB', 1);
+define('UDM_ISPELL_TYPE_SERVER', 1);
+define('UDM_MATCH_WORD', 1);
+define('UDM_MATCH_BEGIN', 1);
+define('UDM_MATCH_SUBSTR', 1);
+define('UDM_MATCH_END', 1);
+
+/*. int .*/ function udm_alloc_agent(/*. string .*/ $dbaddr /*., args .*/){}
+/*. int .*/ function udm_set_agent_param(/*. int .*/ $agent, /*. int .*/ $var_, /*. string .*/ $val){}
+/*. int .*/ function udm_load_ispell_data(/*. int .*/ $agent, /*. int .*/ $var_, /*. string .*/ $val1 /*., args .*/){}
+/*. int .*/ function udm_free_ispell_data(/*. int .*/ $agent){}
+/*. int .*/ function udm_add_search_limit(/*. int .*/ $agent, /*. int .*/ $var_, /*. string .*/ $val){}
+/*. int .*/ function udm_clear_search_limits(/*. int .*/ $agent){}
+/*. int .*/ function udm_check_charset(/*. int .*/ $agent, /*. string .*/ $charset){}
+/*. int .*/ function udm_crc32(/*. int .*/ $agent, /*. string .*/ $str){}
+/*. int .*/ function udm_parse_query_string(/*. int .*/ $agent, /*. string .*/ $str){}
+/*. int .*/ function udm_make_excerpt(/*. int .*/ $agent, /*. int .*/ $res, /*. int .*/ $row){}
+/*. int .*/ function udm_set_agent_param_ex(/*. int .*/ $agent, /*. string .*/ $var_, /*. string .*/ $val){}
+/*. string .*/ function udm_get_agent_param_ex(/*. int .*/ $agent, /*. string .*/ $field){}
+/*. string .*/ function udm_get_res_field_ex(/*. int .*/ $res, /*. int .*/ $row, /*. string .*/ $field){}
+/*. int .*/ function udm_store_doc_cgi(/*. int .*/ $agent){}
+/*. int .*/ function udm_alloc_agent_array(/*. array .*/ $dbaddr){}
+/*. int .*/ function udm_hash32(/*. int .*/ $agent, /*. string .*/ $str){}
+/*. int .*/ function udm_find(/*. int .*/ $agent, /*. string .*/ $query){}
+/*. string .*/ function udm_get_res_field(/*. int .*/ $res, /*. int .*/ $row, /*. int .*/ $field){}
+/*. string .*/ function udm_get_res_param(/*. int .*/ $res, /*. int .*/ $param){}
+/*. int .*/ function udm_free_res(/*. int .*/ $res){}
+/*. int .*/ function udm_free_agent(/*. int .*/ $agent){}
+/*. int .*/ function udm_errno(/*. int .*/ $agent){}
+/*. string .*/ function udm_error(/*. int .*/ $agent){}
+/*. int .*/ function udm_api_version(){}
+/*. array .*/ function udm_cat_list(/*. int .*/ $agent, /*. string .*/ $category){}
+/*. array .*/ function udm_cat_path(/*. int .*/ $agent, /*. string .*/ $category){}
+/*. int .*/ function udm_get_doc_count(/*. int .*/ $agent){}
+?>

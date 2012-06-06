@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class Console_Color</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class Console_Color</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A simple class to use ANSI Colorcodes.</p>
+<p class="description"><p>A simple class to use ANSI Colorcodes.
+ Of all the functions, you probably only want to use convert() and escape(). They are easier to use. However, if you want to access colorcodes more directly, look into the other functions.</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Stefan Walk &lt;<a href="mailto:et@php.net">et@php.net</a>&gt;</li>
+				<li><span class="field">license:</span> <a href="http://www.opensource.org/licenses/mit-license.php">MIT License</a></li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_lib---Color.php.html">/lib/Color.php</a> (line <span class="field">73</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+										
+				<div class="method-definition">
+					static 						<span class="method-result">string</span>
+										<a href="#bgcolor" title="details" class="method-name">bgcolor</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">string</span>
+										<a href="#color" title="details" class="method-name">color</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$color</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$style</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$background</span> = <span class="var-default">null</span>])
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">string</span>
+										<a href="#convert" title="details" class="method-name">convert</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$colored</span> = <span class="var-default">true</span>])
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">string</span>
+										<a href="#escape" title="details" class="method-name">escape</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>)
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">string</span>
+										<a href="#fgcolor" title="details" class="method-name">fgcolor</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">string</span>
+										<a href="#strip" title="details" class="method-name">strip</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>)
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">string</span>
+										<a href="#style" title="details" class="method-name">style</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+																																																																							</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodbgcolor" id="bgcolor"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static bgcolor</span> (line <span class="line-number">152</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a BG color controlcode</p>
+<p class="description"><p>Returns a BG color controlcode</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			bgcolor
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcolor" id="color"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static color</span> (line <span class="line-number">91</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns an ANSI-Controlcode
+ Takes 1 to 3 Arguments: either 1 to 3 strings containing the name of the FG Color, style and BG color, or one array with the indices color, style or background.</p>
+<p class="description"><p>Returns an ANSI-Controlcode
+ Takes 1 to 3 Arguments: either 1 to 3 strings containing the name of the FG Color, style and BG color, or one array with the indices color, style or background.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			color
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$color</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$style</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$background</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$color</span><span class="var-description">: Optional   Either a string with the name of the foreground color, or   an array with the indices 'color', 'style', 'background' and   corresponding names as values.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$style</span><span class="var-description">: Optional name of the style</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$background</span><span class="var-description">: Optional name of the background color</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodconvert" id="convert"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static convert</span> (line <span class="line-number">192</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Converts colorcodes in the format %y (for yellow) into ansi-control codes. terminals).</p>
+<p class="description"><p>Converts colorcodes in the format %y (for yellow) into ansi-control codes. The conversion table is: ('bold' meaning 'light' on some terminals). It's almost the same conversion table irssi uses. <pre>                  text      text            background
+      ------------------------------------------------
+      %k %K %0    black     dark grey       black
+      %r %R %1    red       bold red        red
+      %g %G %2    green     bold green      green
+      %y %Y %3    yellow    bold yellow     yellow
+      %b %B %4    blue      bold blue       blue
+      %m %M %5    magenta   bold magenta    magenta
+      %p %P       magenta (think: purple)
+      %c %C %6    cyan      bold cyan       cyan
+      %w %W %7    white     bold white      white
+
+      %F     Blinking, Flashing
+      %U     Underline
+      %8     Reverse
+      %_,%9  Bold
+
+      %n     Resets the color
+      %%     A single %</pre> First param is the string to convert, second is an optional flag if colors should be used. It defaults to true, if set to false, the colorcodes will just be removed (And %% will be transformed into %)</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			convert
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$colored</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$string</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$colored</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodescape" id="escape"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static escape</span> (line <span class="line-number">254</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Escapes % so they don't get interpreted as color codes</p>
+<p class="description"><p>Escapes % so they don't get interpreted as color codes</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			escape
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$string</span><span class="var-description">: string</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodfgcolor" id="fgcolor"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static fgcolor</span> (line <span class="line-number">126</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a FG color controlcode</p>
+<p class="description"><p>Returns a FG color controlcode</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			fgcolor
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodstrip" id="strip"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static strip</span> (line <span class="line-number">265</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Strips ANSI color codes from a string</p>
+<p class="description"><p>Strips ANSI color codes from a string</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			strip
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$string</span><span class="var-description">: string</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodstyle" id="style"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static style</span> (line <span class="line-number">139</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a style controlcode</p>
+<p class="description"><p>Returns a style controlcode</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			style
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 15 Mar 2009 09:34:30 -0400 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>

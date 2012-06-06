@@ -1,0 +1,33 @@
+name = Use of Math.random()
+file_type = java,jsp
+grep = /Math\.random\(/i
+category = Non-cryptographic pseudo-random number generator
+category_link = http://www.owasp.org/index.php?title=Non-cryptographic_pseudo-random_number_generator
+severity = 4
+description = 
+<p>
+	The Math.random() pseudo-random number generator does not produce data that can
+	be called 'random' from a statistical point of view. 
+	
+	The SecureRandom class should be used instead, except in trivial cases where the 
+	randomness is not important.
+	
+	Basic testing showed that a commodity laptop (1.6 GHz, 1 GB RAM), Java JDK 1.6 was able to
+	perform 10 million executions of Math.random() in approximately 780 milliseconds. In 
+	contrast, using the SecureRandom class with the <b>SHA1PRNG</b> algorithm provided by Sun took
+	approximately 11,500 milliseconds. While this difference may seem huge, the time per calcualtion
+	is still very small. Unless your application need huge amounts of random numbers, the
+	SecureRandom class should not pose a burden.
+	
+	Other providers are available, such as <b>IBMJCE4758</b> for z/OS
+	
+</p>
+<p>
+	<h4>References</h4>
+	<ul>
+		<li><a href="http://www.owasp.org/index.php?title=Using_a_broken_or_risky_cryptographic_algorithm">Using a Broken or Risky Cryptographic Algorithm</a></li>
+		<li><a href="http://www-03.ibm.com/servers/eserver/zseries/software/java/jcecca14.html">Java Cryptography Extension for z/OS</a></li>
+		<li><a href="http://java.sun.com/javase/6/docs/technotes/guides/security/StandardNames.html">Java 6.0 Security Guide Names</a></li> 
+	</ul>
+</p>
+END;

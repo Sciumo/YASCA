@@ -1,0 +1,6 @@
+name = SQL Statement Shown to User
+file_type = cfm,JAVA
+grep = /^select \* /
+category = System Information Leak: SQL Statement
+severity = 3
+;category_link = http://www.fortifysoftware.com/vulncat/java/java_encapsulation_sys_info_leak_html_comment_jsp.html

@@ -1,0 +1,18 @@
+name = Hardcoded DSN Used
+file_type = JAVA
+grep = /\"jdbc:microsoft:sqlserver[^\"]+\"\s*;/i
+grep = /\"jdbc:microsoft:sqlserver.*Password=[^;]/i
+category = Authentication: Hardcoded DSN
+severity = 2
+description =
+<p>
+    Hardcoding a DSN, especially with credentials, makes maintenance harder and potentially exposes the
+    database credentials to anyone with read access to the .class file.
+</p>
+<p>
+	<h4>References</h4>
+	<ul>
+		<li>(none)</li>
+	</ul>
+</p>
+END;

@@ -1,0 +1,16 @@
+name = Using a Hidden Form Field
+file_type = JAVA,HTML,NET,cgi
+grep = /input\s*type\s*=\s*\"?hidden/i
+category = Use of a Hidden Form Field
+severity = 5
+description =
+<p>
+	Hidden form fields can easily be manipulated by an attacker.
+</p>
+<p>
+	<h4>References</h4>
+	<ul>
+		<li><a target="_blank" href="http://www.cgisecurity.com/lib/form-tampering.pdf">Preventing HTML Form Tampering</a> (CGISecurity)</li>
+	</ul>
+</p>
+END;

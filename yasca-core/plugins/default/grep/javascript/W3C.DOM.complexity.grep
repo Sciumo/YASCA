@@ -1,0 +1,7 @@
+name = W3 Core DOM tree complexity
+file_type = js,html
+grep = /(\.(childNodes|children|firstChild|lastChild|nextSibling|parentNode|previousSibling|sourceIndex)){3}/i
+category = W3 Core
+category_link = http://www.quirksmode.org/dom/w3c_core.html
+severity = 3 
+description = Using a combination of more than 2 properties to traverse the DOM could be expensive and cause problems when the structure changes.

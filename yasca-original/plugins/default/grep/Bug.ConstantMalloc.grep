@@ -1,0 +1,16 @@
+name = Constant Memory Allocation
+file_type = c,cpp
+grep = /(malloc|alloc|realloc)\(\s*\d+\s*\)/
+category = Bug: Memory Allocation
+severity = 2
+description =
+<p>
+	Malloc should normally return results dependent on data type sizes (i.e. sizeof(int) instead of "4").
+</p>
+<p>
+	<h4>References</h4>
+	<ul>
+		<li>TODO</li>
+	</ul>
+</p>
+END;

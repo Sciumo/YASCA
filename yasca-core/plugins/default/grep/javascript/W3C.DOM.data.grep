@@ -1,0 +1,7 @@
+name = W3 Core DOM Data
+file_type = js,html
+grep = /\.(appendData|deleteData|insertData|replaceData|substringData)\(/i
+category = W3 Core
+category_link = http://www.quirksmode.org/dom/w3c_core.html
+severity = 5
+description = NOT supported in IE5.5

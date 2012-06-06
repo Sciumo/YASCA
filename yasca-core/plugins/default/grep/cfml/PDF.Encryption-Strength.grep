@@ -1,0 +1,20 @@
+name = Weak Encryption Algorithm Used to Create PDF
+file_type = COLDFUSION
+grep = /\<cfpdf .*action=\"protect\" .*(encrypt=\"[^(AES_128)]+){0,1}\"/i
+category = Weak Cryptography
+severity = 3
+category_link = http://www.owasp.org/index.php/Guide_to_Cryptography
+description = 
+	<p>
+		The default encryption used when protecting a PDF file is RC4_128. AES is a stronger
+		encryption algorithm that should be used in all cases, unless the PDF file must be
+		readable in Adobe Acrobat 6.0 and earlier. It is suggested to change the encryption
+		algorithm to AES_128 or stronger.
+	</p>
+	<p>
+		<h4>References</h4>
+		<ul>
+			<li><a href="http://www.owasp.org/index.php/Guide_to_Cryptography">OWASP Guide to Cryptography</a></li>
+		</ul>
+	</p>
+END;

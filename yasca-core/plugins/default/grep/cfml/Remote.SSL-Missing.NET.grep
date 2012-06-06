@@ -1,0 +1,20 @@
+name = Remote Object Call Not Using SSL (.NET)
+file_type = COLDFUSION
+preprocess = cfml_fix_tag_attributes
+grep = /\<cfobject .*(secure=\"[^(yes)]+){0,1}\" type=\"(\.net|dotnet)\"/i
+category = Insecure Object Call
+severity = 3
+category_link = http://livedocs.adobe.com/coldfusion/8/htmldocs/help.html?content=Tags_m-o_09.html
+description = 
+	<p>
+        When calling a .NET object on another server, use the 'secure' attribute to specify that
+        SSL should be used. Without this, the data passed back and forth could be viewable to 
+        attackers.		
+	</p>
+	<p>
+		<h4>References</h4>
+		<ul>
+			<li><a href="http://livedocs.adobe.com/coldfusion/8/htmldocs/help.html?content=Tags_m-o_09.html">Adobe LiveDocs</a></li>
+		</ul>
+	</p>
+END;

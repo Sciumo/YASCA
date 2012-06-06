@@ -1,0 +1,34 @@
+<html>
+    <head>
+    </head>
+
+<script language="javascript">
+    function ajax_call_sync(url) {
+         var ajax = null;
+         try {
+             ajax = new ActiveXObject("Msxml2.XMLHTTP");
+         } catch(e0) {
+             try {
+                 ajax = new ActiveXObject("Microsoft.XMLHTTP");
+             } catch(e1) {
+                 ajax = null;
+             }
+         }
+         if (!ajax && typeof XMLHttpRequest != "undefined")
+             ajax = new XMLHttpRequest();
+
+	var startTime = new Date().getTime();
+         ajax.open('GET', url, false);
+         ajax.send('');
+         
+	while ((ajax.readyState != 4 || ajax.status != 200) && ((new Date().getTime()-startTime).getSeconds() < 5));
+	return ajax.responseText;
+	
+    }	
+
+</script>
+    
+    <body>
+
+    </body>
+</html>

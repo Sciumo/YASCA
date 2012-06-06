@@ -1,0 +1,5 @@
+name = Invalid HTML Tag
+file_type = jsp,html,htm,asp,js,shtml,php,pl,cgi
+grep = /\<[a-zA-Z0-9]+=/i
+category = Bug: Invalid HTML Tag
+severity = 5

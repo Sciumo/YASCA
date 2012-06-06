@@ -1,0 +1,20 @@
+name = Dangerous Function - Runtime.exec()
+file_type = JAVA
+grep = /\.getRuntime\(\)\.exec\(/
+category = Process Control
+severity = 4
+category_link = http://www.fortify.com/vulncat/en/vulncat/java/process_control.html
+description =
+<p>
+    The System.getRuntime().exec() function is dangerous because it starts a new process to the passed-in executable. The new process
+	executes with the same rights as the JVM. User input should always be strictly sanitized before being passed into the exec() function,
+	and avoided completely if possible.
+</p>
+<p>
+    <h4>References</h4>
+    <ul>
+		<li><a target="_blank" href="http://www.fortify.com/vulncat/en/vulncat/java/process_control.html">Fortify/Vulncat - Process Control</a></li>
+        <li><a target="_blank" href="http://www.blackhat.com/presentations/bh-usa-09/WILLIAMS/BHUSA09-Williams-EnterpriseJavaRootkits-PAPER.pdf">Java Enterprise Rootkits</a></li>
+    </ul>
+</p>
+END;

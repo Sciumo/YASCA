@@ -1,0 +1,1 @@
+java -classpath jalopy.jar de.hunsicker.jalopy.plugin.console.ConsolePlugin %*

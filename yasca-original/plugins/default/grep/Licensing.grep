@@ -1,0 +1,4 @@
+name = Open Source Licensed Code
+grep = / (GPL|GNU|BSD|Non-Commercial|(may not be used in commercial)) /i
+category = Possible Licensing Restrictions
+severity = 5

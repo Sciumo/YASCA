@@ -1,0 +1,5 @@
+name = Non-Production Code
+file_type = java,jsp
+grep = /(Hello World)|(this is a test)|([^a-z]wtf[^[a-z])/i
+category = General: Non-Production Code
+severity = 3

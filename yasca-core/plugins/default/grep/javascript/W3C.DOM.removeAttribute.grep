@@ -1,0 +1,7 @@
+name = W3 Core DOM removeAttribute(), removeAttributeNode()
+file_type = js,html
+grep = /\.removeAttribute/i
+category = W3 Core
+category_link = http://www.quirksmode.org/dom/w3c_core.html
+severity = 2
+description = NOT supported fully on IE5.5-7 or IE8 as 7, Opera or Konqueror.

@@ -1,0 +1,27 @@
+<?
+/*. DOC   System V Shared Memory support
+
+<h2>Requirements</h2>
+
+No external libraries are needed to build this extension.
+
+<h2>Installation</h2>
+
+Support for these functions is not enabled by default.  To enable
+the System V shared memory support compile PHP with the option
+--enable-sysvshm.
+<p>
+
+See: <a href="http://www.php.net/manual/en/ref.sem.php"><code>http://www.php.net/manual/en/ref.sem.php</code></a>
+
+.*/
+
+
+
+/*. int .*/ function shm_attach(/*. int .*/ $key /*., args .*/){}
+/*. bool .*/ function shm_detach(/*. int .*/ $shm_identifier){}
+/*. bool .*/ function shm_remove(/*. int .*/ $shm_identifier){}
+/*. bool .*/ function shm_put_var(/*. int .*/ $shm_identifier, /*. int .*/ $variable_key, /*. mixed .*/ $variable){}
+/*. mixed .*/ function shm_get_var(/*. int .*/ $id, /*. int .*/ $variable_key){}
+/*. bool .*/ function shm_remove_var(/*. int .*/ $id, /*. int .*/ $variable_key){}
+?>

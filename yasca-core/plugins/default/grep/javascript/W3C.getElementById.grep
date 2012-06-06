@@ -1,0 +1,7 @@
+name = W3 Core  getElementById()
+file_type = js,html
+grep = /\.getElementById\(/i
+category = W3 Core
+category_link = http://www.quirksmode.org/dom/w3c_core.html
+severity = 3 
+description = IE5.5-7 getElementById("test") also return elements with name="test"

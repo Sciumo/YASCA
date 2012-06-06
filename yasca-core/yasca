@@ -1,0 +1,3 @@
+#!/bin/sh
+export PATH=.:$PATH
+php -c ./resources/php_linux.ini -d extension_dir=/usr/lib/php5/20090626+lfs -q yasca.php $@

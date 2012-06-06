@@ -1,0 +1,45 @@
+name = SQL Injection
+file_type = JAVA,PHP
+
+;Java Vulnerabilities
+grep = /\"(select|delete) .*from .*\+/i
+grep = /\"insert\s+into\.* .*\+/i
+grep = /\"update.*set.*\+/i
+grep = /\".*call .*\"\s*\+\s*(req(uest)?)\.getParameter/i
+grep = /prepareCall.*\".*call .*"\s*\+\s*[a-zA-Z0-9_]+/i
+
+;PHP Vulnerabilities
+; Possible formats:
+;	$sql = "select * from table where field = '$_GET[\"bar\"]'";
+;	$sql = "select * from table where field = '" . $_GET["bar"] . "'";
+;	$sql = "select SomeStoredProc('$_GET[\"bar\"]')";
+;	$sql = "select SomeStoredProc('" . $_GET["bar"] . "')";
+;
+grep = /\"(select|delete) .*from .*'\$_(GET|POST|REQUEST)\[/i
+grep = /\"(select|delete) .*from .*\.\s*\$_(GET|POST|REQUEST)\[/i
+grep = /\"select ([a-z0-9_]*)\(\s*'\$_(GET|POST|REQUEST)\[/i
+grep = /\"select ([a-z0-9_]*)\(\s*'\"\s*\.\s*\$_(GET|POST|REQUEST)\[/i
+
+category = SQL Injection
+severity = 1
+category_link = http://www.fortify.com/vulncat/en/vulncat/java/sql_injection.html
+
+; TODO: Improve this - doesn't work in cases like "select * from " + "x where foo=foo"
+
+description =
+<p>
+    <h4>Possible SQL Injection</h4>
+    SQL injection is a code injection technique that exploits a security vulnerability occurring in the database
+    layer of an application. The vulnerability is present when user input is either incorrectly filtered for string literal
+    escape characters embedded in SQL statements or user input is not strongly typed and thereby unexpectedly executed. It
+    is an instance of a more general class of vulnerabilities that can occur whenever one programming or scripting language
+    is embedded inside another. SQL injection attacks are also known as SQL insertion attacks.
+</p>
+<p>
+	<h4>References</h4>
+	<ul>
+		<li><a target="_blank" href="http://www.fortify.com/vulncat/en/vulncat/java/sql_injection.html">Fortify/Vulncat - SQL Injection</a></li>
+		<li><a target="_blank" href="http://en.wikipedia.org/wiki/Sql_injection">SQL Injection</a> (Wikipedia)</li>
+	</ul>
+</p>
+END;

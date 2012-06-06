@@ -1,0 +1,25 @@
+name = Use of realloc()
+file_type = C
+category = Potential Sensitive Information Leak via realloc()
+severity = 3
+grep = /realloc/
+description =
+<p>
+	The realloc() function is used to reallocate memory that was previously
+	in use. If memory is not explicitly cleared, the data that was originally
+	at that location can be accessed by the program.
+</p>
+
+<p>
+	Instead of usiing realloc(), use calloc() and move the memory contents
+	yourself. You may wish to wrap this operation into a "safe" realloc()
+	version.
+</p>
+
+<p>
+	<h4>References</h4>
+	<ul>
+        <li><a target="_blank" href="https://www.securecoding.cert.org/confluence/display/cplusplus/MEM03-CPP.+Clear+sensitive+information+stored+in+reusable+resources+returned+for+reuse">MEM03-CPP. Clear sensitive information stored in reusable resources returned for reuse</a></li>
+	</ul>
+</p>
+END;

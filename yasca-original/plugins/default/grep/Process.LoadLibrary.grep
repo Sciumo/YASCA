@@ -1,0 +1,6 @@
+name = LoadLibrary Usage  
+file_type = java,jsp
+grep = /System\.loadLibrary/
+category = Process Control
+severity = 3
+category_link = http://www.fortifysoftware.com/vulncat/java/java_input_process_control.html

@@ -1,0 +1,23 @@
+<?
+/*. DOC   System V Semaphore Support
+
+<h2>Requirements</h2>
+
+No external libraries are needed to build this extension.
+
+<h2>Installation</h2>
+
+Support for these functions is not enabled by default. To enable System
+V semaphore support compile PHP with the option --enable-sysvsem.
+<p>
+
+See: <a href="http://www.php.net/manual/en/ref.sem.php"><code>http://www.php.net/manual/en/ref.sem.php</code></a>
+
+.*/
+
+
+/*. resource .*/ function sem_get(/*. int .*/ $key /*., args .*/){}
+/*. bool .*/ function sem_acquire(/*. resource .*/ $id){}
+/*. bool .*/ function sem_release(/*. resource .*/ $id){}
+/*. bool .*/ function sem_remove(/*. resource .*/ $id){}
+?>

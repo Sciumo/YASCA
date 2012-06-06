@@ -1,0 +1,25 @@
+<?
+/*. DOC   Hash Functions
+
+See: <a href="http://www.php.net/manual/en/ref.hash.php"><code>http://www.php.net/manual/en/ref.hash.php</code></a>
+
+.*/
+
+define('HASH_HMAC', 1);
+
+/*. string .*/ function hash(/*. string .*/ $algo, /*. string .*/ $data /*. , args .*/){}
+/*. string .*/ function hash_file(/*. string .*/ $algo, /*. string .*/ $filename /*. , args .*/){}
+/*. string .*/ function hash_hmac(/*. string .*/ $algo, /*. string .*/ $data, /*. string .*/ $key /*. , args .*/){}
+/*. string .*/ function hash_hmac_file(/*. string .*/ $algo, /*. string .*/ $filename, /*. string .*/ $key /*. , args .*/){}
+/*. resource .*/ function hash_init(/*. string .*/ $algo /*. , args .*/){}
+/*. bool   .*/ function hash_update(/*. resource .*/ $context, /*. string .*/ $data){}
+/*. int    .*/ function hash_update_stream(/*. resource .*/ $context, /*. resource .*/ $handle /*. , args .*/){}
+/*. bool   .*/ function hash_update_file(/*. resource .*/ $context, /*. string .*/ $filename /*. , args .*/){}
+/*. string .*/ function hash_final(/*. resource .*/ $context /*. , args .*/){}
+/*. array  .*/ function hash_algos(){}
+/*. string .*/ function md5(/*. string .*/ $str /*. , args .*/){}
+/*. string .*/ function md5_file(/*. string .*/ $filename /*. , args .*/){}
+/*. string .*/ function sha1(/*. string .*/ $str /*. , args .*/){}
+/*. string .*/ function sha1_file(/*. string .*/ $filename /*. , args .*/){}
+
+?>

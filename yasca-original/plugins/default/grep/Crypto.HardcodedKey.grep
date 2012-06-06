@@ -1,0 +1,20 @@
+name = Hardcoded Cryptographic Key
+file_type = java,jsp
+grep = /encryptionKey\s*=\s*\"/i
+grep = /\skey\s*=\s*\"/i
+category = Using a broken or risky cryptographic algorithm
+category_link = http://www.owasp.org/index.php?title=Using_a_broken_or_risky_cryptographic_algorithm
+severity = 2
+description = 
+<p>
+	The use of a hardcoded cryptographic key in program source code is considered a bad practice
+	and should be avoided. A better technique would be to load the key at runtime from a trusted
+	store.
+</p>
+<p>
+	<h4>References</h4>
+	<ul>
+		<a href="http://www.owasp.org/index.php?title=Using_a_broken_or_risky_cryptographic_algorithm">Using a Broken or Risky Cryptographic Algorithm</a></li>
+	</ul>
+</p>
+END;

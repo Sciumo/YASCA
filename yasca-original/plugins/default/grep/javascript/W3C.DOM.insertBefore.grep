@@ -1,0 +1,7 @@
+name = W3 Core DOM Node manipulation insertBefore()
+file_type = js,html
+grep = /\.insertBefore\(/i
+category = W3 Core
+category_link = http://www.quirksmode.org/dom/w3c_core.html
+severity = 5
+description = IE8b2 inserts the element correctly, but the change only shows when you click on the previous element.

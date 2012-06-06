@@ -1,0 +1,18 @@
+name = Web Server Details Exposed in Header
+file_type = ycap
+grep = /Server:.*\d\.\d/i
+category = Information Disclosure
+severity = 5
+description = 
+<p>
+	Web servers generally show their component names and versions within the 'Server' header.
+	This can make it easy for attackers to make targets of servers with known vulnerabilities.
+	It is a best practice to remove this information on all production servers. Refer to your
+	web-servers operating manual on instructions on how to do so.
+<p>
+	<h4>References</h4>
+	<ul>
+		<li><a href="http://www.acunetix.com/websitesecurity/apache-security.htm">http://www.acunetix.com</a></li>
+	</ul>
+</p>
+END;

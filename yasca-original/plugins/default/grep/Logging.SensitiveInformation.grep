@@ -1,0 +1,18 @@
+name = Potentially Logging Sensitive Information  
+file_type = java,jsp
+grep = /(log\.|logger).*\(.*(([^a-z]ssn[^a-z])|getssn|ssn\(|socialsecurity|taxid|email|e_mail|emailaddress|pass|amount|account|acct|address|phone|phonenumber|zip|postal)/i
+category = Potentially Logging Sensitive Information
+severity = 3
+description =
+<p>
+	Log files are generally not treated the same as production data, even when sensitive information
+	is logged when an error occurs. Certain very sensitive information, such as social security
+	numbers or passwords, should <b>never</b> be logged.
+</p>
+<p>
+        <h4>References</h4>
+        <ul>
+            <li>TODO</a></li>
+        </ul>
+</p>
+END;

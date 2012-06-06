@@ -1,0 +1,7 @@
+name = W3 Core DOM getAttributeNode('style')
+file_type = js,html
+grep = /\.getAttributeNode\('style'\)/i
+category = W3 Core
+category_link = http://www.quirksmode.org/dom/w3c_core.html
+severity = 2
+description = IE 6/7 don't allow you to access the value of x.getAttributeNode('style').

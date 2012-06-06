@@ -1,0 +1,34 @@
+<?
+/*. DOC   Pspell Functions
+
+See: <a href="http://www.php.net/manual/en/ref.pspell.php"><code>http://www.php.net/manual/en/ref.pspell.php</code></a>
+
+.*/
+
+
+# FIXME: dummy values
+define('PSPELL_FAST', 1);
+define('PSPELL_NORMAL', 1);
+define('PSPELL_BAD_SPELLERS', 1);
+define('PSPELL_RUN_TOGETHER', 1);
+
+/*. int .*/ function pspell_new(/*. string .*/ $language /*., args .*/){}
+/*. int .*/ function pspell_new_personal(/*. string .*/ $personal, /*. string .*/ $language /*., args .*/){}
+/*. int .*/ function pspell_new_config(/*. int .*/ $config){}
+/*. bool .*/ function pspell_check(/*. int .*/ $pspell, /*. string .*/ $word){}
+/*. array .*/ function pspell_suggest(/*. int .*/ $pspell, /*. string .*/ $word){}
+/*. bool .*/ function pspell_store_replacement(/*. int .*/ $pspell, /*. string .*/ $misspell, /*. string .*/ $correct){}
+/*. bool .*/ function pspell_add_to_personal(/*. int .*/ $pspell, /*. string .*/ $word){}
+/*. bool .*/ function pspell_add_to_session(/*. int .*/ $pspell, /*. string .*/ $word){}
+/*. bool .*/ function pspell_clear_session(/*. int .*/ $pspell){}
+/*. bool .*/ function pspell_save_wordlist(/*. int .*/ $pspell){}
+/*. int .*/ function pspell_config_create(/*. string .*/ $language /*., args .*/){}
+/*. bool .*/ function pspell_config_runtogether(/*. int .*/ $conf, /*. bool .*/ $runtogether){}
+/*. bool .*/ function pspell_config_mode(/*. int .*/ $conf, /*. int .*/ $mode){}
+/*. bool .*/ function pspell_config_ignore(/*. int .*/ $conf, /*. int .*/ $ignore){}
+/*. bool .*/ function pspell_config_personal(/*. int .*/ $conf, /*. string .*/ $personal){}
+/*. bool .*/ function pspell_config_dict_dir(/*. int .*/ $conf, /*. string .*/ $directory){}
+/*. bool .*/ function pspell_config_data_dir(/*. int .*/ $conf, /*. string .*/ $directory){}
+/*. bool .*/ function pspell_config_repl(/*. int .*/ $conf, /*. string .*/ $repl){}
+/*. bool .*/ function pspell_config_save_repl(/*. int .*/ $conf, /*. bool .*/ $save){}
+?>

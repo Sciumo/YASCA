@@ -1,0 +1,42 @@
+<?php
+/*. DOC  XDebug Extension
+
+See: <a href="http://xdebug.org/"><code>http://xdebug.org</code></a>
+based on 2.0.4 version.
+.*/
+
+// required for var_dump() re-definition
+/*. require_module 'standard'; .*/
+
+define('XDEBUG_CC_UNUSED', 0);
+define('XDEBUG_CC_DEAD_CODE', 0);
+define('XDEBUG_TRACE_APPEND', 0);
+define('XDEBUG_TRACE_COMPUTERIZED', 0);
+define('XDEBUG_TRACE_HTML', 0);
+
+/*. bool .*/ function xdebug_break() {}
+/*. string .*/ function xdebug_call_class() {}
+/*. string .*/ function xdebug_call_file() {}
+/*. string .*/ function xdebug_call_function() {}
+/*. int .*/ function xdebug_call_line() {}
+/*. void .*/ function xdebug_debug_zval( /*. string .*/ $varname /*., args .*/ ) {}
+/*. void .*/ function xdebug_debug_zval_stdout( /*. string .*/ $varname /*., args .*/ ) {}
+/*. void .*/ function xdebug_disable() {}
+/*. void .*/ function xdebug_dump_superglobals() {}
+/*. void .*/ function xdebug_enable() {}
+/*. array[string]array[int]int .*/ function xdebug_get_code_coverage() {}
+/*. array[int]mixed .*/ function xdebug_get_declared_vars() {}
+/*. array[int]array[string]mixed .*/ function xdebug_get_function_stack() {}
+/*. string .*/ function xdebug_get_profiler_filename() {}
+/*. integer .*/ function xdebug_get_stack_depth() {}
+/*. string .*/ function xdebug_get_tracefile_name() {}
+/*. bool .*/ function xdebug_is_enabled() {}
+/*. int .*/ function xdebug_memory_usage() {}
+/*. int .*/ function xdebug_peak_memory_usage() {}
+/*. void .*/ function xdebug_start_code_coverage( /*. int .*/ $options=0 ) {}
+/*. void .*/ function xdebug_start_trace( /*. string .*/ $trace_file, /*. int .*/ $options=0 ) {}
+/*. void .*/ function xdebug_stop_code_coverage() {}
+/*. void .*/ function xdebug_stop_trace() {}
+/*. float .*/ function xdebug_time_index() {}
+/*. void .*/ function xdebug_var_dump( /*. mixed .*/ $x /*., args .*/ ) {}
+?>

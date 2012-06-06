@@ -1,0 +1,1 @@
+@resources\utility\clamav\clamscan.exe --no-summary -d resources\utility\clamav\ -ri --detect-pua --no-mail --max-recursion=5 --max-dir-recursion=30 "%1"

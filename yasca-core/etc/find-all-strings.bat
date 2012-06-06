@@ -1,0 +1,1 @@
+@find | perl -e "while(<STDIN>) { open(F, $_) || next; while($x=<F>) { if ($x=~/\x22([^\x22]*)\x22/) { $j=$1; print \"$j\n\" if $j =~ /^[\x20-\x7f]*$/; } } close(F); }" | sort | uniq

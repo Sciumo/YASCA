@@ -1,0 +1,22 @@
+name = Dangerous Function - System.loadLibrary()
+file_type = JAVA
+grep = /System\.loadLibrary\(/
+category = Process Control
+severity = 4
+category_link = http://www.fortify.com/vulncat/en/vulncat/java/process_control.html
+description =
+<p>
+    The System.loadLibrary() function is dangerous because it brings a native executable (shared object or DLL) into the JVM. This library
+	could potentially execute functions that that application wouldn't normally have access to. (Native executables are not bound by the JVM
+	security restrictions.)
+
+	Only load libraries from trusted sources.
+</p>
+<p>
+    <h4>References</h4>
+    <ul>
+		<li><a target="_blank" href="http://www.fortify.com/vulncat/en/vulncat/java/process_control.html">Fortify/Vulncat - Process Control</a></li>
+        <li><a target="_blank" href="http://www.blackhat.com/presentations/bh-usa-09/WILLIAMS/BHUSA09-Williams-EnterpriseJavaRootkits-PAPER.pdf">Java Enterprise Rootkits</a></li>
+    </ul>
+</p>
+END;

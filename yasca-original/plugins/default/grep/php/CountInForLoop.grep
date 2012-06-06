@@ -1,0 +1,17 @@
+name = Use of count() in for loop test
+file_type = php
+grep = /for\s*\(.*;.*<=?\s*count\(/
+category = Performance: Function Within Loop Declaration
+category_link = http://www.phpvs.net/2008/06/04/ten-php-best-practices-tips-that-will-get-you-a-job/
+severity = 5
+description =
+<p>
+	Using a count() function within a for loop results in it being executed many times; it should probably be placed before the loop.
+</p>
+<p>
+        <h4>References</h4>
+        <ul>
+		<li><a href="http://www.phpvs.net/2008/06/04/ten-php-best-practices-tips-that-will-get-you-a-job/">Ten PHP Best Practices That Will Get You a Job</a></li>
+        </ul>
+</p>
+END;

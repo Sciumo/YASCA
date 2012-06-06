@@ -1,0 +1,9 @@
+#!/bin/sh
+TOPDIR=./resources/utility/pmd
+VERSION=4.2.5
+PMDJAR=$TOPDIR/PMD-Yasca.jar:$TOPDIR/pmd14-$VERSION.jar
+JARPATH=$TOPDIR/asm-3.1.jar:$TOPDIR/jaxen-1.1.1.jar:$TOPDIR/YascaPMD.jar
+RWPATH=$TOPDIR/retroweaver-rt-2.0.5.jar:$TOPDIR/backport-util-concurrent.jar
+JARPATH=$JARPATH:$RWPATH
+MAIN_CLASS=net.sourceforge.pmd.PMD
+java -cp "$PMDJAR:$JARPATH" $MAIN_CLASS $1 net.sourceforge.pmd.renderers.YascaRenderer $2 $3 $4 $5 $6 $7 $8

@@ -1,0 +1,14 @@
+<?
+/*. DOC   Mhash Functions
+
+See: <a href="http://www.php.net/manual/en/ref.mhash.php"><code>http://www.php.net/manual/en/ref.mhash.php</code></a>
+
+.*/
+
+
+/*. int   .*/ function mhash_count(){}
+/*. int   .*/ function mhash_get_block_size(/*. int .*/ $hash){}
+/*. string.*/ function mhash_get_hash_name(/*. int .*/ $hash){}
+/*. string.*/ function mhash(/*. int .*/ $hash, /*. string .*/ $data /*., args .*/){}
+/*. string.*/ function mhash_keygen_s2k(/*. int .*/ $hash, /*. string .*/ $input_password, /*. string .*/ $salt, /*. int .*/ $bytes){}
+?>

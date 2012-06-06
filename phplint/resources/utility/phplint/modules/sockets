@@ -1,0 +1,186 @@
+<?
+/*. DOC   Socket Functions
+
+See: <a href="http://www.php.net/manual/en/ref.sockets.php"><code>http://www.php.net/manual/en/ref.sockets.php</code></a>
+
+.*/
+
+# Required for E_WARNING:
+/*. require_module 'standard'; .*/
+
+
+# FIXME: dummy values
+define('AF_INET', 1);
+define('AF_INET6', 1);
+define('AF_UNIX', 1);
+define('MSG_DONTROUTE', 1);
+define('MSG_EOF', 1);
+define('MSG_EOR', 1);
+define('MSG_OOB', 1);
+define('MSG_PEEK', 1);
+define('MSG_WAITALL', 1);
+define('PHP_BINARY_READ', 1);
+define('PHP_NORMAL_READ', 1);
+define('SOCKET_E2BIG', 1);
+define('SOCKET_EACCES', 1);
+define('SOCKET_EADDRINUSE', 1);
+define('SOCKET_EADDRNOTAVAIL', 1);
+define('SOCKET_EADV', 1);
+define('SOCKET_EAFNOSUPPORT', 1);
+define('SOCKET_EAGAIN', 1);
+define('SOCKET_EALREADY', 1);
+define('SOCKET_EBADE', 1);
+define('SOCKET_EBADF', 1);
+define('SOCKET_EBADFD', 1);
+define('SOCKET_EBADMSG', 1);
+define('SOCKET_EBADR', 1);
+define('SOCKET_EBADRQC', 1);
+define('SOCKET_EBADSLT', 1);
+define('SOCKET_EBUSY', 1);
+define('SOCKET_ECHRNG', 1);
+define('SOCKET_ECOMM', 1);
+define('SOCKET_ECONNABORTED', 1);
+define('SOCKET_ECONNREFUSED', 1);
+define('SOCKET_ECONNRESET', 1);
+define('SOCKET_EDESTADDRREQ', 1);
+define('SOCKET_EDISCON', 1);
+define('SOCKET_EDQUOT', 1);
+define('SOCKET_EEXIST', 1);
+define('SOCKET_EFAULT', 1);
+define('SOCKET_EHOSTDOWN', 1);
+define('SOCKET_EHOSTUNREACH', 1);
+define('SOCKET_EIDRM', 1);
+define('SOCKET_EINPROGRESS', 1);
+define('SOCKET_EINTR', 1);
+define('SOCKET_EINVAL', 1);
+define('SOCKET_EIO', 1);
+define('SOCKET_EISCONN', 1);
+define('SOCKET_EISDIR', 1);
+define('SOCKET_EISNAM', 1);
+define('SOCKET_EL2HLT', 1);
+define('SOCKET_EL2NSYNC', 1);
+define('SOCKET_EL3HLT', 1);
+define('SOCKET_EL3RST', 1);
+define('SOCKET_ELNRNG', 1);
+define('SOCKET_ELOOP', 1);
+define('SOCKET_EMEDIUMTYPE', 1);
+define('SOCKET_EMFILE', 1);
+define('SOCKET_EMLINK', 1);
+define('SOCKET_EMSGSIZE', 1);
+define('SOCKET_EMULTIHOP', 1);
+define('SOCKET_ENAMETOOLONG', 1);
+define('SOCKET_ENETDOWN', 1);
+define('SOCKET_ENETRESET', 1);
+define('SOCKET_ENETUNREACH', 1);
+define('SOCKET_ENFILE', 1);
+define('SOCKET_ENOANO', 1);
+define('SOCKET_ENOBUFS', 1);
+define('SOCKET_ENOCSI', 1);
+define('SOCKET_ENODATA', 1);
+define('SOCKET_ENODEV', 1);
+define('SOCKET_ENOENT', 1);
+define('SOCKET_ENOLCK', 1);
+define('SOCKET_ENOLINK', 1);
+define('SOCKET_ENOMEDIUM', 1);
+define('SOCKET_ENOMEM', 1);
+define('SOCKET_ENOMSG', 1);
+define('SOCKET_ENONET', 1);
+define('SOCKET_ENOPROTOOPT', 1);
+define('SOCKET_ENOSPC', 1);
+define('SOCKET_ENOSR', 1);
+define('SOCKET_ENOSTR', 1);
+define('SOCKET_ENOSYS', 1);
+define('SOCKET_ENOTBLK', 1);
+define('SOCKET_ENOTCONN', 1);
+define('SOCKET_ENOTDIR', 1);
+define('SOCKET_ENOTEMPTY', 1);
+define('SOCKET_ENOTSOCK', 1);
+define('SOCKET_ENOTTY', 1);
+define('SOCKET_ENOTUNIQ', 1);
+define('SOCKET_ENXIO', 1);
+define('SOCKET_EOPNOTSUPP', 1);
+define('SOCKET_EPERM', 1);
+define('SOCKET_EPFNOSUPPORT', 1);
+define('SOCKET_EPIPE', 1);
+define('SOCKET_EPROCLIM', 1);
+define('SOCKET_EPROTO', 1);
+define('SOCKET_EPROTONOSUPPORT', 1);
+define('SOCKET_EPROTOTYPE', 1);
+define('SOCKET_EREMCHG', 1);
+define('SOCKET_EREMOTE', 1);
+define('SOCKET_EREMOTEIO', 1);
+define('SOCKET_ERESTART', 1);
+define('SOCKET_EROFS', 1);
+define('SOCKET_ESHUTDOWN', 1);
+define('SOCKET_ESOCKTNOSUPPORT', 1);
+define('SOCKET_ESPIPE', 1);
+define('SOCKET_ESRMNT', 1);
+define('SOCKET_ESTALE', 1);
+define('SOCKET_ESTRPIPE', 1);
+define('SOCKET_ETIME', 1);
+define('SOCKET_ETIMEDOUT', 1);
+define('SOCKET_ETOOMANYREFS', 1);
+define('SOCKET_EUNATCH', 1);
+define('SOCKET_EUSERS', 1);
+define('SOCKET_EWOULDBLOCK', 1);
+define('SOCKET_EXDEV', 1);
+define('SOCKET_EXFULL', 1);
+define('SOCKET_HOST_NOT_FOUND', 1);
+define('SOCKET_NOTINITIALISED', 1);
+define('SOCKET_NO_ADDRESS', 1);
+define('SOCKET_NO_DATA', 1);
+define('SOCKET_NO_RECOVERY', 1);
+define('SOCKET_SYSNOTREADY', 1);
+define('SOCKET_TRY_AGAIN', 1);
+define('SOCKET_VERNOTSUPPORTED', 1);
+define('SOCK_DGRAM', 1);
+define('SOCK_RAW', 1);
+define('SOCK_RDM', 1);
+define('SOCK_SEQPACKET', 1);
+define('SOCK_STREAM', 1);
+define('SOL_SOCKET', 1);
+define('SOL_TCP', 1);
+define('SOL_UDP', 1);
+define('SOMAXCONN', 1);
+define('SO_BROADCAST', 1);
+define('SO_DEBUG', 1);
+define('SO_DONTROUTE', 1);
+define('SO_ERROR', 1);
+define('SO_KEEPALIVE', 1);
+define('SO_LINGER', 1);
+define('SO_OOBINLINE', 1);
+define('SO_RCVBUF', 1);
+define('SO_RCVLOWAT', 1);
+define('SO_RCVTIMEO', 1);
+define('SO_REUSEADDR', 1);
+define('SO_SNDBUF', 1);
+define('SO_SNDLOWAT', 1);
+define('SO_SNDTIMEO', 1);
+define('SO_TYPE', 1);
+
+/*. int .*/ function socket_select(/*. array .*/ &$read_fds, /*. array .*/ &$write_fds, /*. array .*/ &$except_fds, /*. int .*/ $tv_sec /*., args .*/){}
+/*. resource .*/ function socket_create_listen(/*. int .*/ $port /*., args .*/){}
+/*. resource .*/ function socket_accept(/*. resource .*/ $socket){}
+/*. bool .*/ function socket_set_nonblock(/*. resource .*/ $socket){}
+/*. bool .*/ function socket_set_block(/*. resource .*/ $socket){}
+/*. bool .*/ function socket_listen(/*. resource .*/ $socket /*., args .*/){}
+/*. void .*/ function socket_close(/*. resource .*/ $socket){}
+/*. int .*/ function socket_write(/*. resource .*/ $socket, /*. string .*/ $buf /*., args .*/){}
+/*. string .*/ function socket_read(/*. resource .*/ $socket, /*. int .*/ $length /*., args .*/){}
+/*. bool .*/ function socket_getsockname(/*. resource .*/ $socket, /*. string .*/ &$addr /*., args .*/){}
+/*. bool .*/ function socket_getpeername(/*. resource .*/ $socket, /*. string .*/ &$addr /*., args .*/){}
+/*. resource .*/ function socket_create(/*. int .*/ $domain, /*. int .*/ $type, /*. int .*/ $protocol){ trigger_error("", E_WARNING); }
+/*. bool .*/ function socket_connect(/*. resource .*/ $socket, /*. string .*/ $addr /*., args .*/){}
+/*. string .*/ function socket_strerror(/*. int .*/ $errno){}
+/*. bool .*/ function socket_bind(/*. resource .*/ $socket, /*. string .*/ $addr /*., args .*/){}
+/*. int .*/ function socket_recv(/*. resource .*/ $socket, /*. string .*/ &$buf, /*. int .*/ $len, /*. int .*/ $flags){}
+/*. int .*/ function socket_send(/*. resource .*/ $socket, /*. string .*/ $buf, /*. int .*/ $len, /*. int .*/ $flags){}
+/*. int .*/ function socket_recvfrom(/*. resource .*/ $socket, /*. string .*/ &$buf, /*. int .*/ $len, /*. int .*/ $flags, /*. string .*/ &$name /*., args .*/){}
+/*. int .*/ function socket_sendto(/*. resource .*/ $socket, /*. string .*/ $buf, /*. int .*/ $len, /*. int .*/ $flags, /*. string .*/ $addr /*., args .*/){}
+/*. mixed .*/ function socket_get_option(/*. resource .*/ $socket, /*. int .*/ $level, /*. int .*/ $optname){}
+/*. bool .*/ function socket_set_option(/*. args .*/){}
+/*. bool .*/ function socket_create_pair(/*. int .*/ $domain, /*. int .*/ $type, /*. int .*/ $protocol, /*. array .*/ &$fd){}
+/*. bool .*/ function socket_shutdown(/*. resource .*/ $socket /*., args .*/){}
+/*. int .*/ function socket_last_error( /*. args .*/){}
+/*. void .*/ function socket_clear_error( /*. args .*/){}
+?>

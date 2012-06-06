@@ -1,0 +1,16 @@
+name = Invalid HTML Tag
+file_type = JAVA,HTML,PHP,NET,cgi,pl
+grep = /\<[a-zA-Z0-9]+=/i
+category = Code Correctness
+severity = 5
+description =
+<p>
+	This appears to be an invalid HTML tag, such as &lt;foo=bar&gt;. 
+</p>
+<p>
+    <h4>References</h4>
+    <ul>
+        <li><a target="_blank" href="http://www.w3.org/TR/html401/"</a></li>
+    </ul>
+</p>
+END;

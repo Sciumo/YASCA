@@ -1,0 +1,7 @@
+name = Java Cryptography  
+file_type = java,jsp
+grep = /=\s*Cipher|=\s*MessageDigest|=\s*Signature/i
+category = Cryptography Usage
+severity = 4 
+description = Cryptography is being used (<a target="_blank" href="http://java.sun.com/j2se/1.4.2/docs/api/javax/crypto/Cipher.html">Cipher</a>, <a target="_blank" href="http://java.sun.com/j2se/1.4.2/docs/api/java/security/MessageDigest.html">MessageDigest</a>, <a target="_blank" href="http://java.sun.com/j2se/1.4.2/docs/api/java/security/Signature.html">Signature</a>).
+END;

@@ -1,0 +1,103 @@
+<?
+/*. DOC   Mcrypt Encryption Functions
+
+See: <a href="http://www.php.net/manual/en/ref.mcrypt.php"><code>http://www.php.net/manual/en/ref.mcrypt.php</code></a>
+
+.*/
+
+
+define('MCRYPT_ENCRYPT', 1);
+define('MCRYPT_DECRYPT', 1);
+define('MCRYPT_DEV_RANDOM', 1);
+define('MCRYPT_DEV_URANDOM', 1);
+define('MCRYPT_RAND', 1);
+define('MCRYPT_3DES', "tripledes");
+define('MCRYPT_ARCFOUR_IV', "arcfour-iv");
+define('MCRYPT_ARCFOUR', "arcfour");
+define('MCRYPT_BLOWFISH', "blowfish");
+define('MCRYPT_BLOWFISH_COMPAT', "blowfish-compat");
+define('MCRYPT_CAST_128', "cast-128");
+define('MCRYPT_CAST_256', "cast-256");
+define('MCRYPT_CRYPT', "crypt");
+define('MCRYPT_DES', "des");
+define('MCRYPT_ENIGNA', "crypt");
+define('MCRYPT_GOST', "gost");
+define('MCRYPT_LOKI97', "loki97");
+define('MCRYPT_PANAMA', "panama");
+define('MCRYPT_RC2', "rc2");
+define('MCRYPT_RIJNDAEL_128', "rijndael-128");
+define('MCRYPT_RIJNDAEL_192', "rijndael-192");
+define('MCRYPT_RIJNDAEL_256', "rijndael-256");
+define('MCRYPT_SAFER64', "safer-sk64");
+define('MCRYPT_SAFER128', "safer-sk128");
+define('MCRYPT_SAFERPLUS', "saferplus");
+define('MCRYPT_SERPENT', "serpent");
+define('MCRYPT_THREEWAY', "threeway");
+define('MCRYPT_TRIPLEDES', "tripledes");
+define('MCRYPT_TWOFISH', "twofish");
+define('MCRYPT_WAKE', "wake");
+define('MCRYPT_XTEA', "xtea");
+define('MCRYPT_IDEA', "idea");
+define('MCRYPT_MARS', "mars");
+define('MCRYPT_RC6', "rc6");
+define('MCRYPT_SKIPJACK', "skipjack");
+define('MCRYPT_MODE_CBC', "cbc");
+define('MCRYPT_MODE_CFB', "cfb");
+define('MCRYPT_MODE_ECB', "ecb");
+define('MCRYPT_MODE_NOFB', "nofb");
+define('MCRYPT_MODE_OFB', "ofb");
+define('MCRYPT_MODE_STREAM', "stream");
+
+
+
+/*. resource .*/ function mcrypt_module_open(/*. string .*/ $cipher, /*. string .*/ $cipher_directory, /*. string .*/ $mode, /*. string .*/ $mode_directory){}
+/*. int .*/ function mcrypt_generic_init(/*. resource .*/ $td, /*. string .*/ $key, /*. string .*/ $iv){}
+/*. string .*/ function mcrypt_generic(/*. resource .*/ $td, /*. string .*/ $data){}
+/*. string .*/ function mdecrypt_generic(/*. resource .*/ $td, /*. string .*/ $data){}
+/*. array .*/ function mcrypt_enc_get_supported_key_sizes(/*. resource .*/ $td){}
+/*. int .*/ function mcrypt_enc_self_test(/*. resource .*/ $td){}
+/*. bool .*/ function mcrypt_module_close(/*. resource .*/ $td){}
+
+/*. bool .*/ function mcrypt_generic_end(/*. resource .*/ $td)
+/*.
+	DOC
+	<@deprecated Use <@item mcrypt_generic_deinit()> instead.  It can
+	cause crashes when used with <@item mcrypt_module_close()>. >
+.*/
+{}
+
+/*. bool .*/ function mcrypt_generic_deinit(/*. resource .*/ $td){}
+/*. bool .*/ function mcrypt_enc_is_block_algorithm_mode(/*. resource .*/ $td){}
+/*. bool .*/ function mcrypt_enc_is_block_algorithm(/*. resource .*/ $td){}
+/*. bool .*/ function mcrypt_enc_is_block_mode(/*. resource .*/ $td){}
+/*. int .*/ function mcrypt_enc_get_block_size(/*. resource .*/ $td){}
+/*. int .*/ function mcrypt_enc_get_key_size(/*. resource .*/ $td){}
+/*. int .*/ function mcrypt_enc_get_iv_size(/*. resource .*/ $td){}
+/*. string .*/ function mcrypt_enc_get_algorithms_name(/*. resource .*/ $td){}
+/*. string .*/ function mcrypt_enc_get_modes_name(/*. resource .*/ $td){}
+/*. bool .*/ function mcrypt_module_self_test(/*. string .*/ $algorithm /*., args .*/){}
+/*. bool .*/ function mcrypt_module_is_block_algorithm_mode(/*. string .*/ $mode /*., args .*/){}
+/*. bool .*/ function mcrypt_module_is_block_algorithm(/*. string .*/ $algorithm /*., args .*/){}
+/*. bool .*/ function mcrypt_module_is_block_mode(/*. string .*/ $mode /*., args .*/){}
+/*. int .*/ function mcrypt_module_get_algo_block_size(/*. string .*/ $algorithm /*., args .*/){}
+/*. int .*/ function mcrypt_module_get_algo_key_size(/*. string .*/ $algorithm /*., args .*/){}
+/*. array .*/ function mcrypt_module_get_supported_key_sizes(/*. string .*/ $algorithm /*., args .*/){}
+/*. array .*/ function mcrypt_list_algorithms( /*. args .*/){}
+/*. array .*/ function mcrypt_list_modes( /*. args .*/){}
+/*. int .*/ function mcrypt_get_key_size(/*. string .*/ $cipher, /*. string .*/ $module){}
+/*. int .*/ function mcrypt_get_block_size(/*. string .*/ $cipher, /*. string .*/ $module){}
+/*. int .*/ function mcrypt_get_iv_size(/*. string .*/ $cipher, /*. string .*/ $module){}
+/*. string .*/ function mcrypt_get_cipher_name(/*. string .*/ $cipher){}
+/*. string .*/ function mcrypt_encrypt(/*. string .*/ $cipher, /*. string .*/ $key, /*. string .*/ $data, /*. string .*/ $mode, /*. string .*/ $iv){}
+/*. string .*/ function mcrypt_decrypt(/*. string .*/ $cipher, /*. string .*/ $key, /*. string .*/ $data, /*. string .*/ $mode, /*. string .*/ $iv){}
+
+/*. string .*/ function mcrypt_ecb(/*. int .*/ $cipher, /*. string .*/ $key, /*. string .*/ $data, /*. int .*/ $mode, /*. string .*/ $iv)
+/*. DOC
+	<@deprecated Use <@item mcrypt_generic()> instead. > .*/
+{}
+
+/*. string .*/ function mcrypt_cbc(/*. int .*/ $cipher, /*. string .*/ $key, /*. string .*/ $data, /*. int .*/ $mode, /*. string .*/ $iv){}
+/*. string .*/ function mcrypt_cfb(/*. int .*/ $cipher, /*. string .*/ $key, /*. string .*/ $data, /*. int .*/ $mode, /*. string .*/ $iv){}
+/*. string .*/ function mcrypt_ofb(/*. int .*/ $cipher, /*. string .*/ $key, /*. string .*/ $data, /*. int .*/ $mode, /*. string .*/ $iv){}
+/*. string .*/ function mcrypt_create_iv(/*. int .*/ $size, /*. int .*/ $source){}
+?>

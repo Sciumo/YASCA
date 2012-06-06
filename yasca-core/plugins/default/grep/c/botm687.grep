@@ -1,0 +1,19 @@
+name = Possibly Missed Semi-Colon
+file_type = C
+category = PC-Lint Bug of the Month
+severity = 2
+grep = /\.,\s*$/
+grep = /\.,\s*\/\/.*$/
+
+description =
+<p>
+	A comma might be used accidentally, instead of a semi-colon.	
+</p>
+
+<p>
+	<h4>References</h4>
+	<ul>
+        <li><a target="_blank" href="http://gimpel.com/html/newbugs/bug687.htm">http://gimpel.com/html/newbugs/bug687.htm</a></li>
+	</ul>
+</p>
+END;

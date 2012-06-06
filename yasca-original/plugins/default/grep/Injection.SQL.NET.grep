@@ -1,0 +1,23 @@
+name = Possible SQL Injection
+file_type = cs,aspx,vb,asp
+grep = /sql.*=.*\"\s*\&/i
+grep = /CommandText\s*=\s*.*\"\s*\&/i
+grep = /\.Execute\(.*\"\s*\&/i
+category = Possible SQL Injection
+severity = 2
+description = 
+<p>
+	<h4>Possible SQL Injection</h4>
+	SQL injection is a code injection technique that exploits a security vulnerability occurring in the database 	
+	layer of an application. The vulnerability is present when user input is either incorrectly filtered for string literal
+	escape characters embedded in SQL statements or user input is not strongly typed and thereby unexpectedly executed. It 
+	is an instance of a more general class of vulnerabilities that can occur whenever one programming or scripting language
+	is embedded inside another. SQL injection attacks are also known as SQL insertion attacks.
+</p>	
+<p>
+	<h4>References</h4>
+	<ul>
+		<li><a href="http://en.wikipedia.org/wiki/SQL_injection">Wikipedia: SQL Injection</a></li>
+	</ul>
+</p>
+END;

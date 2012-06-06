@@ -1,0 +1,5 @@
+name = Old Content Copyright
+file_type = JAVA,HTML
+grep = /&copy;\s*200[0-8]/i
+category = General: Outdated Content
+severity = 5

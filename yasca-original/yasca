@@ -1,0 +1,6 @@
+#!/bin/sh
+PHP=`which php 2>/dev/null`
+if [ "$PHP" == "" ]; then
+    PHP=./resources/php
+fi
+$PHP -c ./resources/php_linux.ini -q yasca.php $@

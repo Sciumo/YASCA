@@ -1,0 +1,16 @@
+name = Displaying Error to Client
+file_type = aspx,asp,vb
+grep = /response\.write\s*\(.*error/i
+category = Poor Error Handling
+severity = 3
+description =
+<p>
+	In general, specific error messages should not be shown to the client.	
+</p>
+<p>
+	<h4>References</h4>
+	<ul>
+		<li>TODO</li>
+	</ul>
+</p>
+END;

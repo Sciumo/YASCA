@@ -1,0 +1,75 @@
+name = Banned Function
+file_type = C
+
+; Banned string copy functions
+grep = /^(?!\/\/)(?:.(?!\/\/))*?\b($strcpy|wcscpy|_tcscpy|_mbscpy|StrCpy|StrCpyA|StrCpyW|lstrcpy|lstrcpyA)[\b\Z]/
+grep = /^(?!\/\/)(?:.(?!\/\/))*?\b(lstrcpyW|strcpyA|strcpyW|_tccpy|_mbccpy)[\b\Z]/
+grep = /^(?!\/\/)(?:.(?!\/\/))*?\b(strncpy|wcsncpy|_tcsncpy|_mbsncpy|_mbsnbcpy|StrCpyN|StrCpyNA|StrCpyNW)[\b\Z]/
+grep = /^(?!\/\/)(?:.(?!\/\/))*?\b(StrNCpy|strcpynA|StrNCpyA|StrNCpyW|lstrcpyn|lstrcpynA|lstrcpynW|_fstrncpy)[\b\Z]/
+
+
+; Banned string concatenation functions
+grep = /^(?!\/\/)(?:.(?!\/\/))*?\b(strcat|wcscat|_tcscat|_mbscat|StrCat|StrCatA|StrCatW|lstrcat|lstrcatA)[\b\Z]/
+grep = /^(?!\/\/)(?:.(?!\/\/))*?\b(lstrcatW|StrCatBuffW|StrCatBuff|StrCatBuffA|StrCatChainW|strcatA|strcatW|_tccat|_mbccat)[\b\Z]/
+grep = /^(?!\/\/)(?:.(?!\/\/))*?\b(strncat|wcsncat|_tcsncat|_mbsncat|_mbsnbcat|StrCatN|StrCatNA|StrCatNW|StrNCat|StrNCatA)[\b\Z]/
+grep = /^(?!\/\/)(?:.(?!\/\/))*?\b(StrNCatW|lstrncat|lstrcatnA|lstrcatnW|lstrcatn|_fstrncat)[\b\Z]/
+
+; Banned sprintf functions
+grep = /^(?!\/\/)(?:.(?!\/\/))*?\b(wnsprintf|wnsprintfA|wnsprintfW|sprintfW|sprintfA|wsprintf|wsprintfW|wsprintfA|sprintf|swprintf|_stprintf)[\b\Z]/
+grep = /^(?!\/\/)(?:.(?!\/\/))*?\b(_snwprintf|_snprintf|_sntprintf|nsprintf)[\b\Z]/
+
+; Banned vararg sprintf functions
+grep = /^(?!\/\/)(?:.(?!\/\/))*?\b(wvsprintf|wvsprintfA|wvsprintfW|vsprintf|_vstprintf|vswprintf)[\b\Z]/
+grep = /^(?!\/\/)(?:.(?!\/\/))*?\b(_vsnprintf|_vsnwprintf|_vsntprintf|wvnsprintf|wvnsprintfA|wvnsprintfW)[\b\Z]/
+
+; Banned string tokenizing functions
+grep = /^(?!\/\/)(?:.(?!\/\/))*?\b(strtok|_tcstok|wcstok|_mbstok)[\b\Z]/
+
+; Banned path functions
+grep = /^(?!\/\/)(?:.(?!\/\/))*?\b(Makepath|_tmakepath|_makepath|_wmakepath)[\b\Z]/
+grep = /^(?!\/\/)(?:.(?!\/\/))*?\b(_splitpath|_tsplitpath|_wsplitpath)[\b\Z]/
+
+; Banned scanf functions
+grep = /^(?!\/\/)(?:.(?!\/\/))*?\b(scanf|wscanf|_tscanf|sscanf|swscanf|_stscanf)[\b\Z]/
+grep = /^(?!\/\/)(?:.(?!\/\/))*?\b(snscanf|snwscanf|_sntscanf)[\b\Z]/
+
+; Banned numeric conversion
+grep = /^(?!\/\/)(?:.(?!\/\/))*?\b(_itoa|_itow|_i64toa|_i64tow|_ui64toa|_ui64tot|_ui64tow|_ultoa|_ultot|_ultow)[\b\Z]/
+
+; Banned gets functions
+grep = /^(?!\/\/)(?:.(?!\/\/))*?\b(gets|_getts|_gettws)[\b\Z]/
+
+; Banned IsBad functions
+grep = /^(?!\/\/)(?:.(?!\/\/))*?\b(sBadWritePtr|IsBadHugeWritePtr|IsBadReadPtr|IsBadHugeReadPtr|IsBadCodePtr|IsBadStringPtr)(\b|\Z)/
+
+; Banned OEM functions
+grep = /^(?!\/\/)(?:.(?!\/\/))*?\b(CharToOem|CharToOemA|CharToOemW|OemToChar|OemToCharA|OemToCharW|CharToOemBuffA|CharToOemBuffW)(\b|\Z)/
+
+; Banned stack dynamic memory alloc functions
+grep = /^(?!\/\/)(?:.(?!\/\/))*?\b(alloca|_alloca)(\b|\Z)/
+
+; Banned string length functions
+grep = /^(?!\/\/)(?:.(?!\/\/))*?\b(strlen|wcslen|_mbslen|_mbstrlen|StrLen|lstrlen)(\b|\Z)/
+
+category = Unsafe/Banned Function
+category_link = http://msdn.microsoft.com/en-us/library/bb288454.aspx
+severity = 3
+description =
+<p>
+    A function call was found that has been labeled as "unsafe" or "banned". Specifically, the function is now
+    considered banned by Microsoft. More information is available in <i>The Security Development Lifecycle</i> by
+    Michael Howard and Steve Lipner, Microsoft Press, 2006.
+
+    These functions should be replaced with safer alternatives, or at the minimum, verified that they are being used
+    in a safe manner.
+</p>
+<p>
+	<h4>References</h4>
+	<ul>
+            <li><a target="_blank" href="http://msdn.microsoft.com/en-us/library/bb288454.aspx" target=_"blank">Security Development Lifecycle (SDL) Banned Function Call</a></li>
+            <li><a target="_blank" href="http://www.usenix.org/events/usenix99/full_papers/millert/millert_html/index.html">strlcpy and strlcat - Consistent, Safe String Copy and Concatenation</a></li>
+            <li>Howard, Michael, David LeBlanc, and John Viega. 19 Deadly Sins of Software Development. New York, NY: McGraw-Hill, 2005. Chapter 1, "Buffer Overruns."</li>
+            <li><a target="_blank" href="http://www.owasp.org/ndex.php/Dangerous_Function">OWASP: Dangerous Function</a></li>
+	</ul>
+</p>
+END;
